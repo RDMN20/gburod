@@ -1,0 +1,44 @@
+{% load user_filters %}
+{% if user.is_authenticated %}
+  <div class="card my-4">
+    {% if persona.department_id == 2 %}
+      <h5 class="card-header">Добавить комментарий:</h5>
+      <div class="card-body">
+        <form method="post" action="{% url 'structure:add_comment' persona.id %}">
+          {% csrf_token %}
+          <div class="form-group mb-2">
+            {{ comment_form.text|addclass:"form-control" }}
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+{% else %}
+  <div class="card my-4">
+    <div class="card-body">
+      <p>Чтобы оставить комментарий или рейтинг,
+        <a class="card-text" href="{% url 'users:login' %}">
+          войдите
+        </a>
+        или
+        <a class="" href="{% url 'users:signup' %}">
+          зарегистрируйтесь
+        </a>
+      </p>
+    </div>
+  </div>
+{% endif %}
+{% for comment in comments %}
+  <div class="media ml-4 mb-4">
+    <div class="media-body">
+      <h5 class="mt-0">
+        {{ comment.author.username }}
+      </h5>
+      <p>
+        {{ comment.text|linebreaksbr }}
+      <hr>
+      </p>
+    </div>
+  </div>
+{% endfor %}

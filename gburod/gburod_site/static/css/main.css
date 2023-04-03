@@ -1,0 +1,51 @@
+.fakeimg {
+    height: 200px;
+    width: auto;
+    background: #aaa;
+}
+
+.logos {
+    width: 260px;
+}
+
+@media (max-width: 400px) {
+    body {
+        min-width: 400px !important;
+    }
+}
+
+.navbar-elements {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.author_name span {
+    font-size: 1.2em;
+}
+
+.active {
+    font-weight: bold;
+    /*color: red;*/
+}
+
+.checked {
+    color: orange;
+}
+
+.raiting-btn {
+    background-color: inherit !important;
+    border: 0 !important;
+}
+
+.rating .fa-star:hover ~ .fa-star {
+  color: black;
+}
+
+

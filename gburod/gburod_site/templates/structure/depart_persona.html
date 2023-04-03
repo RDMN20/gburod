@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Структура{% endblock title %}
+{% block content %}
+  {% load thumbnail %}
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <h2>Страница на стадии разработки</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="depart-col d-flex flex-column">
+          <ul class="list-inline">
+            {% for page in page_obj %}
+            <li><a href="{% url 'structure:depart_detail' page.department.id %}">{{ depart.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        {% include 'structure/includes/depart_detail.html' %}
+    </div>
+    <div class="row">
+      {% include 'includes/paginator.html' %}
+    </div>
+    <br>
+  </div>
+
+{% endblock %}

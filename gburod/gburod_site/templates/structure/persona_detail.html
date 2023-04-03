@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title %}
+  Врач
+{% endblock title %}
+{% block content %}
+  <div class="row justify-content-center">
+    <aside class="col-4">
+      <p class="card-deck">
+      <div class="card p-0">
+        {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
+          <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
+        {% endthumbnail %}
+        <div class="card-body">
+          <h5
+            class="card-title">{{ persona.first_name }} {{ persona.last_name }} {{ persona.patronymic_name }}</h5>
+          <p class="card-text">
+            <strong>Должность:</strong> {{ persona.seat }}
+            <br>
+            {% if persona.academic is not None and persona.academic is not False %}
+              <strong>Ученая степень:</strong> {{ persona.academic }}
+              <br>
+            {% endif %}
+            <strong>Отделение:</strong> {{ persona.department }}
+            {% if persona.speciality is not None %}
+              {{ persona.speciality }}
+              <br>
+            {% endif %}
+          </p>
+          {% if persona.biography %}
+            <p class="card-text">{{ persona.biography }}</p>
+          {% endif %}
+          {% if persona.department_id == 2 %}
+            <p><strong>Рейтинг:</strong> {{ average_rating|floatformat:2 }}</p>
+            <form method="POST">
+              {% csrf_token %}
+              <div class="rating">
+                <input type="hidden" name="score" id="score">
+                <i class="fa fa-star {% if average_rating >= 1 %}checked{% else %}{% endif %}" data-value="1"
+                   id="first"></i>
+                <i class="fa fa-star {% if average_rating >= 2 %}checked{% else %}{% endif %}" data-value="2"
+                   id="second"></i>
+                <i class="fa fa-star {% if average_rating >= 3 %}checked{% else %}{% endif %}" data-value="3"
+                   id="third"></i>
+                <i class="fa fa-star {% if average_rating >= 4 %}checked{% else %}{% endif %}" data-value="4"
+                   id="fourth"></i>
+                <i class="fa fa-star {% if average_rating >= 5 %}checked{% else %}{% endif %}" data-value="5"
+                   id="fifth"></i>
+              </div>
+              <hr>
+              {% if user.is_authenticated %}
+                <button type="submit" class="btn btn-primary">Добавить рейтинг</button>
+              {% endif %}
+            </form>
+            <div id="confirm-box"></div>
+            </div>
+          {% else %}
+            </div>
+          {% endif %}
+      {% include 'includes/comments.html' %}
+    </aside>
+  </div>
+{% endblock %}

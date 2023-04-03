@@ -1,0 +1,57 @@
+version: '3.6'
+
+services:
+  web:
+    build: ./gburod
+#    command: python gburod/gburod_site/manage.py runserver 0.0.0.0:8000
+#    ports:
+#     - '8000:8000'
+    volumes:
+      - .:/usr/src/app/
+    env_file:
+      - gburod/.env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+#    ports:
+#      - '5432:5432'
+    env_file: gburod/.env
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: UTC
+      PGTZ: UTC
+
+#  build:
+#    context: ./
+#    dockerfile: Dockerfile
+#    command: sh -c 'set -ex && /app/bin/xpaste db create && /app/bin/xpaste db migrate && /app/bin/xpaste'
+
+  openresty:
+    build: .
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: always
+    volumes:
+      - /data/nginx/conf.d:/etc/nginx/conf.d
+      - /data/nginx/sites-enabled:/etc/nginx/sites-enabled
+      - /data/nginx/resty-auto-ssl:/etc/resty-auto-ssl
+      - /data/nginx/geoip:/etc/nginx/geoip
+    healthcheck:
+      test: curl -f http://localhost/health || exit 1
+      interval: 5s
+      timeout: 10s
+      retries: 3
+    depends_on:
+      - web
+
+configs:
+  nginx_cfg:
+    file: /data/nginx/nginx.conf
+  mime.types:
+    file: /data/nginx/mime.types

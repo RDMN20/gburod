@@ -1,0 +1,48 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+  <a href="{% url 'main-page:index' %}">
+    <img class="logos" src="{% static 'img/repubcancercenter.png' %}" alt="logo-image">
+  </a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse navbar-elements" id="navbarTogglerDemo02">
+    {#    {% with request.resolver_match.view_name as view_name %}#}
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">О нас</a>
+      </li>
+      <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
+          active{% endif %}">
+        <a class="nav-link " href="{% url 'structure:structures' %}">Структура</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
+          active{% endif %}" href="{% url 'paid_services:services' %}">Платные услуги</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}
+          active{% endif %}" href="{% url 'main-page:about' %}">Контакты</a>
+      </li>
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link link-light" href="{% url 'users:logout' %}">Выйти</a>
+        </li>
+        <li class="nav-item link-light nav-link ">
+          <div>
+            Пользователь: {{ user.username }}
+          </div>
+        </li>
+      {% else %}
+        <li>
+          <a class="nav-link link-light" href="{% url 'users:login' %}">Войти</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-light" href="{% url 'users:signup' %}">Регистрация</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
