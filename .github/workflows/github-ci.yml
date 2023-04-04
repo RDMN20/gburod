@@ -29,4 +29,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /home/deploy/docker/project_oncochr
-            sh docker-run.sh
+            sudo sh docker-run.sh
