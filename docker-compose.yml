@@ -27,11 +27,6 @@ services:
       TZ: UTC
       PGTZ: UTC
 
-#  build:
-#    context: ./
-#    dockerfile: Dockerfile
-#    command: sh -c 'set -ex && /app/bin/xpaste db create && /app/bin/xpaste db migrate && /app/bin/xpaste'
-
   openresty:
     build: .
     ports:
