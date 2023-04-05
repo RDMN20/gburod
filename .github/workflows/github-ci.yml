@@ -14,7 +14,8 @@ jobs:
 
       - name: Push Docker images to registry
         run: |
-          docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest -f- ./gburod < ./gburod/Dockerfile &&
+          #docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest -f- ./gburod < ./gburod/Dockerfile &&
+          docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest -f ./gburod/Dockerfile &&
           echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin &&
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest
 
