@@ -16,7 +16,7 @@ jobs:
         run: |
           docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest -f- ./gburod < ./gburod/Dockerfile &&
           echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin &&
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest
 
       - name: Deploy to server
         uses: appleboy/ssh-action@master
