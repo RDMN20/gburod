@@ -4,6 +4,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/
+COPY .env /usr/src/app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./gburod_site /usr/src/app/
