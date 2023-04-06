@@ -66,6 +66,9 @@ class Department(models.Model):
         verbose_name='описание отделения',
         blank=True,
     )
+    add_rate = models.BooleanField(
+        verobose_name='Добавить рейтинг'
+    )
 
     class Meta:
         verbose_name = 'Отделение'

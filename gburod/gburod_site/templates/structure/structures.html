@@ -35,18 +35,19 @@
                     Должность: {{ persona.seat }}
                     <br>
                     {% if persona.academic is not None and persona.academic is not False %}
-                    Ученная степень: {{ persona.academic }}
-                    <br>
+                      Ученная степень: {{ persona.academic }}
+                      <br>
                     {% endif %}
                     Отделение: {{ persona.department }}
                     <br>
-                  {% if persona.speciality is not None %}
-                    {{ persona.speciality }}
-                  {% endif %}
+                    {% if persona.speciality is not None %}
+                      {{ persona.speciality }}
+                    {% endif %}
                   </p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}" class="">Подробно</a></small>
+                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}"
+                                               class="">Подробно</a></small>
                 </div>
               </div>
               {% if forloop.counter|divisibleby:3 and not forloop.last %}
@@ -54,15 +55,22 @@
                 </div>
                 <div class="row">
                 <div class="card-deck">
+              {% elif forloop.counter|devisibleby:0 %}
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
               {% endif %}
             {% endfor %}
             </div>
             </div>
       </div>
     </div>
-  <div class="row">
-    {% include 'includes/paginator.html' %}
-  </div>
-  <br>
+    <div class="row">
+      {% include 'includes/paginator.html' %}
+    </div>
+    <br>
   </div>
 {% endblock %}
