@@ -31,7 +31,7 @@ def depart_detail(request, department_id):
     depart = Department.objects.all()
     departs = get_object_or_404(Department, id=department_id)
     current_page_id = department_id
-    personas = Persona.objects.filter(department=departs)
+    personas = departs.persona.select_related('department',) # Persona.objects.filter(department=departs)
     context = {
         'current_page_id': current_page_id,
         'depart': depart,
