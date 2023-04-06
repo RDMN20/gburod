@@ -67,6 +67,7 @@ class Department(models.Model):
         blank=True,
     )
     add_rate = models.BooleanField(
+        default=False,
         verbose_name='Добавить рейтинг',
     )
 
