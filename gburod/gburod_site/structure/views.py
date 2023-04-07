@@ -1,4 +1,6 @@
 from django.conf import settings
+from django.contrib import messages
+from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
 from django.db.models import Avg
 from django.contrib.auth.decorators import login_required
@@ -49,9 +51,14 @@ def persona_detail(request, persona_id):
     if request.method == 'POST':
         form = RatingForm(request.POST)
         if form.is_valid():
-            score = form.cleaned_data['score']
-            Rating.objects.create(persona=persona, score=score)
-            return redirect('structure:persona_detail', persona_id=persona_id)
+            try:
+                score = form.cleaned_data['score']
+                Rating.objects.create(persona=persona, score=score, author=request.user)
+                messages.success(request, 'Рейтинг успешно сохранен')
+                return redirect('structure:persona_detail', persona_id=persona_id)
+            except ValidationError as e:
+                messages.error(request, e.message)
+            # messages.error(request, 'Вы уже поставили рейтинг')
     else:
         form = RatingForm()
     context = {
@@ -63,6 +70,7 @@ def persona_detail(request, persona_id):
         'form': form,
     }
     return render(request, template, context)
+
 
 def persona_qr_detail(request, persona_code):
     template = 'structure/persona_detail.html'
@@ -87,6 +95,7 @@ def persona_qr_detail(request, persona_code):
         'form': form,
     }
     return render(request, template, context)
+
 
 @login_required
 def add_comment(request, persona_id):
