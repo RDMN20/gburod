@@ -207,7 +207,7 @@ class Rating(models.Model):
 
     def save(self, *args, **kwargs):
         if Rating.objects.filter(persona=self.persona, author=self.author).exists():
-            raise ValidationError('Вы уже пооставили рейтинг')
+            raise ValidationError('Вы уже поставили оценку')
         super(Rating, self).save(*args, **kwargs)
 
     def __str__(self):
