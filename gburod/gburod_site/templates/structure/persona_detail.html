@@ -30,7 +30,7 @@
           {% if persona.biography %}
             <p class="card-text">{{ persona.biography }}</p>
           {% endif %}
-          {% if persona.department.add_rate == True %}
+          {% if persona.department.adding_rate == True %}
             <p><strong>Рейтинг:</strong> {{ average_rating|floatformat:2 }}</p>
             <form method="POST">
               {% csrf_token %}
@@ -48,13 +48,20 @@
                    id="fifth"></i>
               </div>
               <hr>
+              {% if messages %}
+                <ul class="messages list-unstyled">
+                  {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
               {% if user.is_authenticated %}
                 <div class="d-flex justify-content-center">
                   <button type="submit" class="btn btn-primary">Добавить рейтинг</button>
                 </div>
               {% endif %}
             </form>
-            <div id="confirm-box"></div>
+
             </div>
           {% else %}
             </div>

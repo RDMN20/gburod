@@ -1,8 +1,9 @@
 from django.contrib.auth import get_user_model
+from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.db.models import UniqueConstraint, CheckConstraint, Q, F
 from django.db import models
 from django.db.models import Avg
-
 
 User = get_user_model()
 
@@ -66,7 +67,7 @@ class Department(models.Model):
         verbose_name='описание отделения',
         blank=True,
     )
-    add_rate = models.BooleanField(
+    adding_rate = models.BooleanField(
         default=False,
         verbose_name='Добавить рейтинг',
     )
@@ -177,6 +178,12 @@ class Rating(models.Model):
         verbose_name='Сотрудник',
         help_text='Поставьте рейтинг от 1 до 5',
     )
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='rating',
+        null=True,
+    )
     score = models.IntegerField(
         default=0.00,
         validators=[
@@ -189,8 +196,22 @@ class Rating(models.Model):
         verbose_name = 'Рейтинг'
         verbose_name_plural = 'Рейтинг'
 
+        constraints = [
+            UniqueConstraint(
+                fields=['persona', 'author'],
+                name='persona_author_unique'),
+            CheckConstraint(
+                check=~Q(persona=F('author')),
+                name='could_not_rating_itself')
+        ]
+
+    def save(self, *args, **kwargs):
+        if Rating.objects.filter(persona=self.persona, author=self.author).exists():
+            raise ValidationError('Вы уже поставили оценку')
+        super(Rating, self).save(*args, **kwargs)
+
     def __str__(self):
-        return f'{self.persona.first_name} {self.persona.last_name} Оценка: {self.score}'
+        return f'Сотруник: {self.persona.first_name} {self.persona.last_name} Оценка: {self.score} Автор: {self.author}'
 
 
 class Comment(models.Model):
