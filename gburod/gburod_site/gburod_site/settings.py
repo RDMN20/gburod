@@ -83,7 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gburod_site.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -130,18 +129,17 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
 if DEBUG:
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 else:
-  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#STATIC_ROOT = 'static/'
+# STATIC_ROOT = 'static/'
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
@@ -156,5 +154,3 @@ AMOUNT_POSTS_ONE_PAGE = 6
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'main-page:index'
 LOGOUT_REDIRECT_URL = 'main-page:index'
-
-
