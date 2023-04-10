@@ -1,48 +1,96 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-  <a href="{% url 'main-page:index' %}">
-    <img class="logos" src="{% static 'img/repubcancercenter.png' %}" alt="logo-image">
-  </a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-          data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse navbar-elements" id="navbarTogglerDemo02">
-    {#    {% with request.resolver_match.view_name as view_name %}#}
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">О нас</a>
-      </li>
-      <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
-          active{% endif %}">
-        <a class="nav-link " href="{% url 'structure:structures' %}">Структура</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
-          active{% endif %}" href="{% url 'paid_services:services' %}">Платные услуги</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}
-          active{% endif %}" href="{% url 'main-page:about' %}">Контакты</a>
-      </li>
-      {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="nav-link link-light" href="{% url 'users:logout' %}">Выйти</a>
-        </li>
-        <li class="nav-item link-light nav-link ">
-          <div>
-            Пользователь: {{ user.username }}
+<header>
+  <div class="">
+    <div class="row m-auto">
+      <div class="col-10 col-sm-8 col-md-4 col-xl-3">
+        <a href="{% url 'main-page:index' %}">
+          <img class="logos" src="{% static 'img/repubcancercenter.png' %}" alt="logo-image">
+        </a>
+      </div>
+      <div class="col-sm-1 col-xl-2">
+        {# empty div #}
+      </div>
+      <div class="col-6 col-md-2 p-3">
+        <div class="header-info-item item1">
+          <div class="header-info-item-text">
+            <i class="fas fa-map-marker-alt"></i>
+            364029, г. Грозный
+            <br>
+            ул. Леонова, 81
+            <br>
+            <a href="{% url 'main-page:about' %}">Схема проезда</a>
           </div>
-        </li>
-      {% else %}
-        <li>
-          <a class="nav-link link-light" href="{% url 'users:login' %}">Войти</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-light" href="{% url 'users:signup' %}">Регистрация</a>
-        </li>
-      {% endif %}
-    </ul>
+        </div>
+      </div>
+      <div class="col-6 col-md-2  p-3">
+        <div class="header-info-desc-span">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clock"
+               viewBox="0 0 16 16">
+            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+          </svg>
+          Режим работы
+        </div>
+        <div class="header-info-desc-b">8:30 - 17:00</div>
+        <div class="header-info-desc-span">выходные:</div>
+        <div class="header-info-link-span-2">суббота, воскресенье</div>
+      </div>
+      <div class="col-6 col-md-2 col-lg-3 p-3">
+        <div class="header-info-desc-span">
+          <i class="fas fa-phone"></i>
+          Колл-центр:
+        </div>
+        <div class="header-info-desc-b">+7 (938) 020-33-33</div>
+        <div class="header-info-desc-span">режим приема звонков:</div>
+        <div class="header-info-link-span-2">с 8:45 до 17:00 по будням</div>
+      </div>
+    </div>
+    <div class="header-info-item-2 row justify-content-end">
+      <div class="m-2">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo02"
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-elements" id="navbarTogglerDemo02">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">О диспансере</a>
+              </li>
+              <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
+          active{% endif %}">
+                <a class="nav-link" href="{% url 'structure:structures' %}">Структура</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
+          active{% endif %}" href="{% url 'paid_services:services' %}">Платные услуги</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'about' %}
+          active{% endif %}" href="{% url 'main-page:about' %}">Контакты</a>
+              </li>
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="{% url 'users:logout' %}">Выйти</a>
+                </li>
+                <li class="nav-item link-light nav-link ">
+                  <div>
+                    Пользователь: {{ user.username }}
+                  </div>
+                </li>
+              {% else %}
+                <li>
+                  <a class="nav-link link-light" href="{% url 'users:login' %}">Войти</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="{% url 'users:signup' %}">Регистрация</a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
-</nav>
+</header>
