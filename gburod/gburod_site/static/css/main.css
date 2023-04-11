@@ -1,92 +1,96 @@
 .fakeimg {
-    height: 200px;
-    width: auto;
-    background: #aaa;
+  height: 200px;
+  width: auto;
+  background: #aaa;
 }
 
 .logos {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 400px) {
-    body {
-        min-width: 400px !important;
-    }
+  body {
+    min-width: 400px !important;
+  }
 }
 
 .navbar-elements {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .checked {
-    color: orange;
+  color: orange;
 }
 
 .raiting-btn {
-    background-color: inherit !important;
-    border: 0 !important;
+  background-color: inherit !important;
+  border: 0 !important;
 }
 
 .rating .fa-star:hover ~ .fa-star {
-    color: black;
+  color: black;
 }
 
 .header-info-item-2 {
-    background-color: #87CEEB;
+  background-color: #87ceeb;
 }
 
 .header-info-item-2 a.nav-link {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 li a.active {
-    font-weight: bold;
-    color: #000000;
+  font-weight: bold;
+  color: #000000;
 }
 
 .header-info-desc-span {
-    font-size: 12px;
-    color: #7d7d7d;
+  font-size: 12px;
+  color: #7d7d7d;
 }
 
 .header-info-desc-b {
-    font-weight: bold;
-    margin-bottom: 3px;
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 
 .header-info-link-span-2 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .header-info-item-text {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 div.banner-content-title {
-    font-size: 46px;
-    line-height: 60px;
-    color: white;
-    margin-bottom: 21px;
+  font-size: 46px;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 21px;
 }
 
 .banner-content-desc {
-    font-size: 18px;
-    line-height: 28px;
-    color: white;
-    margin-bottom: 44px;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  margin-bottom: 44px;
 }
 
 footer {
-    background-color: #4682B4 !important;
-    height: 110px;
-    color: #eeeeee;
+  background-color: #4682b4 !important;
+  height: 110px;
+  color: #eeeeee;
+}
+
+.container {
+  background-color: transparent;
 }

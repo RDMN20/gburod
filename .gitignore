@@ -115,6 +115,7 @@ env.bak/
 venv.bak/
 
 gburod/gburod_site/personnels/migrations/
+gburod/gburod_site/gburod_site/settings
 
 # Spyder project settings
 .spyderproject
