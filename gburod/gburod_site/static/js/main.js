@@ -11,3 +11,5 @@ const stars = document.querySelectorAll('.rating .fa-star');
       }
     });
   });
+
+

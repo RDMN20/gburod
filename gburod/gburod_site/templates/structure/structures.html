@@ -5,8 +5,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-auto py-5">
-        <h2>Сотрудники организации</h2>
-        <br>
+        <h2>Структура ГБУ "Республиканского онкологического диспансера"</h2>
       </div>
     </div>
     <div class="row">
@@ -21,47 +20,40 @@
         </div>
       </div>
       <div class="col-md-9">
-        <div class="row">
-          <div class="card-deck">
-            {% for persona in page_obj %}
-              <div class="card p-0 mb-3">
-                {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
-                  <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
-                {% endthumbnail %}
-                <div class="card-body">
-                  <h5
-                    class="card-title">{{ persona.first_name }} {{ persona.last_name }} {{ persona.patronymic_name }}</h5>
-                  <p class="card-text">
-                    Должность: {{ persona.seat }}
-                    <br>
-                    {% if persona.academic is not None and persona.academic is not False %}
-                      Ученная степень: {{ persona.academic }}
-                      <br>
-                    {% endif %}
-                    Отделение: {{ persona.department }}
-                    <br>
-                    {% if persona.speciality is not None %}
-                      {{ persona.speciality }}
-                    {% endif %}
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}"
-                                               class="">Подробно</a></small>
-                </div>
-              </div>
-              {% if forloop.counter|divisibleby:3 and not forloop.last %}
-                </div>
-                </div>
-                <div class="row">
-                <div class="card-deck">
-              {% endif %}
-            {% endfor %}
-            </div>
-            </div>
+        <ul>
+          <li>Администрация</li>
+        </ul>
+        <h5>Поликлиника</h5>
+        <ul>
+          <li>Регистратура</li>
+          <li>Колл-центр</li>
+          <li>Поликлиническое отделение</li>
+          <li>Организационно-методический отдел</li>
+        </ul>
+        <h5>Стационар</h5>
+        <ul>
+          <li>Приемное отделение</li>
+          <li>Дневной стационар</li>
+          <li>Хирургическое отделение №1</li>
+          <li>Хирургическое отделение №2</li>
+          <li>Хирургическое отделение №3</li>
+          <li>Химиотерапевтическое отделение №1</li>
+          <li>Химиотерапевтическое отделение №2</li>
+          <li>Отделение паллиативной медицинской помощи</li>
+          <li>Отделение радиотерапии</li>
+          <li>Операционный блок</li>
+          <li>Отделение анестезиологии-реанимации и интенсивной терапии</li>
+        </ul>
+        <h5>Лечебно-диагностические отделения, лаборатории</h5>
+        <ul>
+          <li>Отделение лучевой диагностики</li>
+          <li>Клинико-диагностическая лаборатория</li>
+          <li>Цитологическая лаборатория</li>
+          <li>Отделение внутрипросветной эндоскопической диагностики</li>
+        </ul>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       {% include 'includes/paginator.html' %}
     </div>
     <br>

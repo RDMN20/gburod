@@ -9,21 +9,19 @@ from django.shortcuts import render, get_object_or_404, redirect
 from personnels.forms import RatingForm, CommentForm
 from personnels.models import Persona, Department, Rating, Comment
 
-# from forms import CommentForm
-
 
 def get_page_obj(posts, page_number):
+    """Paginator"""
     paginator = Paginator(posts, settings.AMOUNT_POSTS_ONE_PAGE)
     return paginator.get_page(page_number)
 
 
 def structures(request):
+    """Страница структура"""
     depart = Department.objects.all()
-    stuff = Persona.objects.filter(department__slug='administration')
     template = 'structure/structures.html'
     context = {
         'depart': depart,
-        'page_obj': get_page_obj(stuff, request.GET.get('page')),
     }
     return render(request, template, context)
 
@@ -33,7 +31,7 @@ def depart_detail(request, department_id):
     depart = Department.objects.all()
     departs = get_object_or_404(Department, id=department_id)
     current_page_id = department_id
-    personas = departs.persona.select_related('department',) # Persona.objects.filter(department=departs)
+    personas = departs.persona.select_related('department', )
     context = {
         'current_page_id': current_page_id,
         'depart': depart,
@@ -58,7 +56,6 @@ def persona_detail(request, persona_id):
                 return redirect('structure:persona_detail', persona_id=persona_id)
             except ValidationError as e:
                 messages.error(request, e.message)
-            # messages.error(request, 'Вы уже поставили рейтинг')
     else:
         form = RatingForm()
     context = {
@@ -112,5 +109,3 @@ def add_comment(request, persona_id):
 def ambulant(request):
     template = 'structure/ambulant.html'
     return render(request, template)
-
-
