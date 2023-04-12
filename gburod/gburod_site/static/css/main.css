@@ -71,19 +71,19 @@ li a.active {
     font-size: 13px;
 }
 
-div.banner-content-title {
-    font-size: 46px;
-    line-height: 60px;
-    color: white;
-    margin-bottom: 21px;
-}
+/*div.banner-content-title {*/
+/*    font-size: 46px;*/
+/*    line-height: 60px;*/
+/*    color: white;*/
+/*    margin-bottom: 21px;*/
+/*}*/
 
-.banner-content-desc {
-    font-size: 18px;
-    line-height: 28px;
-    color: white;
-    margin-bottom: 44px;
-}
+/*.banner-content-desc {*/
+/*    font-size: 18px;*/
+/*    line-height: 28px;*/
+/*    color: white;*/
+/*    margin-bottom: 44px;*/
+/*}*/
 
 footer {
     background-color: #4682B4 !important;
