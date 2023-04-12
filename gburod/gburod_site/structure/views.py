@@ -27,7 +27,7 @@ def structures(request):
 
 
 def depart_detail(request, department_id):
-    template = 'structure/structures.html'
+    template = 'structure/department_detail.html'
     depart = Department.objects.all()
     departs = get_object_or_404(Department, id=department_id)
     current_page_id = department_id
