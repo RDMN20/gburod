@@ -1,26 +1,35 @@
 {% extends "base.html" %}
-{% block title %}Стуктура{% endblock title %}
+{% block title %} {{ depart.title }}{% endblock title %}
 {% block content %}
   {% load thumbnail %}
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-auto">
-        <h2>Сотрудники организации</h2>
+
+      <div class="col-auto py-5">
+        <h2>{{ depart.title }}</h2>
         <br>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <div class="depart-col d-flex flex-column">
-          <ul class="list-inline">
-            {% for depart in depart|dictsort:"title" %}
-              <li><a class="{% if depart.id == current_page_id %}
-          active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a></li>
-            {% endfor %}
-          </ul>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+              Структура
+            </button>
+            <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenu2">
+              {% for depart in departs|dictsort:"title" %}
+                <li>
+                  <a class="{% if depart.id == current_page_id %}
+                    active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9 p-0">
         <div class="row">
           <div class="card-deck">
             {% for persona in page_obj %}
@@ -35,18 +44,20 @@
                     Должность: {{ persona.seat }}
                     <br>
                     {% if persona.academic is not None and persona.academic is not False %}
-                    Ученная степень: {{ persona.academic }}
-                    <br>
+                      Ученная степень: {{ persona.academic }}
+                      <br>
                     {% endif %}
                     Отделение: {{ persona.department }}
                     <br>
-                  {% if persona.speciality is not None %}
-                    {{ persona.speciality }}
-                  {% endif %}
+                    {% if persona.speciality is not None %}
+                      {{ persona.speciality }}
+                    {% endif %}
                   </p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}" class="">Подробно</a></small>
+                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}"
+                                               class="">Подробно</a></small>
+
                 </div>
               </div>
               {% if forloop.counter|divisibleby:3 and not forloop.last %}
@@ -60,9 +71,9 @@
             </div>
       </div>
     </div>
-  <div class="row justify-content-center">
-    {% include 'includes/paginator.html' %}
-  </div>
-  <br>
+    <div class="row justify-content-center">
+      {% include 'includes/paginator.html' %}
+    </div>
+    <br>
   </div>
 {% endblock %}

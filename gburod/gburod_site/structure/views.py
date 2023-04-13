@@ -18,23 +18,23 @@ def get_page_obj(posts, page_number):
 
 def structures(request):
     """Страница структура"""
-    depart = Department.objects.all()
+    departs = Department.objects.all()
     template = 'structure/structures.html'
     context = {
-        'depart': depart,
+        'departs': departs,
     }
     return render(request, template, context)
 
 
 def depart_detail(request, department_id):
     template = 'structure/department_detail.html'
-    depart = Department.objects.all()
-    departs = get_object_or_404(Department, id=department_id)
+    departs = Department.objects.all()
+    depart = get_object_or_404(Department, id=department_id)
     current_page_id = department_id
-    personas = departs.persona.select_related('department', )
+    personas = depart.persona.select_related('department', )
     context = {
         'current_page_id': current_page_id,
-        'depart': depart,
+        'departs': departs,
         'page_obj': get_page_obj(personas, request.GET.get('page')),
     }
     return render(request, template, context)
