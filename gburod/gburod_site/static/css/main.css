@@ -1,3 +1,4 @@
+
 .fakeimg {
     height: 200px;
     width: auto;
@@ -13,6 +14,10 @@
     body {
         min-width: 400px !important;
     }
+}
+
+.navbar {
+    background-color: #87CEEB;
 }
 
 .navbar-elements {
@@ -71,22 +76,19 @@ li a.active {
     font-size: 13px;
 }
 
-div.banner-content-title {
-    font-size: 46px;
-    line-height: 60px;
-    color: white;
-    margin-bottom: 21px;
+.btn.btn-secondary {
+    background-color: #87CEEB;
+    color: black;
 }
 
-.banner-content-desc {
-    font-size: 18px;
-    line-height: 28px;
-    color: white;
-    margin-bottom: 44px;
+a {
+    text-decoration: none;
 }
 
-footer {
+footer.footer {
     background-color: #4682B4 !important;
-    height: 110px;
+    height: 100px;
     color: #eeeeee;
 }
+
+
