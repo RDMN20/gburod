@@ -4,7 +4,6 @@
   {% load thumbnail %}
   <div class="container">
     <div class="row justify-content-center">
-
       <div class="col-auto py-5">
         <h2>{{ depart.title }}</h2>
         <br>
@@ -56,8 +55,8 @@
                 </div>
                 <div class="card-footer">
                   <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}"
-                                               class="">Подробно</a></small>
-
+                                               class="">Подробно</a>
+                  </small>
                 </div>
               </div>
               {% if forloop.counter|divisibleby:3 and not forloop.last %}
@@ -69,11 +68,11 @@
             {% endfor %}
             </div>
             </div>
+        <div class="row justify-content-center">
+          {% include 'includes/paginator.html' %}
+        </div>
       </div>
+      <br>
     </div>
-    <div class="row justify-content-center">
-      {% include 'includes/paginator.html' %}
-    </div>
-    <br>
   </div>
 {% endblock %}
