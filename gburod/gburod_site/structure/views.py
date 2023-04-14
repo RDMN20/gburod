@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.db.models import Avg
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
+from decimal import Decimal
 
 from personnels.forms import RatingForm, CommentForm
 from personnels.models import Persona, Department, Rating, Comment
@@ -29,11 +30,12 @@ def structures(request):
 def depart_detail(request, department_id):
     template = 'structure/department_detail.html'
     departs = Department.objects.all()
-    depart = get_object_or_404(Department, id=department_id)
+    department = get_object_or_404(departs, id=department_id)
     current_page_id = department_id
-    personas = depart.persona.select_related('department', )
+    personas = department.persona.select_related('department', )
     context = {
         'current_page_id': current_page_id,
+        'department': department,
         'departs': departs,
         'page_obj': get_page_obj(personas, request.GET.get('page')),
     }
@@ -53,6 +55,8 @@ def persona_detail(request, persona_id):
                 score = form.cleaned_data['score']
                 Rating.objects.create(persona=persona, score=score, author=request.user)
                 messages.success(request, 'Рейтинг успешно сохранен')
+                persona.avg_rating = average_rating
+                persona.save()
                 return redirect('structure:persona_detail', persona_id=persona_id)
             except ValidationError as e:
                 messages.error(request, e.message)
@@ -80,6 +84,8 @@ def persona_qr_detail(request, persona_code):
         if form.is_valid():
             score = form.cleaned_data['score']
             Rating.objects.create(persona=persona, score=score)
+            persona.avg_rating = average_rating
+            persona.save()
             return redirect('structure:persona_detail', persona_id=persona.id)
     else:
         form = RatingForm()
