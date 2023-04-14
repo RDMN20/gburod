@@ -55,10 +55,14 @@
                     <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
                   {% endif %}
                 </div>
-
                 <div class="card-footer">
-                  <small class="text-muted"><a href="{% url 'structure:persona_detail' persona.pk %}"
-                                               class="">Подробно</a></small>
+                  <small class="text-muted">
+                    <a
+                      href="{% url 'structure:persona_detail' persona.pk %}"
+                      class="">
+                      Подробно
+                    </a>
+                  </small>
                 </div>
               </div>
               {% if forloop.counter|divisibleby:3 and not forloop.last %}
@@ -76,6 +80,5 @@
         <br>
       </div>
     </div>
-
   </div>
 {% endblock %}
