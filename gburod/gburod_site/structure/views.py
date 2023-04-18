@@ -82,11 +82,15 @@ def persona_qr_detail(request, persona_code):
     if request.method == 'POST':
         form = RatingForm(request.POST)
         if form.is_valid():
-            score = form.cleaned_data['score']
-            Rating.objects.create(persona=persona, score=score)
-            persona.avg_rating = average_rating
-            persona.save()
-            return redirect('structure:persona_detail', persona_id=persona.id)
+            try:
+                score = form.cleaned_data['score']
+                Rating.objects.create(persona=persona, score=score, author=request.user)
+                messages.success(request, 'Рейтинг успешно сохранен')
+                persona.avg_rating = average_rating
+                persona.save()
+                return redirect('structure:persona_detail', persona_id=persona.id)
+            except ValidationError as e:
+                messages.error(request, e.message)
     else:
         form = RatingForm()
     context = {
