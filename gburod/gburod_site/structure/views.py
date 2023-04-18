@@ -46,7 +46,7 @@ def persona_detail(request, persona_id):
     template = 'structure/persona_detail.html'
     persona = Persona.objects.get(id=persona_id)
     ratings = persona.rating.all()
-    average_rating = ratings.aggregate(Avg('score'))['score__avg'] or 0
+    average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
     persona.avg_rating = average_rating
     persona.save()
     comments = persona.comments.select_related('author')
@@ -77,7 +77,7 @@ def persona_qr_detail(request, persona_code):
     template = 'structure/persona_detail.html'
     persona = Persona.objects.get(persona_code=persona_code)
     ratings = persona.rating.all()
-    average_rating = ratings.aggregate(Avg('score'))['score__avg'] or 0
+    average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
     persona.avg_rating = average_rating
     persona.save()
     comments = persona.comments.select_related('author')
