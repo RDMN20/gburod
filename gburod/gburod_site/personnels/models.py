@@ -155,7 +155,7 @@ class Persona(models.Model):
     def update_average_rating(self):
         ratings = self.rating.all()
         if ratings:
-            average_rating = round(ratings.aggregate(Avg('score'))['score__avg'])
+            average_rating = round(ratings.aggregate(Avg('score'))['score__avg'], 2)
             self.average_rating = average_rating
             self.save()
         else:
