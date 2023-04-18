@@ -147,7 +147,7 @@ class Persona(models.Model):
         help_text='Средний рейтинг сотрудника'
     )
     persona_code = models.IntegerField(
-        blank=False,
+        blank=True,
         null=True,
         verbose_name='код сотрудника',
     )
