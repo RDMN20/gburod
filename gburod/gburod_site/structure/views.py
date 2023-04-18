@@ -47,6 +47,8 @@ def persona_detail(request, persona_id):
     persona = Persona.objects.get(id=persona_id)
     ratings = persona.rating.all()
     average_rating = ratings.aggregate(Avg('score'))['score__avg'] or 0
+    persona.avg_rating = average_rating
+    persona.save()
     comments = persona.comments.select_related('author')
     if request.method == 'POST':
         form = RatingForm(request.POST)
@@ -55,8 +57,6 @@ def persona_detail(request, persona_id):
                 score = form.cleaned_data['score']
                 Rating.objects.create(persona=persona, score=score, author=request.user)
                 messages.success(request, 'Рейтинг успешно сохранен')
-                persona.avg_rating = average_rating
-                persona.save()
                 return redirect('structure:persona_detail', persona_id=persona_id)
             except ValidationError as e:
                 messages.error(request, e.message)
@@ -78,6 +78,8 @@ def persona_qr_detail(request, persona_code):
     persona = Persona.objects.get(persona_code=persona_code)
     ratings = persona.rating.all()
     average_rating = ratings.aggregate(Avg('score'))['score__avg'] or 0
+    persona.avg_rating = average_rating
+    persona.save()
     comments = persona.comments.select_related('author')
     if request.method == 'POST':
         form = RatingForm(request.POST)
@@ -86,8 +88,6 @@ def persona_qr_detail(request, persona_code):
                 score = form.cleaned_data['score']
                 Rating.objects.create(persona=persona, score=score, author=request.user)
                 messages.success(request, 'Рейтинг успешно сохранен')
-                persona.avg_rating = average_rating
-                persona.save()
                 return redirect('structure:persona_detail', persona_id=persona.id)
             except ValidationError as e:
                 messages.error(request, e.message)
