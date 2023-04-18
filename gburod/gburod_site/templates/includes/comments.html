@@ -20,11 +20,11 @@
   <div class="card my-4">
     <div class="card-body">
       <p>Чтобы оставить комментарий или рейтинг,
-        <a class="card-text" href="{% url 'users:login' %}">
+        <a class="card-text" href="{% url 'users:login' %}?next={{ request.path }}">
           войдите
         </a>
         или
-        <a class="" href="{% url 'users:signup' %}">
+        <a class="" href="{% url 'users:signup' %}?next={{ request.path }}">
           зарегистрируйтесь
         </a>
       </p>
