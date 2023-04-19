@@ -141,8 +141,8 @@ class Persona(models.Model):
     )
     avg_rating = models.DecimalField(
         default=0.00,
-        max_digits=3,
-        decimal_places=2,
+        max_digits=10,
+        decimal_places=3,
         editable=True,
         help_text='Средний рейтинг сотрудника'
     )
