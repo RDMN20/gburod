@@ -36,8 +36,11 @@
                   <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
                 {% endthumbnail %}
                 <div class="card-body">
-                  <h5
-                    class="card-title">{{ persona.first_name }} {{ persona.last_name }} {{ persona.patronymic_name }}</h5>
+                  <h5 class="card-title">
+                    {{ persona.first_name }}
+                    {{ persona.last_name }}
+                    {{ persona.patronymic_name }}
+                  </h5>
                   <p class="card-text">
                     Должность: {{ persona.seat }}
                     <br>
