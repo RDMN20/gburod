@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True  # os.getenv('DEBUG_STATUS')
+DEBUG = False  # os.getenv('DEBUG_STATUS')
 
 ALLOWED_HOSTS = ['*']
 
@@ -96,7 +96,7 @@ if DEBUG:
             'NAME': os.getenv('POSTGRES_DB'),
             'USER': os.getenv('POSTGRES_USER'),
             'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-            'HOST': 'db',
+            'HOST': 'localhost',
             'PORT': os.getenv('DB_PORT'),
         }
     }

@@ -28,6 +28,7 @@ def structures(request):
 
 
 def depart_detail(request, department_id):
+    """Подробно об отделении"""
     template = 'structure/department_detail.html'
     departs = Department.objects.all()
     department = get_object_or_404(departs, id=department_id)
@@ -54,7 +55,7 @@ def persona_detail(request, persona_id):
         form = RatingForm(request.POST)
         if form.is_valid():
             try:
-                score = form.cleaned_data['score']
+                score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
                 Rating.objects.create(persona=persona, score=score, author=request.user)
                 messages.success(request, 'Рейтинг успешно сохранен')
                 return redirect('structure:persona_detail', persona_id=persona_id)
