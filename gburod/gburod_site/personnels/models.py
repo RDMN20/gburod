@@ -207,8 +207,8 @@ class Rating(models.Model):
                 fields=['persona', 'author'],
                 name='persona_author_unique'),
             # CheckConstraint(
-            #    check=~Q(persona=F('author')),
-            #    name='could_not_rating_itself')
+            #     check=~Q(persona=F('author')),
+            #     name='could_not_rating_itself')
         ]
 
     def save(self, *args, **kwargs):
