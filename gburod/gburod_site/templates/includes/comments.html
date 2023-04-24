@@ -1,7 +1,7 @@
 {% load user_filters %}
 {% if user.is_authenticated %}
   <div class="card my-4">
-    {% if persona.department_id == 2 %}
+    {% if persona.department.adding_rate == True %}
       <h5 class="card-header">Добавить комментарий:</h5>
       <div class="card-body">
         <form method="post" action="{% url 'structure:add_comment' persona.id %}">
