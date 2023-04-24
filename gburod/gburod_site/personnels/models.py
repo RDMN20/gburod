@@ -139,18 +139,18 @@ class Persona(models.Model):
         upload_to='persons/',
         blank=True,
     )
-    avg_rating = models.FloatField(
-        blank=True,
-        null=True,
-        default=None,
-    )
-    # avg_rating = models.DecimalField(
-    #     default=0.00,
-    #     max_digits=10,
-    #     decimal_places=3,
-    #     editable=True,
-    #     help_text='Средний рейтинг сотрудника'
+    # avg_rating = models.FloatField(
+    #     blank=True,
+    #     null=True,
+    #     default=None,
     # )
+    avg_rating = models.DecimalField(
+        default=0.00,
+        max_digits=5,
+        decimal_places=2,
+        editable=True,
+        help_text='Средний рейтинг сотрудника'
+    )
     persona_code = models.IntegerField(
         blank=True,
         null=True,
