@@ -31,7 +31,7 @@
             <p class="card-text">{{ persona.biography }}</p>
           {% endif %}
           {% if persona.department.adding_rate == True %}
-            <p><strong>Рейтинг:</strong> {{ average_rating|floatformat:2 }}</p>
+            <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
             <form method="POST">
               {% csrf_token %}
               <div class="rating">

@@ -163,6 +163,7 @@ class Persona(models.Model):
             self.save()
 
     class Meta:
+        ordering = ['created_at']
         verbose_name = 'Сотрудник'
         verbose_name_plural = 'Сотрудники'
 
