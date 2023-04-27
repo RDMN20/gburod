@@ -2,7 +2,7 @@
 {% block title %} {{ depart.title }}{% endblock title %}
 {% block content %}
   {% load thumbnail %}
-  <div class="container">
+  <div class="px-5">
     <div class="row justify-content-center">
       <div class="col-auto py-5">
         <h2>{{ department.title }}</h2>
@@ -10,22 +10,14 @@
     </div>
     <div class="row">
       <div class="col-md-3">
-        <div class="depart-col d-flex flex-column">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-              Структура
-            </button>
-            <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenu2">
-              {% for depart in departs|dictsort:"title" %}
-                <li>
-                  <a class="{% if depart.id == current_page_id %}
+        <ul>
+          {% for depart in departs|dictsort:"title" %}
+            <li>
+              <a class="{% if depart.id == current_page_id %}
                     active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="col-md-9 p-0">
         <div class="row">
@@ -37,8 +29,8 @@
                 {% endthumbnail %}
                 <div class="card-body">
                   <h5 class="card-title">
-                    {{ persona.first_name }}
                     {{ persona.last_name }}
+                    {{ persona.first_name }}
                     {{ persona.patronymic_name }}
                   </h5>
                   <p class="card-text">
