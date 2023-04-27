@@ -43,6 +43,49 @@ def depart_detail(request, department_id):
     return render(request, template, context)
 
 
+# def get_persona_context(request, persona):
+#     ratings = persona.rating.all()
+#     average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
+#     persona.avg_rating = average_rating
+#     persona.save()
+#     comments = persona.comments.select_related('author')
+#     if request.method == 'POST':
+#         form = RatingForm(request.POST)
+#         if form.is_valid():
+#             try:
+#                 score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
+#                 Rating.objects.create(persona=persona, score=score, author=request.user)
+#                 messages.success(request, 'Рейтинг успешно сохранен')
+#                 return redirect('structure:persona_detail', persona_id=persona.id)
+#             except ValidationError as e:
+#                 messages.error(request, e.message)
+#     else:
+#         form = RatingForm()
+#     context = {
+#         'ratings': ratings,
+#         'average_rating': average_rating,
+#         'persona': persona,
+#         'comments': comments,
+#         'comment_form': CommentForm(),
+#         'form': form,
+#     }
+#     return context
+#
+#
+# def persona_detail(request, persona_id):
+#     template = 'structure/persona_detail.html'
+#     persona = Persona.objects.get(id=persona_id)
+#     context = get_persona_context(request, persona)
+#     return render(request, template, context)
+#
+#
+# def persona_qr_detail(request, persona_code):
+#     template = 'structure/persona_detail.html'
+#     persona = Persona.objects.get(persona_code=persona_code)
+#     context = get_persona_context(request, persona)
+#     return render(request, template, context)
+
+
 def persona_detail(request, persona_id):
     template = 'structure/persona_detail.html'
     persona = Persona.objects.get(id=persona_id)
@@ -86,7 +129,7 @@ def persona_qr_detail(request, persona_code):
         form = RatingForm(request.POST)
         if form.is_valid():
             try:
-                score = form.cleaned_data['score']
+                score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
                 Rating.objects.create(persona=persona, score=score, author=request.user)
                 messages.success(request, 'Рейтинг успешно сохранен')
                 return redirect('structure:persona_detail', persona_id=persona.id)

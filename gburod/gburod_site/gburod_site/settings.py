@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False  # os.getenv('DEBUG_STATUS')
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -111,15 +111,6 @@ else:
             'PORT': os.getenv('DB_PORT'),
         }
     }
-
-# База для тестов
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
