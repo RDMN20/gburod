@@ -55,7 +55,7 @@
           <div class="collapse navbar-collapse navbar-elements" id="navbarTogglerDemo02">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">О диспансере</a>
+                <a class="nav-link" href="{% url 'main-page:index' %}">О диспансере</a>
               </li>
               <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
           active{% endif %}">
