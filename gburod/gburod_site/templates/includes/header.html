@@ -2,14 +2,16 @@
 <header>
   <div class="">
     <div class="row m-auto">
-      <div class="col-10 col-sm-8 col-md-4 col-xl-3">
+      <div class="col-12 col-md-4 col-xl-2 pt-2">
         <a href="{% url 'main-page:index' %}">
-          <img class="logos" src="{% static 'img/repubcancercenter.png' %}" alt="logo-image">
+          <img class="logos" src="{% static 'img/repubcancercenter2.png' %}" alt="logo-image">
         </a>
       </div>
-      <div class="col-sm-1 col-xl-2">
+      <div class="col-md-1 col-xl-2">
       </div>
-      <div class="col-6 col-md-2 p-3">
+       <div class="col-md-1 col-xl-2">
+      </div>
+      <div class="col-12 col-md-2 p-3">
         <div class="header-info-item item1">
           <div class="header-info-item-text">
             <i class="fas fa-map-marker-alt"></i>
@@ -21,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-2  p-3">
+      <div class="col-6 col-md-2 p-3">
         <div class="header-info-desc-span">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clock"
                viewBox="0 0 16 16">
@@ -34,7 +36,7 @@
         <div class="header-info-desc-span">выходные:</div>
         <div class="header-info-link-span-2">суббота, воскресенье</div>
       </div>
-      <div class="col-6 col-md-2 col-lg-3 p-3">
+      <div class="col-6 col-md-2 p-3">
         <div class="header-info-desc-span">
           <i class="fas fa-phone"></i>
           Колл-центр:
@@ -47,7 +49,7 @@
     <div class="header-info-item-2 row justify-content-end">
       <div class="m-2">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler navbar-toggler-right ml-2" type="button" data-toggle="collapse"
+          <button class="navbar-toggler navbar-toggler-right ml-3" type="button" data-toggle="collapse"
                   data-target="#navbarTogglerDemo02"
                   aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -59,13 +61,13 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link {% if request.path == '/structure/licenses/' %} active {% endif %}"
-                href="{% url 'structure:licenses' %}">
-                Лицензии
+                   href="{% url 'structure:licenses' %}">
+                  Документы
                 </a>
               </li>
               <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
           active{% endif %}">
-                <a class="nav-link" href="{% url 'structure:structures' %}">Структура</a>
+                <a class="nav-link {% if request.path == '/structure/' %} active {% endif %}" href="{% url 'structure:structures' %}">Структура</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
