@@ -3,84 +3,78 @@
 {% block content %}
   {% load thumbnail %}
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-auto py-5">
-        <h2>{{ department.title }}</h2>
+    <div class="px-5">
+      <div class="row justify-content-center">
+        <div class="col-auto py-5">
+          <h2>{{ department.title }}</h2>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="depart-col d-flex flex-column">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-              Структура
-            </button>
-            <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenu2">
-              {% for depart in departs|dictsort:"title" %}
-                <li>
-                  <a class="{% if depart.id == current_page_id %}
+      <div class="row">
+        <div class="col-md-3">
+          <ul>
+            {% for depart in departs|dictsort:"title" %}
+              <li>
+                <a class="{% if depart.id == current_page_id %}
                     active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-9 p-0">
-        <div class="row">
-          <div class="card-deck">
-            {% for persona in page_obj %}
-              <div class="card p-0 mb-3">
-                {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
-                  <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
-                {% endthumbnail %}
-                <div class="card-body">
-                  <h5 class="card-title">
-                    {{ persona.first_name }}
-                    {{ persona.last_name }}
-                    {{ persona.patronymic_name }}
-                  </h5>
-                  <p class="card-text">
-                    Должность: {{ persona.seat }}
-                    <br>
-                    {% if persona.academic is not None and persona.academic is not False %}
-                      Ученная степень: {{ persona.academic }}
-                      <br>
-                    {% endif %}
-                    Отделение: {{ persona.department }}
-                    <br>
-                    {% if persona.speciality is not None %}
-                      {{ persona.speciality }}
-                    {% endif %}
-                  </p>
-                  {% if persona.department.adding_rate == True %}
-                    <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
-                  {% endif %}
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">
-                    <a
-                      href="{% url 'structure:persona_detail' persona.pk %}"
-                      class="">
-                      Подробно
-                    </a>
-                  </small>
-                </div>
-              </div>
-              {% if forloop.counter|divisibleby:3 and not forloop.last %}
-                </div>
-                </div>
-                <div class="row">
-                <div class="card-deck">
-              {% endif %}
+              </li>
             {% endfor %}
-            </div>
-            </div>
-        <div class="row justify-content-center">
-          {% include 'includes/paginator.html' %}
+          </ul>
         </div>
-        <br>
+        <div class="col-md-9 p-0">
+          <div class="row">
+            <div class="card-deck">
+              {% for persona in page_obj %}
+                <div class="card p-0 mb-3">
+                  {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
+                    <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
+                  {% endthumbnail %}
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      {{ persona.last_name }}
+                      {{ persona.first_name }}
+                      {{ persona.patronymic_name }}
+                    </h5>
+                    <p class="card-text">
+                      Должность: {{ persona.seat }}
+                      <br>
+                      {% if persona.academic is not None and persona.academic is not False %}
+                        Ученная степень: {{ persona.academic }}
+                        <br>
+                      {% endif %}
+                      Отделение: {{ persona.department }}
+                      <br>
+                      {% if persona.speciality is not None %}
+                        {{ persona.speciality }}
+                      {% endif %}
+                    </p>
+                    {% if persona.department.adding_rate == True %}
+                      <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <a
+                        href="{% url 'structure:persona_detail' persona.pk %}"
+                        class="">
+                        Подробно
+                      </a>
+                    </small>
+                  </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="card-deck">
+                {% endif %}
+              {% endfor %}
+              </div>
+              </div>
+          <div class="row justify-content-center">
+            {% include 'includes/paginator.html' %}
+          </div>
+          <br>
+        </div>
       </div>
     </div>
   </div>
