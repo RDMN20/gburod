@@ -2,14 +2,15 @@
 <header>
   <div class="">
     <div class="row m-auto">
-      <div class="col-12 col-md-4 col-xl-2 pt-2">
+      <div class="col-12 col-md-2 py-3">
         <a href="{% url 'main-page:index' %}">
           <img class="logos" src="{% static 'img/repubcancercenter2.png' %}" alt="logo-image">
         </a>
       </div>
-      <div class="col-md-1 col-xl-2">
-      </div>
-       <div class="col-md-1 col-xl-2">
+      <div class="col-md-4 py-3 pl-0">
+        <div class="d-flex py-4 pl-0 gburod-docs justify-content-start">
+          ГБУ Республиканский онкологический диспансер
+        </div>
       </div>
       <div class="col-12 col-md-2 p-3">
         <div class="header-info-item item1">
@@ -67,7 +68,8 @@
               </li>
               <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
           active{% endif %}">
-                <a class="nav-link {% if request.path == '/structure/' %} active {% endif %}" href="{% url 'structure:structures' %}">Структура</a>
+                <a class="nav-link {% if request.path == '/structure/' %} active {% endif %}"
+                   href="{% url 'structure:structures' %}">Структура</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
@@ -76,6 +78,8 @@
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'about' %}
           active{% endif %}" href="{% url 'main-page:about' %}">Контакты</a>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
               </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
