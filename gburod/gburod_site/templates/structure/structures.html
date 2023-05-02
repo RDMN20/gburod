@@ -10,41 +10,16 @@
     </div>
     <div class="row">
       <div class="col-md-3">
-        <div class="depart-col d-flex flex-column">
-          {#          <div class="dropdown">#}
-          {#            <div class="dropdown-trigger">#}
-          {#              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">#}
-          {#                <span>DROPDOWN</span>#}
-          {#                <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span>#}
-          {#              </button>#}
-          {#            </div>#}
-          {#            <div class="dropdown-menu" id="dropdown-menu3" role="menu">#}
-          {#              <div class="dropdown-content">#}
-          {##}
-          {#                {% for depart in departs|dictsort:"title" %}#}
-          {#                  <a class="dropdown-item{% if depart.id == current_page_id %}#}
-          {#          active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>#}
-          {#                {% endfor %}#}
-          {##}
-          {#              </div>#}
-          {#            </div>#}
-          {#          </div>#}
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-              Структура
-            </button>
-            <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenu2">
-              {% for depart in departs|dictsort:"title" %}
-                <li>
-                  <a class="{% if depart.id == current_page_id %}
-                    active{% endif %}" href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
+        <ul>
+          {% for depart in departs|dictsort:"title" %}
+            <li>
+              <a class="{% if depart.id == current_page_id %}active{% endif %}"
+                 href="{% url 'structure:depart_detail' depart.id %}">
+                {{ depart.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="col-md-9 pt-1 my-css-test">
         <ul>

@@ -139,11 +139,6 @@ class Persona(models.Model):
         upload_to='persons/',
         blank=True,
     )
-    # avg_rating = models.FloatField(
-    #     blank=True,
-    #     null=True,
-    #     default=None,
-    # )
     avg_rating = models.DecimalField(
         default=0.00,
         max_digits=113,
