@@ -10,7 +10,6 @@
         <h3>
           Документы
         </h3>
-        <hr>
         <p>
           ГБУ "Республиканского онкологического диспансера"
         </p>
@@ -33,10 +32,26 @@
                 <h6 class="card-title">{{ license.title }}</h6>
               </div>
               <div class="card-body">
-                <a href="{{ license.file.url }}">
+                <a href="{{ license.file.url }}" data-toggle="modal" data-target="#pdfModal{{ license.pk }}">
                   <i class="fa fa-file-pdf-o"></i>
                   <p>открыть</p>
                 </a>
+              </div>
+            </div>
+            <div class="modal fade" id="pdfModal{{ license.pk }}" tabindex="-1" role="dialog"
+                 aria-labelledby="pdfModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">{{ license.title }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <embed src="{{ license.file.url }}" type="application/pdf" width="100%" height="600px">
+                  </div>
+                </div>
               </div>
             </div>
             {% empty %}
