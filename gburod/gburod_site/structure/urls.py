@@ -15,4 +15,7 @@ urlpatterns = [
     ),
     path('persona_detail/<int:persona_id>/comment/', views.add_comment, name='add_comment'),
     path('licenses/', views.licenses, name='licenses'),
+    # path('licenses/<int:pk>/preview/', LicensePDFView.as_view(), name='license_preview'),
+    # path('licenses/<int:license_id>/preview/', views.license_preview, name='license_preview'),
+    # path('licenses/<int:pk>/', views.license_preview, name='license_preview'),
 ]
