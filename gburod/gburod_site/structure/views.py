@@ -56,6 +56,14 @@ def licenses(request):
     return render(request, template, context)
 
 
+def license_preview(request, pk):
+    license_pr = get_object_or_404(License, pk=pk)
+    context = {
+        'license': license_pr,
+    }
+    return render(request, 'structure/license_preview.html', context)
+
+
 def persona_detail(request, persona_id):
     template = 'structure/persona_detail.html'
     persona = Persona.objects.get(id=persona_id)
