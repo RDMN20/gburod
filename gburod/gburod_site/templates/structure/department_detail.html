@@ -24,6 +24,7 @@
           <div class="row">
             <div class="card-deck">
               {% for persona in page_obj %}
+                {% if persona.published %}
                 <div class="card p-0 mb-3">
                   {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
                     <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
@@ -66,6 +67,7 @@
                   </div>
                   <div class="row">
                   <div class="card-deck">
+                {% endif %}
                 {% endif %}
               {% endfor %}
               </div>
