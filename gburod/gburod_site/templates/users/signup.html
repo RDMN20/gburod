@@ -24,7 +24,7 @@
           <form method="post" action="{% url 'users:signup' %}">
             {% csrf_token %}
             {% for field in form %}
-              <div class="form-group row my-3">
+              <div class="form-group row mx-3 my-3">
                 <label for="field.id_for_label">
                   {{ field.label }}
                   {% if field.field.required %}
