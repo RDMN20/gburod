@@ -151,6 +151,10 @@ class Persona(models.Model):
         null=True,
         verbose_name='код сотрудника',
     )
+    published = models.BooleanField(
+        default=False,
+        verbose_name='Опубликовать',
+    )
 
     def update_average_rating(self):
         ratings = self.rating.all()
