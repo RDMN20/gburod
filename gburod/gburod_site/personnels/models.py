@@ -95,6 +95,24 @@ class Persona(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    education = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name='Образование',
+        help_text='Введите информацию об образовании'
+    )
+    qualification = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name='Квалификация',
+        help_text='Введите информацию о квалификации'
+    )
+    experience = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name='Опыт работы',
+        help_text='Введите информацию об опыте работы',
+    )
     seat = models.ForeignKey(
         Seat,
         related_name='persona',
