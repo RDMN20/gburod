@@ -11,7 +11,7 @@
         {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
           <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
         {% endthumbnail %}
-        <div class="card-body">
+        <div class="card-body m-4">
           <h5
             class="card-title">{{ persona.last_name }} {{ persona.first_name }} {{ persona.patronymic_name }}</h5>
           <p class="card-text">
@@ -29,6 +29,23 @@
           </p>
           {% if persona.biography %}
             <p class="card-text">{{ persona.biography }}</p>
+          {% endif %}
+          {% if persona.education %}
+            <p class="card-text">
+              <strong>Образование:</strong>
+              {{ persona.education }}
+            </p>
+          {% endif %}
+          {% if persona.qualification %}
+            <p class="card-text">
+              <strong>Квалификация:</strong>
+              {{ persona.qualification }}
+            </p>
+          {% endif %}
+          {% if persona.experience %}
+            <p class="card-text">
+              <strong>Опыт работы:</strong>
+              {{ persona.experience }}</p>
           {% endif %}
           {% if persona.department.adding_rate == True %}
             <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
