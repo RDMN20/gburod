@@ -8,6 +8,12 @@ from django.db.models import Avg
 User = get_user_model()
 
 
+def validate_unique_rating(value):
+    persona, device_id = value['persona'], value['device_id']
+    if Rating.objects.filter(persona=persona, device_id=device_id).exists():
+        raise ValidationError('Рейтинг уже существует для данного устройства')
+
+
 class CommonInfo(models.Model):
     name = models.CharField(
         max_length=250,
@@ -206,6 +212,7 @@ class Rating(models.Model):
         on_delete=models.CASCADE,
         related_name='rating',
         null=True,
+        blank=True,
     )
     score = models.IntegerField(
         default=0.00,
@@ -214,6 +221,12 @@ class Rating(models.Model):
             MinValueValidator(0),
         ]
     )
+    device_id = models.CharField(
+        max_length=255,
+        verbose_name='Уникальный идентификатор устройства',
+        null=True,
+        blank=True,
+    )
 
     class Meta:
         verbose_name = 'Рейтинг'
@@ -221,20 +234,24 @@ class Rating(models.Model):
 
         constraints = [
             UniqueConstraint(
-                fields=['persona', 'author'],
-                name='persona_author_unique'),
-            # CheckConstraint(
-            #     check=~Q(persona=F('author')),
-            #     name='could_not_rating_itself')
+                fields=['persona', 'device_id'],
+                name='persona_device_unique'),
+
         ]
 
     def save(self, *args, **kwargs):
-        if Rating.objects.filter(persona=self.persona, author=self.author).exists():
-            raise ValidationError('Вы уже поставили оценку')
-        super(Rating, self).save(*args, **kwargs)
+        self.full_clean()
+        super().save(*args, **kwargs)
+
+    # def save(self, *args, **kwargs):
+    #     if Rating.objects.filter(persona=self.persona, author=self.author).exists():
+    #         raise ValidationError('Вы уже поставили оценку')
+    #     super(Rating, self).save(*args, **kwargs)
 
     def __str__(self):
-        return f'Сотруник: {self.persona.first_name} {self.persona.last_name} Оценка: {self.score} Автор: {self.author}'
+        return f'Сотруник: {self.persona.first_name} {self.persona.last_name} ' \
+               f'Оценка: {self.score}' \
+               f' Автор: {self.author} {self.device_id} '
 
 
 class Comment(models.Model):
