@@ -77,7 +77,7 @@ def persona_detail(request, persona_id=None, persona_code=None):
     comments = persona.comments.select_related('author')
     if request.method == 'POST':
         form = RatingForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and request.recaptcha_is_valid:
             try:
                 score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
                 Rating.objects.create(persona=persona, score=score, author=request.user)
