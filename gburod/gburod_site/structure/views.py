@@ -64,29 +64,29 @@ def license_preview(request, pk):
     return render(request, 'structure/license_preview.html', context)
 
 
-def persona_detail(request, persona_id):
+def persona_detail(request, persona_id=None, persona_code=None):
     template = 'structure/persona_detail.html'
-    persona = Persona.objects.get(id=persona_id)
+    if persona_code:
+        persona = Persona.objects.get(persona_code=persona_code)
+    else:
+        persona = Persona.objects.get(id=persona_id)
     ratings = persona.rating.all()
     average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
     persona.avg_rating = average_rating
     persona.save()
     comments = persona.comments.select_related('author')
-    # device_id = request.META.get('REMOTE_ADDR')
-    device_id = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('HTTP_CLIENT_IP') or request.META.get(
-        'REMOTE_ADDR')
 
     if request.method == 'POST':
         form = RatingForm(request.POST)
         if form.is_valid() and request.recaptcha_is_valid:
             try:
                 score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
-                if Rating.objects.filter(persona=persona, device_id=device_id).exists():
+                if Rating.objects.filter(persona=persona).exists():
                     messages.error(request, 'Вы уже поставили оценку')
                 else:
-                    Rating.objects.create(persona=persona, score=score, device_id=device_id)
+                    Rating.objects.create(persona=persona, score=score)
                     messages.success(request, 'Рейтинг успешно сохранен')
-                return redirect('structure:persona_detail', persona_id=persona_id)
+                return redirect('structure:persona_detail', persona_id=persona.id)
             except ValidationError as e:
                 messages.error(request, e.args[0])
     else:

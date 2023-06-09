@@ -221,23 +221,10 @@ class Rating(models.Model):
             MinValueValidator(0),
         ]
     )
-    device_id = models.CharField(
-        max_length=255,
-        verbose_name='Уникальный идентификатор устройства',
-        null=True,
-        blank=True,
-    )
 
     class Meta:
         verbose_name = 'Рейтинг'
         verbose_name_plural = 'Рейтинг'
-
-        constraints = [
-            UniqueConstraint(
-                fields=['persona', 'device_id'],
-                name='persona_device_unique'),
-
-        ]
 
     def save(self, *args, **kwargs):
         self.full_clean()
@@ -251,7 +238,7 @@ class Rating(models.Model):
     def __str__(self):
         return f'Сотруник: {self.persona.first_name} {self.persona.last_name} ' \
                f'Оценка: {self.score}' \
-               f' Автор: {self.author} {self.device_id} '
+               f' Автор: {self.author}'
 
 
 class Comment(models.Model):
