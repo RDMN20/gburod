@@ -4,6 +4,9 @@
   {% load static %}
   <div class="container">
     <div class="row">
+      {% include 'includes/gosuslugi_widet.html' %}
+    </div>
+    <div class="row">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -11,7 +14,8 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 carousel-img-item" src="{% static 'img/Gorizontalnyy-banner.png' %}" alt="First slide">
+            <img class="d-block w-100 carousel-img-item" src="{% static 'img/Gorizontalnyy-banner.png' %}"
+                 alt="First slide">
             <div class="carousel-caption d-block text-left">
               <h5>Порядок приема граждан</h5>
               <p>
@@ -26,7 +30,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 carousel-img-item" src="{% static 'img/Gorizontalnyy-banner.jpg' %}" alt="Second slide">
+            <img class="d-block w-100 carousel-img-item" src="{% static 'img/Gorizontalnyy-banner.jpg' %}"
+                 alt="Second slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
