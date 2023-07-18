@@ -8,10 +8,10 @@ from django.db.models import Avg
 User = get_user_model()
 
 
-def validate_unique_rating(value):
-    persona, device_id = value['persona'], value['device_id']
-    if Rating.objects.filter(persona=persona, device_id=device_id).exists():
-        raise ValidationError('Рейтинг уже существует для данного устройства')
+# def validate_unique_rating(value):
+#     persona, device_id = value['persona'], value['device_id']
+#     if Rating.objects.filter(persona=persona, device_id=device_id).exists():
+#         raise ValidationError('Рейтинг уже существует для данного устройства')
 
 
 class CommonInfo(models.Model):
@@ -221,6 +221,7 @@ class Rating(models.Model):
             MinValueValidator(0),
         ]
     )
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Рейтинг'
@@ -230,15 +231,12 @@ class Rating(models.Model):
         self.full_clean()
         super().save(*args, **kwargs)
 
-    # def save(self, *args, **kwargs):
-    #     if Rating.objects.filter(persona=self.persona, author=self.author).exists():
-    #         raise ValidationError('Вы уже поставили оценку')
-    #     super(Rating, self).save(*args, **kwargs)
-
     def __str__(self):
-        return f'Сотруник: {self.persona.first_name} {self.persona.last_name} ' \
-               f'Оценка: {self.score}' \
-               f' Автор: {self.author}'
+        return (
+            f'Сотруник: {self.persona.first_name} {self.persona.last_name}'
+            f'Оценка: {self.score}'
+            f'Автор: {self.author}'
+        )
 
 
 class Comment(models.Model):

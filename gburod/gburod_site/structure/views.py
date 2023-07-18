@@ -1,15 +1,16 @@
+import datetime
+from django.utils import timezone
 from django.conf import settings
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
-from django.db.models import Avg
+from django.db.models import Avg, Count
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from decimal import Decimal
 
 from personnels.forms import RatingForm, CommentForm
 from personnels.models import Persona, Department, Rating, Comment
-
 from structure.models import License
 
 
@@ -35,7 +36,8 @@ def depart_detail(request, department_id):
     departs = Department.objects.all()
     department = get_object_or_404(departs, id=department_id)
     current_page_id = department_id
-    personas = department.persona.select_related('department', )
+    personas = department.persona.select_related('department', ).annotate(score_count=Count('rating'))
+
     context = {
         'current_page_id': current_page_id,
         'department': department,
@@ -65,6 +67,10 @@ def license_preview(request, pk):
 
 
 def persona_detail(request, persona_id=None, persona_code=None):
+    # Получаем текущее время
+    now = timezone.now()
+    last_minute = now - datetime.timedelta(seconds=60)
+
     template = 'structure/persona_detail.html'
     if persona_code:
         persona = Persona.objects.get(persona_code=persona_code)
@@ -81,45 +87,14 @@ def persona_detail(request, persona_id=None, persona_code=None):
         if form.is_valid() and request.recaptcha_is_valid:
             try:
                 score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
-                if Rating.objects.filter(persona=persona).exists():
-                    messages.error(request, 'Вы уже поставили оценку')
+                if Rating.objects.filter(persona=persona, created__gte=last_minute).exists():
+                    messages.error(request, 'Вы уже оценили персону в течение последней минуты')
                 else:
                     Rating.objects.create(persona=persona, score=score)
                     messages.success(request, 'Рейтинг успешно сохранен')
                 return redirect('structure:persona_detail', persona_id=persona.id)
             except ValidationError as e:
                 messages.error(request, e.args[0])
-    else:
-        form = RatingForm()
-    context = {
-        'ratings': ratings,
-        'average_rating': average_rating,
-        'persona': persona,
-        'comments': comments,
-        'comment_form': CommentForm(),
-        'form': form,
-    }
-    return render(request, template, context)
-
-
-def persona_qr_detail(request, persona_code):
-    template = 'structure/persona_detail.html'
-    persona = Persona.objects.get(persona_code=persona_code)
-    ratings = persona.rating.all()
-    average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
-    persona.avg_rating = average_rating
-    persona.save()
-    comments = persona.comments.select_related('author')
-    if request.method == 'POST':
-        form = RatingForm(request.POST)
-        if form.is_valid() and request.recaptcha_is_valid:
-            try:
-                score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
-                Rating.objects.create(persona=persona, score=score, author=request.user)
-                messages.success(request, 'Рейтинг успешно сохранен')
-                return redirect('structure:persona_detail', persona_id=persona.id)
-            except ValidationError as e:
-                messages.error(request, e.message)
     else:
         form = RatingForm()
     context = {
