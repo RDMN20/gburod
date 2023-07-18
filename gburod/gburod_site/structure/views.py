@@ -88,7 +88,7 @@ def persona_detail(request, persona_id=None, persona_code=None):
             try:
                 score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
                 if Rating.objects.filter(persona=persona, created__gte=last_minute).exists():
-                    messages.error(request, 'Вы уже оценили персону в течение последней минуты')
+                    messages.error(request, 'Вы уже оценили врача в течение последней минуты')
                 else:
                     Rating.objects.create(persona=persona, score=score)
                     messages.success(request, 'Рейтинг успешно сохранен')
