@@ -50,6 +50,7 @@
                     </p>
                     {% if persona.department.adding_rate == True %}
                       <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}</p>
+                      <p><strong>Проголосовало:</strong> {{ persona.score_count }}</p>
                     {% endif %}
                   </div>
                   <div class="card-footer">
