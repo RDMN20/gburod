@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.11
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -11,4 +11,4 @@ COPY ./gburod_site /usr/src/app/
 
 EXPOSE 8000
 
-CMD python manage.py runserver 0.0.0.0:8000
+CMD ["gunicorn", "gburod_site.wsgi:application", "--bind", "0:8000" ]

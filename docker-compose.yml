@@ -2,11 +2,14 @@ version: '3.6'
 
 services:
   web:
-    image: sirius712/gburod:latest
-#    build: ./gburod
-#    command: python gburod/gburod_site/manage.py runserver 0.0.0.0:8000
-#    ports:
-#     - '8000:8000'
+    # image: sirius712/gburod:latest
+    container_name: backend
+    build: ./gburod
+    volumes:
+      - static_value:/app/static/
+      - media_value:/app/media/
+    ports:
+      - '8000:8000'
 #    volumes:
 #      - .:/usr/src/app/
 #    env_file:
@@ -16,6 +19,8 @@ services:
 
   db:
     image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
 #    ports:
 #      - '5432:5432'
     env_file: gburod/.env
@@ -51,3 +56,8 @@ configs:
     file: /data/nginx/nginx.conf
   mime.types:
     file: /data/nginx/mime.types
+
+volumes:
+  static_value:
+  media_value:
+  postgres_data:
