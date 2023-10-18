@@ -4,11 +4,13 @@
     <div class="row m-auto">
       <div class="col-12 col-md-2 py-3">
         <a href="{% url 'main-page:index' %}">
-          <img class="logos" src="{% static 'img/repubcancercenter2.png' %}" alt="logo-image">
+          <img class="logos" src="{% static 'img/repubcancercenter2.png' %}"
+               alt="logo-image">
         </a>
       </div>
       <div class="col-md-4 py-3 pl-lg-0">
-        <div class="d-flex ml-4 my-4 mr-0 ml-lg-0 gburod-docs justify-content-start">
+        <div
+          class="d-flex ml-4 my-4 mr-0 ml-lg-0 gburod-docs justify-content-start">
           ГБУ Республиканский онкологический диспансер
         </div>
       </div>
@@ -26,10 +28,13 @@
       </div>
       <div class="col-6 col-md-2 p-3">
         <div class="header-info-desc-span">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clock"
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               fill="currentColor" class="bi bi-clock"
                viewBox="0 0 16 16">
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+            <path
+              d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            <path
+              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
           </svg>
           Режим работы
         </div>
@@ -50,40 +55,52 @@
     <div class="header-info-item-2 row justify-content-end">
       <div class="m-2">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler navbar-toggler-right ml-3" type="button" data-toggle="collapse"
+          <button class="navbar-toggler navbar-toggler-right ml-3"
+                  type="button" data-toggle="collapse"
                   data-target="#navbarTogglerDemo02"
-                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                  aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse navbar-elements" id="navbarTogglerDemo02">
+          <div class="collapse navbar-collapse navbar-elements"
+               id="navbarTogglerDemo02">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'main-page:index' %}">О диспансере</a>
+                <a class="nav-link" href="{% url 'main-page:index' %}">О
+                  диспансере</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.path == '/structure/licenses/' %} active {% endif %}"
-                   href="{% url 'structure:licenses' %}">
+                <a
+                  class="nav-link {% if request.path == '/structure/licenses/' %} active {% endif %}"
+                  href="{% url 'structure:licenses' %}">
                   Документы
                 </a>
               </li>
-              <li class="nav-item {% if request.resolver_match.url_name == 'structures' %}
+              <li
+                class="nav-item {% if request.resolver_match.url_name == 'structures' %}
           active{% endif %}">
-                <a class="nav-link {% if request.path == '/structure/' %} active {% endif %}"
-                   href="{% url 'structure:structures' %}">Структура</a>
+                <a
+                  class="nav-link {% if request.path == '/structure/' %} active {% endif %}"
+                  href="{% url 'structure:structures' %}">Структура</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'services' %}
-          active{% endif %}" href="{% url 'paid_services:services' %}">Платные услуги</a>
+                <a
+                  class="nav-link {% if request.resolver_match.url_name == 'services' %}
+          active{% endif %}" href="{% url 'paid_services:services' %}">Платные
+                  услуги</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'about' %}
+                <a
+                  class="nav-link {% if request.resolver_match.url_name == 'about' %}
           active{% endif %}" href="{% url 'main-page:about' %}">Контакты</a>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                <a class="nav-link disabled" href="#" tabindex="-1"
+                   aria-disabled="true"></a>
               </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link link-light" href="{% url 'users:logout' %}">Выйти</a>
+                  <a class="nav-link link-light"
+                     href="{% url 'users:logout' %}">Выйти</a>
                 </li>
                 <li class="nav-item link-light nav-link ">
                   <div>
@@ -92,10 +109,12 @@
                 </li>
               {% else %}
                 <li>
-                  <a class="nav-link link-light" href="{% url 'users:login' %}">Войти</a>
+                  <a class="nav-link link-light"
+                     href="{% url 'users:login' %}">Войти</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link-light" href="{% url 'users:signup' %}">Регистрация</a>
+                  <a class="nav-link link-light"
+                     href="{% url 'users:signup' %}">Регистрация</a>
                 </li>
               {% endif %}
             </ul>
