@@ -62,6 +62,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             sudo rm -f .env
             sudo touch .env
