@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'main_page.apps.MainPageConfig',
     'personnels.apps.PersonnelsConfig',
     'structure.apps.StructureConfig',
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'ratings',
     'sorl.thumbnail',
+    'sitemap',
 ]
 
 MIDDLEWARE = [
