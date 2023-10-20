@@ -1,17 +1,15 @@
 from django.contrib.auth import get_user_model
-from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.db.models import UniqueConstraint, CheckConstraint, Q, F
 from django.db import models
 from django.db.models import Avg
 
 User = get_user_model()
 
 
-# def validate_unique_rating(value):
-#     persona, device_id = value['persona'], value['device_id']
-#     if Rating.objects.filter(persona=persona, device_id=device_id).exists():
-#         raise ValidationError('Рейтинг уже существует для данного устройства')
+# def validate_unique_rating(value): persona, device_id = value['persona'],
+# value['device_id'] if Rating.objects.filter(persona=persona,
+# device_id=device_id).exists(): raise ValidationError('Рейтинг уже
+# существует для данного устройства')
 
 
 class CommonInfo(models.Model):
@@ -183,7 +181,10 @@ class Persona(models.Model):
     def update_average_rating(self):
         ratings = self.rating.all()
         if ratings:
-            average_rating = round(ratings.aggregate(Avg('score'))['score__avg'], 2)
+            average_rating = round(
+                ratings.aggregate(Avg('score'))['score__avg'],
+                2
+            )
             self.average_rating = average_rating
             self.save()
         else:
@@ -269,4 +270,5 @@ class Comment(models.Model):
         verbose_name_plural = 'Комментарии'
 
     def __str__(self):
-        return f'Комментарий: {self.text[:30]} на {self.persona}, автор: {self.author}, {self.created}'
+        return (f'Комментарий: {self.text[:30]} на {self.persona},',
+                f' автор: {self.author}, {self.created}')

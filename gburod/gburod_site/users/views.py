@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import login
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -27,5 +27,3 @@ class SignUp(CreateView):
 class Login(LoginView):
     template_name = 'users/login.html'
     redirect_field_name = 'next'
-
-

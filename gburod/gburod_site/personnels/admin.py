@@ -20,5 +20,3 @@ admin.site.register(Department)
 admin.site.register(AcademicDegree)
 admin.site.register(Rating)
 admin.site.register(Comment)
-
-
