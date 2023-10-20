@@ -123,3 +123,4 @@ def add_comment(request, persona_id):
 def ambulant(request):
     template = 'structure/ambulant.html'
     return render(request, template)
+
