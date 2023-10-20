@@ -10,7 +10,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from decimal import Decimal
 
 from personnels.forms import RatingForm, CommentForm
-from personnels.models import Persona, Department, Rating, Comment
+from personnels.models import Persona, Department, Rating
 from structure.models import License
 
 
@@ -36,7 +36,8 @@ def depart_detail(request, department_id):
     departs = Department.objects.all()
     department = get_object_or_404(departs, id=department_id)
     current_page_id = department_id
-    personas = department.persona.select_related('department', ).annotate(score_count=Count('rating'))
+    personas = department.persona.select_related(
+        'department', ).annotate(score_count=Count('rating'))
 
     context = {
         'current_page_id': current_page_id,
@@ -77,7 +78,10 @@ def persona_detail(request, persona_id=None, persona_code=None):
     else:
         persona = Persona.objects.get(id=persona_id)
     ratings = persona.rating.all()
-    average_rating = round(ratings.aggregate(Avg('score'))['score__avg'] or 0, 2)
+    average_rating = round(
+        ratings.aggregate(Avg('score'))['score__avg'] or 0,
+        2
+    )
     persona.avg_rating = average_rating
     persona.save()
     comments = persona.comments.select_related('author')
@@ -86,13 +90,21 @@ def persona_detail(request, persona_id=None, persona_code=None):
         form = RatingForm(request.POST)
         if form.is_valid() and request.recaptcha_is_valid:
             try:
-                score = Decimal(form.cleaned_data['score']).quantize(Decimal('0.01'))
-                if Rating.objects.filter(persona=persona, created__gte=last_minute).exists():
-                    messages.error(request, 'Вы уже оценили врача в течение последней минуты')
+                score = Decimal(
+                    form.cleaned_data['score']).quantize(Decimal('0.01'))
+                if Rating.objects.filter(
+                        persona=persona, created__gte=last_minute).exists():
+                    messages.error(
+                        request,
+                        'Вы уже оценили врача в течение последней минуты'
+                    )
                 else:
                     Rating.objects.create(persona=persona, score=score)
                     messages.success(request, 'Рейтинг успешно сохранен')
-                return redirect('structure:persona_detail', persona_id=persona.id)
+                return redirect(
+                    'structure:persona_detail',
+                    persona_id=persona.id
+                )
             except ValidationError as e:
                 messages.error(request, e.args[0])
     else:
@@ -123,4 +135,3 @@ def add_comment(request, persona_id):
 def ambulant(request):
     template = 'structure/ambulant.html'
     return render(request, template)
-
