@@ -30,8 +30,12 @@ GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
 DEBUG = os.getenv('DEBUG_KEY', 'False')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
-CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1', 'https://*localhost',
-                        'http://localhost', ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://oncochr.ru',
+    'https://*.127.0.0.1',
+    'https://*localhost',
+    'http://localhost',
+]
 
 # Application definition
 
