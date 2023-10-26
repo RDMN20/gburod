@@ -36,14 +36,15 @@ def depart_detail(request, department_id):
     departs = Department.objects.all()
     department = get_object_or_404(departs, id=department_id)
     current_page_id = department_id
-    personas = department.persona.select_related(
+    personas = department.persona.filter(published=True).select_related(
         'department', ).annotate(score_count=Count('rating'))
+    page_obj = get_page_obj(personas, request.GET.get('page'))
 
     context = {
         'current_page_id': current_page_id,
         'department': department,
         'departs': departs,
-        'page_obj': get_page_obj(personas, request.GET.get('page')),
+        'page_obj': page_obj,
     }
     return render(request, template, context)
 

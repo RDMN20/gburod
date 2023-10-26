@@ -1,0 +1,53 @@
+{% load thumbnail %}
+<div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
+  {% for persona in page_obj %}
+    {% if persona.published %}
+      <div class="col ">
+        <div class="card mb-3 h-100">
+          {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
+            <img class="card-img-top" src="{{ im.url }}"
+                 alt="Doctor image">
+          {% endthumbnail %}
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ persona.last_name }}
+              {{ persona.first_name }}
+              {{ persona.patronymic_name }}
+            </h5>
+            <p class="card-text">
+              Должность: {{ persona.seat }}
+              <br>
+              {% if persona.academic is not None and persona.academic is not False %}
+                Ученная степень: {{ persona.academic }}
+                <br>
+              {% endif %}
+              Отделение: {{ persona.department }}
+              <br>
+              {% if persona.speciality is not None %}
+                {{ persona.speciality }}
+              {% endif %}
+            </p>
+            {% if persona.department.adding_rate == True %}
+              <p><strong>Рейтинг:</strong>
+                {{ persona.avg_rating|floatformat:2 }}</p>
+              <p>
+                <strong>Проголосовало:</strong> {{ persona.score_count }}
+              </p>
+            {% endif %}
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a
+                href="{% url 'structure:persona_detail' persona.pk %}"
+                class="">
+                Подробно
+              </a>
+            </small>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+</div>
