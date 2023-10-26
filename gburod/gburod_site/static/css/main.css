@@ -1,13 +1,22 @@
-html {
+html body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+body structure-card-btn {
+    color: black;
+    background-color: #87CEEB;
+    border: 1px solid #87CEEB;
+    border-radius: 0px
+}
+
+@media (max-width: 390px) {
+    body {
+        min-width: 390px !important;
+    }
 }
 
 .fakeimg {
@@ -22,14 +31,16 @@ body {
     object-fit: contain;
 }
 
-@media (max-width: 400px) {
-    body {
-        min-width: 400px !important;
-    }
+
+
+.nav {
+    font-size: larger;
 }
 
 .navbar {
     background-color: #87CEEB;
+    text-transform: uppercase;
+    color: #b6bdc2;
 }
 
 .navbar-elements {
@@ -58,16 +69,14 @@ hr {
 }
 
 .header-info-item-2 {
+    margin-left: 0px;
     background-color: #87CEEB;
-}
-
-.header-info-item-2 a.nav-link {
-    color: #FFFFFF;
+    font-size: 1.2em;
 }
 
 li a.active {
     font-weight: bold;
-    color: #000000;
+    color: #6a7175;
 }
 
 .header-info-desc-span {
@@ -105,29 +114,6 @@ div.first-head {
     justify-content: center !important;
 }
 
-/*Стили карусели*/
-
-@media screen and (max-width: 768px) {
-    .carousel-item {
-        height: 250px;
-        transition: transform 0.6s ease-in-out;
-    }
-
-    .carousel-img-item {
-        height: 100%;
-        width: 700px !important;
-    }
-
-    .carousel-caption {
-        padding: 0.5rem;
-        height: 80%;
-        font-size: 0.8rem !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-
 /*Стили страницы документы*/
 
 .fa.fa-file-pdf-o {
@@ -155,6 +141,8 @@ h3 {
     font-family: 'Roboto', sans-serif;
     color: #4C6A85;
 }
+
+
 
 
 /*footer*/

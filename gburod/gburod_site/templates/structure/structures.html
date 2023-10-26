@@ -8,57 +8,113 @@
         <h2>Структура ГБУ "Республиканского онкологического диспансера"</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3">
-        <ul>
+    {#    <div class="clearfix">#}
+    {#      <img src="..." class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">#}
+    {##}
+    {#      <p>#}
+    {#        A paragraph of placeholder text. We're using it here to show the use of#}
+    {#        the clearfix class. We're adding quite a few meaningless phrases here#}
+    {#        to demonstrate how the columns interact here with the floated image.#}
+    {#      </p>#}
+    {##}
+    {#      <p>#}
+    {#        As you can see the paragraphs gracefully wrap around the floated image.#}
+    {#        Now imagine how this would look with some actual content in here,#}
+    {#        rather than just this boring placeholder text that goes on and on, but#}
+    {#        actually conveys no tangible information at. It simply takes up space#}
+    {#        and should not really be read.#}
+    {#      </p>#}
+    {##}
+    {#      <p>#}
+    {#        And yet, here you are, still persevering in reading this placeholder#}
+    {#        text, hoping for some more insights, or some hidden easter egg of#}
+    {#        content. A joke, perhaps. Unfortunately, there's none of that here.#}
+    {#      </p>#}
+    {#    </div>#}
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
           {% for depart in departs|dictsort:"title" %}
-            <li>
-              <a class="{% if depart.id == current_page_id %}active{% endif %}"
-                 href="{% url 'structure:depart_detail' depart.id %}">
-                {{ depart.title }}
-              </a>
-            </li>
+            <div class="col">
+              <div class="card mb-3">
+                {#                <img src="{% thumbnail depart.image 300x200 %}"#}
+                {#                     class="card-img-top" alt="{{ depart.title }}">#}
+                <div class="card-body">
+                  <h5 class="card-title">{{ depart.title }}</h5>
+                  <!-- Здесь можно добавить другую информацию о каждом отделении -->
+                </div>
+                <a class="btn btn-primary"
+                   style="color: black; background-color: #87CEEB; border: 1px solid #87CEEB; border-radius: 0px"
+                   href="{% url 'structure:depart_detail' depart.id %}">Подробнее</a>
+              </div>
+            </div>
           {% endfor %}
-        </ul>
-      </div>
-      <div class="col-md-9 pt-1 my-css-test">
-        <ul>
-          <li>Администрация</li>
-        </ul>
-        <h5>Поликлиника</h5>
-        <ul>
-          <li>Регистратура</li>
-          <li>Колл-центр</li>
-          <li>Поликлиническое отделение</li>
-          <li>Организационно-методический отдел</li>
-        </ul>
-        <h5>Стационар</h5>
-        <ul>
-          <li>Приемное отделение</li>
-          <li>Дневной стационар</li>
-          <li>Хирургическое отделение №1</li>
-          <li>Хирургическое отделение №2</li>
-          <li>Хирургическое отделение №3</li>
-          <li>Химиотерапевтическое отделение №1</li>
-          <li>Химиотерапевтическое отделение №2</li>
-          <li>Отделение паллиативной медицинской помощи</li>
-          <li>Отделение радиотерапии</li>
-          <li>Отделение паллиативной медицинской помощи</li>
-          <li>Операционный блок</li>
-          <li>Отделение анестезиологии-реанимации и интенсивной терапии</li>
-        </ul>
-        <h5>Лечебно-диагностические отделения, лаборатории</h5>
-        <ul>
-          <li>Отделение лучевой диагностики</li>
-          <li>Клинико-диагностическая лаборатория</li>
-          <li>Цитологическая лаборатория</li>
-          <li>Отделение внутрипросветной эндоскопической диагностики</li>
-        </ul>
-      </div>
     </div>
-    <div class="row justify-content-center">
-      {% include 'includes/paginator.html' %}
-    </div>
-    <br>
   </div>
 {% endblock %}
+
+
+
+
+{#{% extends "base.html" %}#}
+{#{% block title %}Структура{% endblock title %}#}
+{#{% block content %}#}
+{#  {% load thumbnail %}#}
+{#  <div class="container">#}
+{#    <div class="row justify-content-center">#}
+{#      <div class="col-auto py-5">#}
+{#        <h2>Структура ГБУ "Республиканского онкологического диспансера"</h2>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="row">#}
+{#      <div class="col-md-3">#}
+{#        <ul>#}
+{#          {% for depart in departs|dictsort:"title" %}#}
+{#            <li>#}
+{#              <a class="{% if depart.id == current_page_id %}active{% endif %}"#}
+{#                 href="{% url 'structure:depart_detail' depart.id %}">#}
+{#                {{ depart.title }}#}
+{#              </a>#}
+{#            </li>#}
+{#          {% endfor %}#}
+{#        </ul>#}
+{#      </div>#}
+{#      <div class="col-md-9 pt-1 my-css-test">#}
+{#        <ul>#}
+{#          <li>Администрация</li>#}
+{#        </ul>#}
+{#        <h5>Поликлиника</h5>#}
+{#        <ul>#}
+{#          <li>Регистратура</li>#}
+{#          <li>Колл-центр</li>#}
+{#          <li>Поликлиническое отделение</li>#}
+{#          <li>Организационно-методический отдел</li>#}
+{#        </ul>#}
+{#        <h5>Стационар</h5>#}
+{#        <ul>#}
+{#          <li>Приемное отделение</li>#}
+{#          <li>Дневной стационар</li>#}
+{#          <li>Хирургическое отделение №1</li>#}
+{#          <li>Хирургическое отделение №2</li>#}
+{#          <li>Хирургическое отделение №3</li>#}
+{#          <li>Химиотерапевтическое отделение №1</li>#}
+{#          <li>Химиотерапевтическое отделение №2</li>#}
+{#          <li>Отделение паллиативной медицинской помощи</li>#}
+{#          <li>Отделение радиотерапии</li>#}
+{#          <li>Отделение паллиативной медицинской помощи</li>#}
+{#          <li>Операционный блок</li>#}
+{#          <li>Отделение анестезиологии-реанимации и интенсивной терапии</li>#}
+{#        </ul>#}
+{#        <h5>Лечебно-диагностические отделения, лаборатории</h5>#}
+{#        <ul>#}
+{#          <li>Отделение лучевой диагностики</li>#}
+{#          <li>Клинико-диагностическая лаборатория</li>#}
+{#          <li>Цитологическая лаборатория</li>#}
+{#          <li>Отделение внутрипросветной эндоскопической диагностики</li>#}
+{#        </ul>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="row justify-content-center">#}
+{#      {% include 'includes/paginator.html' %}#}
+{#    </div>#}
+{#    <br>#}
+{#  </div>#}
+{#{% endblock %}#}
