@@ -64,6 +64,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
+            sudo su
             sudo rm -f .env
             sudo touch .env
             sudo chmod 666 .env
@@ -80,8 +81,8 @@ jobs:
             sudo echo GOOGLE_RECAPTCHA_SECRET_KEY=${{ secrets.GOOGLE_RECAPTCHA_SECRET_KEY }} >> .env
             
             sudo docker-compose stop
-            sudo docker-compose rm backend
-            sudo docker-compose pull backend
+            sudo docker rm backend
+            sudo docker-compose pull ${{ secrets.DOCKERHUB_USERNAME }}/gburod:latest
             sudo docker-compose up -d --build
             sudo docker image prune -a
 
