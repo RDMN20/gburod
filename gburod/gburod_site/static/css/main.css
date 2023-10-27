@@ -149,8 +149,26 @@ h3 {
 
 footer.footer {
     background-color: #4682B4 !important;
-    height: 100px;
+    height: 200px;
     color: #eeeeee;
 }
 
+.copyright-info {
+    font-size: 1.2em;
+}
 
+/*баннеры мз по оценке качества мед услуг*/
+.mz-nok-mu img.mz-log-img {
+    width: auto;
+    height: 60px;
+}
+
+.mz-nok-mu p {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+
+.mz-nok-mu a {
+    color: #eeeeee!important;
+    font-size: 1em;
+}
