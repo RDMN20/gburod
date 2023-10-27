@@ -65,6 +65,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             sudo su
+            cd docker/oncochr/
             sudo rm -f .env
             sudo touch .env
             sudo chmod 666 .env
