@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Новости{% endblock title %}
+{% block content %}
+  <div class="row justify-content-center pt-2">
+    <div class="col text-center">
+      <h1>Список новостей</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center pt-2">
+    <div class="col-12 col-sm-8">
+      {% if page_obj %}
+        {% for item in page_obj %}
+          <div class="news-item">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.content }}</p>
+            <p><strong>Дата публикаций:</strong> {{ item.pub_date|date:"Y-m-d" }}</p>
+          </div>
+          <hr>
+        {% endfor %}
+
+        {% include 'includes/paginator.html' %}
+
+      {% else %}
+        <p>Пока нет опубликованных новостей.</p>
+
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
