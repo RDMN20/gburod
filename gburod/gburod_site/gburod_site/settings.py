@@ -27,7 +27,7 @@ GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.getenv('DEBUG_STATUS', 'False')
+DEBUG = True  # os.getenv('DEBUG_STATUS', 'False')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 CSRF_TRUSTED_ORIGINS = [
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'ratings',
     'sorl.thumbnail',
     'sitemap',
+    'news_posts',
 ]
 
 MIDDLEWARE = [
@@ -123,8 +124,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-LANGUAGE_CODE = 'ru'
+
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -137,12 +138,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# if DEBUG:
-#     STATIC_URL = '/static/'
-#     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-#     MEDIA_URL = '/media/'
-#     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# else:
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -156,6 +157,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Project constants
 AMOUNT_POSTS_ONE_PAGE = 6
+AMOUNT_NEWS_ONE_PAGE = 6
 
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'main-page:index'

@@ -6,13 +6,6 @@ html body {
     padding: 0;
 }
 
-body structure-card-btn {
-    color: black;
-    background-color: #87CEEB;
-    border: 1px solid #87CEEB;
-    border-radius: 0px
-}
-
 @media (max-width: 390px) {
     body {
         min-width: 390px !important;
@@ -20,8 +13,8 @@ body structure-card-btn {
 }
 
 .fakeimg {
-    height: 200px;
-    width: auto;
+    height: 350px;
+    width: 300px;
     background: #aaa;
 }
 
@@ -30,7 +23,6 @@ body structure-card-btn {
     height: 100px;
     object-fit: contain;
 }
-
 
 
 .nav {
@@ -102,8 +94,11 @@ li a.active {
     color: black;
 }
 
-a {
-    text-decoration: none;
+.dep-card-a {
+    color: black;
+    background-color: #87CEEB;
+    border: 1px solid #87CEEB;
+    border-radius: 0
 }
 
 ul {
@@ -143,18 +138,18 @@ h3 {
 }
 
 
-
-
 /*footer*/
 
 footer.footer {
     background-color: #4682B4 !important;
     height: 200px;
     color: #eeeeee;
+    text-align: center;
+    padding: 10px;
 }
 
 .copyright-info {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 /*баннеры мз по оценке качества мед услуг*/
@@ -169,6 +164,6 @@ footer.footer {
 }
 
 .mz-nok-mu a {
-    color: #eeeeee!important;
+    color: #eeeeee !important;
     font-size: 1em;
 }

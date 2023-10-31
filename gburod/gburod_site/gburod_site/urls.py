@@ -20,14 +20,11 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    # path(r'^media/(?P<path>.*)$', serve,
-    #      {'document_root': settings.MEDIA_ROOT}),
-    # path(r'^static/(?P<path>.*)$', serve,
-    #      {'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')),
     path('structure/', include('structure.urls')),
     path('paid_services/', include('paid_services.urls')),
+    path('news/', include('news_posts.urls')),
     path('auth/', include('users.urls')),
     path('auth/', include('django.contrib.auth.urls')),
 
