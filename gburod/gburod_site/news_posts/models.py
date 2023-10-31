@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class News(models.Model):
+    """Модель новостных постов."""
     title = models.CharField(max_length=200)
     content = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
