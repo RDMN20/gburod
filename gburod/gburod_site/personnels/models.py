@@ -73,7 +73,7 @@ class Department(models.Model):
     )
     adding_rate = models.BooleanField(
         default=False,
-        verbose_name='Добавить рейтинг',
+        verbose_name='Добавить в рейтинг',
     )
 
     class Meta:
@@ -141,14 +141,10 @@ class Persona(models.Model):
         on_delete=models.SET_NULL,
         verbose_name='Специальность',
     )
-    department = models.ForeignKey(
+    departments = models.ManyToManyField(
         Department,
-        related_name='persona',
-        blank=False,
-        null=True,
-        on_delete=models.SET_NULL,
-        verbose_name='Отделение',
-    )
+        through='PersonaDepartment',
+        related_name='persona')
 
     biography = models.OneToOneField(
         Biography,
@@ -198,6 +194,11 @@ class Persona(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
+
+class PersonaDepartment(models.Model):
+    persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
 
 
 class Rating(models.Model):
@@ -270,5 +271,4 @@ class Comment(models.Model):
         verbose_name_plural = 'Комментарии'
 
     def __str__(self):
-        return (f'Комментарий: {self.text[:30]} на {self.persona},',
-                f' автор: {self.author}, {self.created}')
+        return f'Комментарий: {self.text[:30]} на {self.persona}, автор: {self.author}, {self.created}'

@@ -36,8 +36,7 @@ def depart_detail(request, department_id):
     departs = Department.objects.all()
     department = get_object_or_404(departs, id=department_id)
     current_page_id = department_id
-    personas = department.persona.filter(published=True).select_related(
-        'department', ).annotate(score_count=Count('rating'))
+    personas = department.persona.filter(published=True).annotate(score_count=Count('rating'))
     page_obj = get_page_obj(personas, request.GET.get('page'))
 
     context = {
@@ -49,26 +48,8 @@ def depart_detail(request, department_id):
     return render(request, template, context)
 
 
-def licenses(request):
-    template = 'structure/licenses.html'
-    departs = Department.objects.all()
-    licenses_all = License.objects.all()
-    context = {
-        'licenses': licenses_all,
-        'departs': departs,
-    }
-    return render(request, template, context)
-
-
-def license_preview(request, pk):
-    license_pr = get_object_or_404(License, pk=pk)
-    context = {
-        'license': license_pr,
-    }
-    return render(request, 'structure/license_preview.html', context)
-
-
-def persona_detail(request, persona_id=None, persona_code=None):
+def persona_detail(request, persona_id=None, persona_code=None, department_id=None):
+    """Детальное представление о сотрунике."""
     # Получаем текущее время
     now = timezone.now()
     last_minute = now - datetime.timedelta(seconds=60)
@@ -79,6 +60,7 @@ def persona_detail(request, persona_id=None, persona_code=None):
     else:
         persona = Persona.objects.get(id=persona_id)
     ratings = persona.rating.all()
+    adding_rate = persona.departments.get(id=department_id).adding_rate
     average_rating = round(
         ratings.aggregate(Avg('score'))['score__avg'] or 0,
         2
@@ -117,12 +99,16 @@ def persona_detail(request, persona_id=None, persona_code=None):
         'comments': comments,
         'comment_form': CommentForm(),
         'form': form,
+        'department_id': department_id,
+        'adding_rate': adding_rate,
+        'now': now,
     }
     return render(request, template, context)
 
 
 @login_required
 def add_comment(request, persona_id):
+    """Добавление комментария."""
     persona = get_object_or_404(Persona, id=persona_id)
     form = CommentForm(request.POST or None)
     if form.is_valid():
@@ -131,6 +117,27 @@ def add_comment(request, persona_id):
         comment.persona = persona
         comment.save()
     return redirect('structure:persona_detail', persona_id=persona_id)
+
+
+def licenses(request):
+    """Представление документов и лицензий организации."""
+    template = 'structure/licenses.html'
+    departs = Department.objects.all()
+    licenses_all = License.objects.all()
+    context = {
+        'licenses': licenses_all,
+        'departs': departs,
+    }
+    return render(request, template, context)
+
+
+def license_preview(request, pk):
+    """Предпросмотр документов."""
+    license_pr = get_object_or_404(License, pk=pk)
+    context = {
+        'license': license_pr,
+    }
+    return render(request, 'structure/license_preview.html', context)
 
 
 def ambulant(request):

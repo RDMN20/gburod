@@ -11,5 +11,10 @@ class News(models.Model):
     is_published = models.BooleanField(default=True)
     image = models.ImageField(upload_to='news_images/', blank=True, null=True)
 
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
     def __str__(self):
         return self.title
