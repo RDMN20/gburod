@@ -84,6 +84,20 @@ class Department(models.Model):
         return self.title
 
 
+class Office(models.Model):
+    number = models.CharField(
+        max_length=10,
+        verbose_name='Номер кабинета',
+    )
+
+    class Meta:
+        verbose_name = 'Номер кабинет'
+        verbose_name_plural = 'Нумерация кабинетов'
+
+    def __str__(self):
+        return self.number
+
+
 class Persona(models.Model):
     first_name = models.CharField(
         max_length=50,
@@ -144,7 +158,19 @@ class Persona(models.Model):
     departments = models.ManyToManyField(
         Department,
         through='PersonaDepartment',
-        related_name='persona')
+        related_name='persona',
+        blank=False,
+        verbose_name='Отделение сотрудника',
+    )
+
+    office = models.ForeignKey(
+        Office,
+        related_name='persona',
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        verbose_name='Кабинет',
+    )
 
     biography = models.OneToOneField(
         Biography,
@@ -200,6 +226,10 @@ class PersonaDepartment(models.Model):
     persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'отделение сотрудника'
+        verbose_name_plural = 'отделение сотрудников'
+
 
 class Rating(models.Model):
     persona = models.ForeignKey(
@@ -209,13 +239,7 @@ class Rating(models.Model):
         verbose_name='Сотрудник',
         help_text='Поставьте рейтинг от 1 до 5',
     )
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='rating',
-        null=True,
-        blank=True,
-    )
+    author = models.CharField(max_length=255)
     score = models.IntegerField(
         default=0.00,
         validators=[

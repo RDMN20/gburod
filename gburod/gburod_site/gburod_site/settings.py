@@ -37,6 +37,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
 ]
 
+SITE_ID = 106
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django_extensions',
     'main_page.apps.MainPageConfig',
     'personnels.apps.PersonnelsConfig',
@@ -55,7 +58,6 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'ratings',
     'sorl.thumbnail',
-    'sitemap',
     'news_posts',
 ]
 

@@ -9,7 +9,8 @@ from .models import (
     AcademicDegree,
     Rating,
     Comment,
-    PersonaDepartment
+    PersonaDepartment,
+    Office,
 )
 
 class PersonaDepartmentInline(admin.TabularInline):
@@ -20,6 +21,7 @@ class PersonaAdmin(admin.ModelAdmin):
 
 admin.site.register(Persona, PersonaAdmin)
 admin.site.register(Seat)
+admin.site.register(Office)
 admin.site.register(Speciality)
 admin.site.register(Biography)
 admin.site.register(Department)
