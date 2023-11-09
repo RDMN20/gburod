@@ -6,7 +6,7 @@
         <div class="card mb-3 h-100">
           {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
             <img class="card-img-top" src="{{ im.url }}"
-                 alt="Doctor image">
+                 alt="Persona image">
           {% endthumbnail %}
           <div class="card-body">
             <h5 class="card-title">
@@ -21,7 +21,7 @@
                 Ученная степень: {{ persona.academic }}
                 <br>
               {% endif %}
-              Отделение: {{ persona.department }}
+              Отделение: {{ department.all }}
               <br>
               {% if persona.speciality is not None %}
                 {{ persona.speciality }}
