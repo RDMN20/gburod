@@ -73,7 +73,7 @@ class Department(models.Model):
     )
     adding_rate = models.BooleanField(
         default=False,
-        verbose_name='Добавить рейтинг',
+        verbose_name='Добавить в рейтинг',
     )
 
     class Meta:
@@ -82,6 +82,20 @@ class Department(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Office(models.Model):
+    number = models.CharField(
+        max_length=10,
+        verbose_name='Номер кабинета',
+    )
+
+    class Meta:
+        verbose_name = 'Номер кабинет'
+        verbose_name_plural = 'Нумерация кабинетов'
+
+    def __str__(self):
+        return self.number
 
 
 class Persona(models.Model):
@@ -141,13 +155,21 @@ class Persona(models.Model):
         on_delete=models.SET_NULL,
         verbose_name='Специальность',
     )
-    department = models.ForeignKey(
+    departments = models.ManyToManyField(
         Department,
+        through='PersonaDepartment',
         related_name='persona',
         blank=False,
+        verbose_name='Отделение сотрудника',
+    )
+
+    office = models.ForeignKey(
+        Office,
+        related_name='persona',
+        blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name='Отделение',
+        verbose_name='Кабинет',
     )
 
     biography = models.OneToOneField(
@@ -200,6 +222,15 @@ class Persona(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
+class PersonaDepartment(models.Model):
+    persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'отделение сотрудника'
+        verbose_name_plural = 'отделение сотрудников'
+
+
 class Rating(models.Model):
     persona = models.ForeignKey(
         Persona,
@@ -208,13 +239,7 @@ class Rating(models.Model):
         verbose_name='Сотрудник',
         help_text='Поставьте рейтинг от 1 до 5',
     )
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='rating',
-        null=True,
-        blank=True,
-    )
+    author = models.CharField(max_length=255)
     score = models.IntegerField(
         default=0.00,
         validators=[
@@ -270,5 +295,4 @@ class Comment(models.Model):
         verbose_name_plural = 'Комментарии'
 
     def __str__(self):
-        return (f'Комментарий: {self.text[:30]} на {self.persona},',
-                f' автор: {self.author}, {self.created}')
+        return f'Комментарий: {self.text[:30]} на {self.persona}, автор: {self.author}, {self.created}'

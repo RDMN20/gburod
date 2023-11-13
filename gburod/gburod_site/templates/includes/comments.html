@@ -1,10 +1,11 @@
 {% load user_filters %}
 {% if user.is_authenticated %}
-  <div class="card m-4">
-    {% if persona.department.adding_rate == True %}
+  <div class="card m-0" style="border-radius: 0;">
+    {% if adding_rate %}
       <h5 class="card-header">Добавить комментарий:</h5>
       <div class="card-body">
-        <form method="post" action="{% url 'structure:add_comment' persona.id %}">
+        <form method="post"
+              action="{% url 'structure:add_comment' persona.id %}">
           {% csrf_token %}
           <div class="form-group mb-2">
             {{ comment_form.text|addclass:"form-control" }}
@@ -17,10 +18,11 @@
     {% endif %}
   </div>
 {% else %}
-  <div class="card my-4">
+  <div class="card my-4" style="border-radius: 0;">
     <div class="card-body">
       <p>Чтобы оставить комментарий или рейтинг,
-        <a class="card-text" href="{% url 'users:login' %}?next={{ request.path }}">
+        <a class="card-text"
+           href="{% url 'users:login' %}?next={{ request.path }}">
           войдите
         </a>
         или
@@ -32,15 +34,22 @@
   </div>
 {% endif %}
 {% for comment in comments %}
-  <div class="media ml-4 mb-4">
-    <div class="media-body">
-      <h5 class="mt-0">
-        {{ comment.author.username }}
-      </h5>
-      <p>
-        {{ comment.text|linebreaksbr }}
-      <hr>
-      </p>
+  <div class="row  pl-5 m-0 pt-4">
+    <div class="col m-0">
+      <div class="media pl-5 mb-4">
+        <div class="media-body">
+          <h5 class="mt-0">
+            {{ comment.author.username }}
+          </h5>
+          <p class=""><small class="text-muted">
+             Комментарий добавлен: {{ comment.created|timesince:now }} назад. {{ comment.created }}
+            </small></p>
+          <p>
+            <strong>Комментарий:</strong> {{ comment.text|linebreaksbr }}
+          <hr>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 {% endfor %}
