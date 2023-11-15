@@ -24,7 +24,14 @@
                 <strong>Ученая степень:</strong> {{ persona.academic }}
                 <br>
               {% endif %}
-              <strong>Отделение:</strong> {{ persona.department }}
+              <strong>Отделение:</strong>
+              {% for depart in persona_departments %}
+                <a
+                  href="{% url 'structure:depart_detail' depart.department.id %}">
+                {{ depart.department.title }}
+                </a>
+                {% if not forloop.last %}, {% endif %}
+              {% endfor %}
               {% if persona.speciality is not None %}
                 {{ persona.speciality }}
                 <br>

@@ -23,7 +23,7 @@ class RatingForm(forms.ModelForm):
 class CommentForm(ModelForm):
     class Meta:
         model = Comment
-        fields = ('text',)
+        fields = ('text', 'comment_email', 'author')
         widgets = {
             'text': Textarea(attrs={'rows': 5})
         }

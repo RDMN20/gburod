@@ -15,13 +15,20 @@
               {{ persona.patronymic_name }}
             </h5>
             <p class="card-text">
-              Должность: {{ persona.seat }}
+              <strong>Должность:</strong> {{ persona.seat }}
               <br>
               {% if persona.academic is not None and persona.academic is not False %}
                 Ученная степень: {{ persona.academic }}
                 <br>
               {% endif %}
-              Отделение: {{ department.all }}
+              <strong>Отделение:</strong>
+              {% for persona_department in persona.persona_departments.all %}
+                <a
+                  href="{% url 'structure:depart_detail' persona_department.department.id %}">
+                  {{ persona_department.department.title }}
+                </a>
+                {% if not forloop.last %}, {% endif %}
+              {% endfor %}
               <br>
               {% if persona.speciality is not None %}
                 {{ persona.speciality }}

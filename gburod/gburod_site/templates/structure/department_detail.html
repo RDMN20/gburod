@@ -14,7 +14,7 @@
           <ul>
             {% for depart in departs|dictsort:"title" %}
               <li>
-                <a class="{% if depart.id == current_page_id %}
+                <a class="{% if depart.id == department.id %}
                     active{% endif %}"
                    href="{% url 'structure:depart_detail' depart.id %}">{{ depart.title }}</a>
               </li>

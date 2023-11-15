@@ -13,11 +13,14 @@ from .models import (
     Office,
 )
 
+
 class PersonaDepartmentInline(admin.TabularInline):
     model = PersonaDepartment
 
+
 class PersonaAdmin(admin.ModelAdmin):
     inlines = [PersonaDepartmentInline]
+
 
 admin.site.register(Persona, PersonaAdmin)
 admin.site.register(Seat)

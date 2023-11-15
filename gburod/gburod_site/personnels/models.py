@@ -76,6 +76,12 @@ class Department(models.Model):
         verbose_name='Добавить в рейтинг',
     )
 
+    def get_personas(self):
+        return self.personadepartment_set.all().values_list(
+            'persona',
+            flat=True,
+        )
+
     class Meta:
         verbose_name = 'Отделение'
         verbose_name_plural = 'Отделения'
@@ -155,14 +161,6 @@ class Persona(models.Model):
         on_delete=models.SET_NULL,
         verbose_name='Специальность',
     )
-    departments = models.ManyToManyField(
-        Department,
-        through='PersonaDepartment',
-        related_name='persona',
-        blank=False,
-        verbose_name='Отделение сотрудника',
-    )
-
     office = models.ForeignKey(
         Office,
         related_name='persona',
@@ -223,7 +221,11 @@ class Persona(models.Model):
 
 
 class PersonaDepartment(models.Model):
-    persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
+    persona = models.ForeignKey(
+        Persona,
+        on_delete=models.CASCADE,
+        related_name='persona_departments',
+    )
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
 
     class Meta:
@@ -239,7 +241,7 @@ class Rating(models.Model):
         verbose_name='Сотрудник',
         help_text='Поставьте рейтинг от 1 до 5',
     )
-    author = models.CharField(max_length=255)
+    author = models.CharField(max_length=255, null=True, )
     score = models.IntegerField(
         default=0.00,
         validators=[
@@ -273,13 +275,11 @@ class Comment(models.Model):
         verbose_name='Сотрудник',
         help_text='Комментарий на сотрудника'
     )
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='comments',
-        verbose_name='Автор',
-        help_text='Автор комментария',
+    author = models.CharField(
+        max_length=80,
+        null=True,
     )
+    comment_email = models.EmailField()
     text = models.TextField(
         verbose_name='Текст',
         help_text='Текст комментария',

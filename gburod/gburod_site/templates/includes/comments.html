@@ -1,5 +1,5 @@
 {% load user_filters %}
-{% if user.is_authenticated %}
+{#{% if user.is_authenticated %}#}
   <div class="card m-0" style="border-radius: 0;">
     {% if adding_rate %}
       <h5 class="card-header">Добавить комментарий:</h5>
@@ -17,29 +17,29 @@
       </div>
     {% endif %}
   </div>
-{% else %}
-  <div class="card my-4" style="border-radius: 0;">
-    <div class="card-body">
-      <p>Чтобы оставить комментарий или рейтинг,
-        <a class="card-text"
-           href="{% url 'users:login' %}?next={{ request.path }}">
-          войдите
-        </a>
-        или
-        <a class="" href="{% url 'users:signup' %}?next={{ request.path }}">
-          зарегистрируйтесь
-        </a>
-      </p>
-    </div>
-  </div>
-{% endif %}
+{#{% else %}#}
+{#  <div class="card my-4" style="border-radius: 0;">#}
+{#    <div class="card-body">#}
+{#      <p>Чтобы оставить комментарий или рейтинг,#}
+{#        <a class="card-text"#}
+{#           href="{% url 'users:login' %}?next={{ request.path }}">#}
+{#          войдите#}
+{#        </a>#}
+{#        или#}
+{#        <a class="" href="{% url 'users:signup' %}?next={{ request.path }}">#}
+{#          зарегистрируйтесь#}
+{#        </a>#}
+{#      </p>#}
+{#    </div>#}
+{#  </div>#}
+{#{% endif %}#}
 {% for comment in comments %}
   <div class="row  pl-5 m-0 pt-4">
     <div class="col m-0">
       <div class="media pl-5 mb-4">
         <div class="media-body">
           <h5 class="mt-0">
-            {{ comment.author.username }}
+            {{ comment.author }}
           </h5>
           <p class=""><small class="text-muted">
              Комментарий добавлен: {{ comment.created|timesince:now }} назад. {{ comment.created }}

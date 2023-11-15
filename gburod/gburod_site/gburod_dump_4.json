@@ -1,0 +1,4494 @@
+[{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-04-24T16:40:22.824Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Поликлиника",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-04-24T16:41:01.272Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "врач-онколог",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-04-24T16:41:11.439Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеда Витаева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-04-24T17:33:15.201Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 3 Автор: testing",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-04-24T17:33:15.204Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-04-24T17:33:15.206Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 4 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-04-24T22:09:12.729Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Израил Джабраилов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-04-24T22:09:57.593Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Кока Зайпулаева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-04-24T22:10:39.443Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Заурбек Исмаилов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-04-24T22:11:45.611Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-04-24T22:12:27.251Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Хизир Солтамурадов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-04-24T22:13:04.148Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-04-24T22:13:41.128Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-04-24T22:14:27.868Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "Камета Хадисова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-04-24T22:15:17.182Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "Макка Хадисова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-04-25T10:55:31.601Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 4 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-04-25T10:55:47.013Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Комментарий: tset на Хеда Витаева, автор: sirius, 2023-04-25 10:50:26.037663+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-04-25T10:55:47.016Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "Комментарий: test на Хеда Витаева, автор: testing, 2023-04-24 17:04:52.738253+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-04-25T11:03:50.476Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-04-25T11:21:01.829Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-04-25T11:21:08.960Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Комментарий: test на Хеда Витаева, автор: sirius, 2023-04-25 11:02:55.932273+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-04-25T11:21:45.565Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Комментарий: test на Хеда Витаева, автор: sirius, 2023-04-25 11:02:55.932273+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-04-25T11:21:52.948Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-04-26T08:06:48.253Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеда Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-04-26T08:08:00.007Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-04-26T08:08:08.872Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Комментарий: Test comments на Хеда Витаева, автор: sirius, 2023-04-26 08:07:47.188605+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-05-10T10:34:30.482Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-05-10T10:34:53.597Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-05-10T10:35:45.375Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-05-10T13:06:35.609Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-05-10T13:06:46.325Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-05-10T13:10:01.307Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-05-10T13:30:22.782Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 4 Автор: Nazarbek",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-05-10T13:30:22.785Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Сотруник: Хеда Витаева Оценка: 5 Автор: Ahmad",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-05-11T06:38:10.100Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "Ahmad",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_staff\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-05-11T06:43:58.779Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-05-11T06:44:16.602Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-05-11T06:44:23.980Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-05-11T06:46:42.946Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеда Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-05-11T06:47:16.751Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-05-11T06:48:54.869Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Заурбек Исмаилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-05-11T06:49:06.046Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Израил Джабраилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-05-11T06:53:18.899Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Кока Зайпулаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-05-11T06:53:32.546Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-05-11T06:53:45.246Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Хизир Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-05-11T06:55:00.445Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Хизир Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-05-11T06:55:18.991Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-05-11T06:55:30.833Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-05-11T06:56:18.358Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-05-11T07:00:05.689Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-05-11T07:00:27.747Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "Камета Хадисова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"persona_code\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-05-11T07:21:15.497Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-05-11T07:21:20.166Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Израил Джабраилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-05-11T07:21:24.588Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Кока Зайпулаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-05-11T07:21:29.597Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Кока Зайпулаева",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-05-11T07:21:34.061Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Заурбек Исмаилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-05-11T07:21:38.239Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-05-11T07:21:41.629Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Заурбек Исмаилов",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-05-11T07:21:45.232Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-05-11T07:21:49.426Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Хизир Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-05-11T07:21:53.826Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-05-11T07:21:58.249Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-05-11T07:22:01.563Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-05-11T07:22:04.630Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-05-11T07:22:08.238Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "Камета Хадисова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-05-11T07:23:37.446Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "Мадина Татаева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-05-11T07:26:52.298Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-05-11T07:27:41.350Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-05-11T08:26:06.595Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "ЦАОП",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-05-11T08:29:53.220Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "Докаев Ислам",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-05-11T08:31:54.486Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "Бацаева Хеда",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-05-11T08:33:25.395Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "14",
+        "object_repr": "Татаева Мадина",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-05-11T08:34:29.750Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Кунтаева Залина",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-05-11T08:34:51.750Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Кунтаева Залина",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-05-11T08:35:40.551Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Залина Кунтаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-05-11T08:35:57.175Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "14",
+        "object_repr": "Мадина Татаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-05-11T08:36:08.504Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "Хеда Бацаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-05-11T08:36:17.990Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "Ислам Докаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-05-11T08:36:28.978Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Залина Кунтаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-05-12T08:52:04.073Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-05-12T08:52:22.986Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-05-12T08:52:32.030Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-05-14T10:27:18.249Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "16",
+        "object_repr": "Мовлет Темиргереев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-05-14T10:27:54.138Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "17",
+        "object_repr": "Умалат Тарамов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-05-17T06:04:07.493Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Цитологическая лаборатория",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-05-17T06:04:21.835Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Клинико-диагностическая лаборатория",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-05-17T06:04:53.350Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Патологоанатомическое отделение",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-05-17T06:05:10.115Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "Химиотерапевтическое отделение № 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-05-17T06:05:25.558Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Химиотерапевтическое отделение № 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-05-17T06:07:47.304Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "Отделение лучевой диагностики",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-05-17T06:08:25.684Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "ОАРИТ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-05-17T06:09:38.301Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Дневной стационар химиотерапии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-05-17T06:10:53.164Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "Отделение внутрипросветной эндоскопической диагностики",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-05-17T09:21:48.698Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-05-17T09:22:02.864Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-05-17T09:22:15.117Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-05-17T09:22:57.819Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-05-17T10:05:23.272Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-05-17T10:05:41.364Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-05-17T10:05:59.337Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-05-18T06:55:06.967Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Отделение радиотерапии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-05-18T06:55:56.107Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "Отделение паллиативной помощи онкологическим больным",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-05-18T06:59:02.894Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "Приемное отделение",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-05-18T07:01:20.689Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Отделение опухолей молочной железы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-05-18T07:01:39.383Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "Отделение онкогинекологии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-05-18T07:02:16.652Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "Отделение абдоминальной онкологии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-05-18T07:02:31.756Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "Отделение онкоурологии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-05-18T07:07:50.933Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "19",
+        "object_repr": "Отделение опухолей головы и шеи",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-05-22T11:31:42.345Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "Ислам Докаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-05-22T11:32:12.638Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "Ислам Докаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-05-22T11:51:59.639Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-05-22T11:55:44.061Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Израил Джабраилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-05-22T12:05:27.489Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Хеди Витаева",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-05-22T12:08:35.492Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Кока Зайпулаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-05-22T12:10:47.514Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Заурбек Исмаилов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-05-23T05:11:06.047Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2023-05-23T05:16:17.792Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "Хизир Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2023-05-23T05:17:32.749Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "Разита Тайсумова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2023-05-23T05:20:11.723Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Мадина Усманова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2023-05-23T05:21:58.763Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "Камета Хадисова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2023-05-23T05:24:22.564Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "Макка Хадисова",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2023-05-23T05:28:03.758Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "Мадина Татаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2023-05-23T05:31:02.423Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "Ислам Докаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2023-05-23T05:40:53.488Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "Хеда Бацаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2023-05-23T05:42:33.033Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "14",
+        "object_repr": "Мадина Татаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2023-05-23T05:44:46.461Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "15",
+        "object_repr": "Залина Кунтаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2023-05-23T05:45:49.454Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "16",
+        "object_repr": "Мовлет Темиргереев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2023-05-23T05:50:09.771Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "17",
+        "object_repr": "Умалат Тарамов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"education\", \"qualification\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2023-05-23T08:48:44.527Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "6",
+        "object_repr": "Сотруник: Израил Джабраилов Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2023-05-23T08:48:59.894Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "10",
+        "object_repr": "Сотруник: Заурбек Исмаилов Оценка: 5 Автор: Nazarbek",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2023-05-23T08:48:59.896Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "Сотруник: Залина Кунтаева Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2023-05-23T08:48:59.898Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "Сотруник: Заурбек Исмаилов Оценка: 5 Автор: sirius",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2023-05-23T11:13:06.014Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Заведующий отделением",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2023-05-23T11:13:13.138Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "18",
+        "object_repr": "Адам Токаев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2023-05-23T11:16:37.014Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "19",
+        "object_repr": "Залина Темиркаева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2023-05-23T11:18:12.470Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "20",
+        "object_repr": "Мялх-Азни Пешхоева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2023-05-23T11:21:43.021Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "21",
+        "object_repr": "Раиса Идигова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2023-05-23T11:21:53.722Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "20",
+        "object_repr": "Мялх-Азни Пешхоева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2023-05-23T11:21:58.639Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "19",
+        "object_repr": "Залина Темиркаева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2023-05-23T11:58:07.682Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Кандидат медицинских наук",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2023-05-23T11:58:11.853Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "22",
+        "object_repr": "Эмилия Кадиева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2023-05-23T11:59:24.486Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "22",
+        "object_repr": "Эмилия Кадиева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2023-05-24T05:33:32.731Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "22",
+        "object_repr": "Эмилия Кадиева",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2023-05-24T05:40:21.269Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "23",
+        "object_repr": "Фатима Исакова",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2023-05-24T05:42:36.629Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "24",
+        "object_repr": "Элина Нанаева",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2023-05-24T05:53:47.656Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "25",
+        "object_repr": "Мовлет Темиргереев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2023-05-24T05:58:17.614Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "26",
+        "object_repr": "Умалат Тарамов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2023-05-24T06:00:55.984Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "27",
+        "object_repr": "Израил Джабраилов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2023-05-24T06:03:19.787Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "28",
+        "object_repr": "Эльдар Магомадов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2023-05-24T06:06:29.712Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "29",
+        "object_repr": "Адлан Базаев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2023-05-24T06:15:58.692Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "30",
+        "object_repr": "Алихан Гехаев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2023-05-24T06:18:08.605Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "31",
+        "object_repr": "Леча Ибрагимов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2023-05-24T06:20:09.243Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "32",
+        "object_repr": "Алхазур Сулейманов",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2023-05-24T06:22:33.612Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "33",
+        "object_repr": "Идрис Чаниев",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2023-05-24T06:25:11.792Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "33",
+        "object_repr": "Идрис Чаниев",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2023-05-24T07:41:57.218Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "18",
+        "object_repr": "Адам Токаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2023-05-24T07:42:25.975Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "18",
+        "object_repr": "Адам Токаев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2023-06-09T08:32:43.705Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2023-06-09T08:32:57.892Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2023-06-09T08:33:11.166Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2023-06-09T11:01:28.642Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "12",
+        "object_repr": "Сотруник: Хеди Витаева Оценка: 3 Автор: None",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2023-06-09T11:02:51.893Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2023-06-09T11:03:10.739Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2023-06-09T11:03:20.780Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2023-06-16T08:37:10.185Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2023-06-16T08:37:25.002Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2023-06-16T08:37:37.848Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2023-06-16T09:13:50.262Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2023-06-16T09:14:10.450Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2023-06-16T09:14:37.452Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2023-08-10T15:18:07.866Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "Ахмед Солтамурадов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2023-08-10T15:18:42.026Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "17",
+        "object_repr": "Умалат Тарамов",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2023-08-10T15:18:57.741Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "16",
+        "object_repr": "Мовлет Темиргереев",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"published\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2023-08-10T15:53:20.021Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Комментарий: Сильнейший онколог-пульмонолог на Заурбек Исмаилов, автор: sirius, 2023-05-11 07:35:01.433545+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2023-08-10T15:53:28.843Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "7",
+        "object_repr": "Комментарий: Легендарный на Заурбек Исмаилов, автор: abu, 2023-06-22 10:04:58.451526+00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2023-08-25T13:10:00.903Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Дневной стационар",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"title\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2023-08-25T13:10:19.920Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "Эндоскопическое отделение",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"title\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2023-08-30T19:47:36.497Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2023-08-30T19:47:44.982Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2023-08-30T19:47:54.079Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2023-09-28T08:04:54.563Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2023-09-28T08:05:06.772Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2023-09-28T08:05:15.371Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"file\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2023-10-31T09:49:39.233Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "Отделение паллиативной помощи",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043e\\u0442\\u0434\\u0435\\u043b\\u0435\\u043d\\u0438\\u044f\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2023-10-31T09:52:14.310Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "4",
+        "object_repr": "Лицензия на осуществление медицинской деятельности",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u0439\\u043b \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0438\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2023-10-31T09:52:28.546Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "3",
+        "object_repr": "Лицензия деятельности по обороту наркотических средств",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u0439\\u043b \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0438\"]}}]"
+    }
+}, {
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+        "action_time": "2023-10-31T09:52:41.053Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "Лицензия на фармацевтическую деятельность",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u0439\\u043b \\u043b\\u0438\\u0446\\u0435\\u043d\\u0437\\u0438\\u0438\"]}}]"
+    }
+}, {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$BulkB9sUTcVzvtqcPa2bJr$GuPdhDjuv5zQrtRE7gJVJ9+L5WnWA+ffeoaOj5ZP6uE=",
+        "last_login": "2023-10-31T09:51:46.984Z",
+        "is_superuser": true,
+        "username": "sirius",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-24T16:10:13.917Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Eh7z4EV5SZEr$aN4QWtB41DkVkBqbnD/hKiEwH0iC/GKwiw/GCU6tZ8Y=",
+        "last_login": "2023-04-24T16:44:37.253Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-24T16:44:37.022Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$5r0p7CkPxEMc$QW97b+w9G7H1byHmTVL42YYYGeMWXridUgb4ZY9X8bI=",
+        "last_login": "2023-04-24T17:15:24.484Z",
+        "is_superuser": false,
+        "username": "testing",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-24T17:04:41.331Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$r1B3jzfMzNZm$SjFtQBPUb9rCDdg7X/KHcTqq4QU1Ob/BqPdSoLHcYl4=",
+        "last_login": "2023-04-30T03:58:26.881Z",
+        "is_superuser": false,
+        "username": "KristieChody",
+        "first_name": "KristieChodyMP",
+        "last_name": "KristieChodyMP",
+        "email": "vikasanka@litaga.xyz",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-30T03:58:25.499Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$cNSxn1BfPRwq$Q4N1VRFBdhrnD8U+JhaT0mhgJLYel0dHCzCt1xf8d3c=",
+        "last_login": "2023-05-10T13:12:47Z",
+        "is_superuser": false,
+        "username": "Ahmad",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-05-10T13:12:47Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$t4orBhVdWbz4$yjeMU4gyhlch0/5R2OH892N2p5F2aQUmecbPJsK5GCg=",
+        "last_login": "2023-05-10T13:17:39.612Z",
+        "is_superuser": false,
+        "username": "Nazarbek",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-10T13:17:39.429Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$65XiGjsqXWsH$GYxkk8GaaZA5Mz92Nv0snxSlycqFn5wAB8xqwSg65DA=",
+        "last_login": "2023-05-11T07:44:11.182Z",
+        "is_superuser": false,
+        "username": "Isa",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-11T07:44:10.923Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$mElUoZnLcElO$gwG5ASqut7gMwnRzu51Lh+eB2rZraw7WxbmDfm/tSPQ=",
+        "last_login": "2023-05-12T08:51:22.406Z",
+        "is_superuser": false,
+        "username": "Umar",
+        "first_name": "",
+        "last_name": "",
+        "email": "hakimov.umar@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-12T08:51:22.141Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$xQDvbuxJblSV$RmMcyZWjy6f3jCs6i2GkWkUf9spaM46JupbqhE4HJyQ=",
+        "last_login": "2023-05-15T12:46:12.195Z",
+        "is_superuser": false,
+        "username": "Z.K.",
+        "first_name": "",
+        "last_name": "",
+        "email": "zali_ku@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-15T12:46:11.977Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$EXFd4ba5xP0L$sOICGgVEX5DPq/Ur3qNdnfcXBfLpyNBJm37dMfdq408=",
+        "last_login": "2023-05-18T08:56:18.109Z",
+        "is_superuser": false,
+        "username": "Рамзан",
+        "first_name": "",
+        "last_name": "",
+        "email": "bisultanov.ramza@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T08:56:17.880Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$6DWCxyRZHPgn$YjFKSziVJOnKuedSGQNDuMpNtriYPkF5GvlQiRAXNM4=",
+        "last_login": "2023-05-18T10:31:27.340Z",
+        "is_superuser": false,
+        "username": "Макка",
+        "first_name": "",
+        "last_name": "",
+        "email": "sers6951@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-18T10:31:27.201Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$hVE983mahT6X$sQtporZs+GKmQPmGTxQuwTU2cJY6LtWpRJT2BrKwg8c=",
+        "last_login": "2023-05-23T10:53:39.272Z",
+        "is_superuser": false,
+        "username": "I_am_your_angel_91@mail.ru",
+        "first_name": "",
+        "last_name": "",
+        "email": "i_am_your_angel_91@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-23T10:53:39.099Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$F4PevjCgCdvs$hegeccviU50lh0HXP01tZm5oe/dBRK5jEncpYWCkBBc=",
+        "last_login": "2023-05-24T10:09:49.212Z",
+        "is_superuser": false,
+        "username": "Ахмед",
+        "first_name": "",
+        "last_name": "",
+        "email": "islam.shataev.7008455@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-24T10:09:49.022Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$d4L5TpKkcWYM$EXXLKzSGB64/Nbmd3r3Qq29t2q8mVe1RMP31oXLcYNY=",
+        "last_login": "2023-05-26T22:36:58.724Z",
+        "is_superuser": false,
+        "username": "Раиса",
+        "first_name": "",
+        "last_name": "",
+        "email": "lora888abc@icloud.co",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-26T22:36:58.562Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$PLqBhxMF4H9q$znOwiaCpjrTBE2mO+JaXvijeJAW7YRnjk+hBQiVghl4=",
+        "last_login": "2023-05-31T05:56:38.845Z",
+        "is_superuser": false,
+        "username": "Эльмира",
+        "first_name": "",
+        "last_name": "",
+        "email": "elmiragereeva1993@icloud.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-31T05:56:38.613Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$dK73DKN2Cams$W69tRMlABRQm1vUXXD0gHqAowuYVotANfdtzw4jQJd4=",
+        "last_login": "2023-06-02T06:05:03.116Z",
+        "is_superuser": false,
+        "username": "Турпалханов",
+        "first_name": "",
+        "last_name": "",
+        "email": "ibra.95.argun@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-02T06:05:02.593Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 17,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$ZqcQgEJZSBrc$1/CFvAZ6CZJubGHsebw3YSP8uO9jqAy6Xp2IYeYMSl8=",
+        "last_login": "2023-06-09T08:12:24.580Z",
+        "is_superuser": false,
+        "username": "Lu",
+        "first_name": "",
+        "last_name": "",
+        "email": "luizaabv631@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-09T08:12:24.412Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 18,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$b8eD2026DF2c$CBNZ09rURXas7ZvJaFZY4swtS9k71gvY30EorQBAY3o=",
+        "last_login": "2023-06-22T10:03:43.816Z",
+        "is_superuser": false,
+        "username": "abu",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-22T10:03:43.615Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 19,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$XzFhPytU3Jkp$uDlQmAGVxD1SeVD+kLO0Y1JZzIjft2Fmm+LVvQmCDGA=",
+        "last_login": "2023-06-26T10:13:33.117Z",
+        "is_superuser": false,
+        "username": "Zalina",
+        "first_name": "",
+        "last_name": "",
+        "email": "zalinafireva138794@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-26T10:09:55.713Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 20,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$MleD7dizQ2lV$DmE7uMDc4cTYKWvGwQ+riufCKzwbOsEFoOcBCVe5Y6s=",
+        "last_login": "2023-06-26T10:23:41.397Z",
+        "is_superuser": false,
+        "username": "AlviT",
+        "first_name": "",
+        "last_name": "",
+        "email": "alvi1982@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-26T10:20:46.066Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 21,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$VZ2jr0Sspdwk$CqWNJPM5oxM/iuIKx3GQhQ+pLk8Shz3DqH7LgGE/1B4=",
+        "last_login": "2023-07-15T02:14:45.390Z",
+        "is_superuser": false,
+        "username": "MichelBip",
+        "first_name": "",
+        "last_name": "",
+        "email": "BeerneShiniaKaw@aptekadvita.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-15T02:14:45.192Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Kwe4D3mHOv3E$E/ilnDPQ2LqZm4K0eAiB98P4ggF6KOR5C1fmjlLNP8Q=",
+        "last_login": "2023-07-26T07:51:35.918Z",
+        "is_superuser": false,
+        "username": "Луиза",
+        "first_name": "",
+        "last_name": "",
+        "email": "krevetka.seko@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-26T07:51:35.697Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 23,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$DTVPpNmljPNp$i95sweOh0ymD8JPKx2xhm9ZmbEt9ZM9I336/8a8y47Y=",
+        "last_login": "2023-07-31T12:23:27.739Z",
+        "is_superuser": false,
+        "username": "Luiza",
+        "first_name": "",
+        "last_name": "",
+        "email": "luiza.isaeva.1971@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-31T12:23:27.514Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 24,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$yAtxByc6jaXi$fvt2wb+7flOXqwBWAEhsOW1RzZtH1lLckC+YO1iBy+E=",
+        "last_login": "2023-10-16T07:25:25.304Z",
+        "is_superuser": false,
+        "username": "BitmaAgerb",
+        "first_name": "",
+        "last_name": "",
+        "email": "valitov3984@outlook.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-08-17T10:58:41.379Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 25,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$1xvw3fdSnznQ$b8jCkEJnLSG9pWBTy1iI2xcWRIPTWAdPAxo5Ca0GYX0=",
+        "last_login": "2023-09-12T11:35:50.074Z",
+        "is_superuser": false,
+        "username": "Моххамед-Эминг",
+        "first_name": "",
+        "last_name": "",
+        "email": "indaibri@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-09-12T11:35:49.840Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 26,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$oGw05z9Wz3OX$U7mxrXM5n3fahqSFRfUiye+mxpl7BI5MQAl2r1AlmQk=",
+        "last_login": "2023-09-19T09:40:38.671Z",
+        "is_superuser": false,
+        "username": "Edi",
+        "first_name": "",
+        "last_name": "",
+        "email": "ediev-alikhan@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-09-19T09:40:38.476Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 27,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$k5FlrXLKvfvk$T3DAKP4T1ZibC25MdwIZ7cQwq5JsutCK5cfzcw+fTbc=",
+        "last_login": "2023-09-23T09:40:29.904Z",
+        "is_superuser": false,
+        "username": "luchinkinkos",
+        "first_name": "",
+        "last_name": "",
+        "email": "maximbelov00@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-09-23T09:40:27.484Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 28,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Ke2Cg73jQlrH$MqGDUzTLW6d7OHVYqrfd9M1V0hLv+JBOL1o0JJxO/bA=",
+        "last_login": "2023-10-02T08:49:31.131Z",
+        "is_superuser": false,
+        "username": "Aisha88",
+        "first_name": "",
+        "last_name": "",
+        "email": "magomadova26091988@gmail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-02T08:49:30.934Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 29,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$DVtlkvcK5oef$qiNEZyW14/pDhudnV5CZzegpOZFokhqeMI4KiHgetDI=",
+        "last_login": "2023-10-02T08:55:20.095Z",
+        "is_superuser": false,
+        "username": "Заира",
+        "first_name": "",
+        "last_name": "",
+        "email": "tahaeva1970@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-02T08:55:19.902Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 30,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$E9HB32AnI4RH$PDqigRbseejHLHlrLX/DzQEuNZREQyaz/LnrfUEusTo=",
+        "last_login": "2023-10-03T07:01:51.422Z",
+        "is_superuser": false,
+        "username": "анзор",
+        "first_name": "",
+        "last_name": "",
+        "email": "daulmirzaev@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-03T07:01:51.169Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 31,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$IWstuyjb9lUM$9xbjhgV4GJMQ5H71UhQbB465kXOXNGLbtJDZZ+JmKkg=",
+        "last_login": "2023-10-03T18:37:08.419Z",
+        "is_superuser": false,
+        "username": "Лина",
+        "first_name": "",
+        "last_name": "",
+        "email": "27.lina@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-03T18:37:08.173Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 32,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$4RQiI8TjjO9w$a45Wm8JvaDX+cAAVGnkWRs2bc3kJFZbCmiAAd3z4uhU=",
+        "last_login": "2023-10-05T17:39:12.487Z",
+        "is_superuser": false,
+        "username": "Malika.Kaimova",
+        "first_name": "",
+        "last_name": "",
+        "email": "www.kaimova1988@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-05T17:39:12.282Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 33,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Gm8vr7o4HekD$Pw6OjeM5S8H8kfHQ2L+CgjTnL9ovvIAJvAOWTdnllv0=",
+        "last_login": "2023-10-12T06:51:12.569Z",
+        "is_superuser": false,
+        "username": "Мохмад",
+        "first_name": "",
+        "last_name": "",
+        "email": "mahmad89288997628@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-12T06:51:12.355Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "0k7u87dozl8t62ungsmv3ia3kv1oc377",
+    "fields": {
+        "session_data": "NDQyOWU3OTFjNWE2ODhiNWQzMTQ3N2VhNGEyY2RjOWJlZmRlYmQwNzp7Il9hdXRoX3VzZXJfaWQiOiIyOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiODNmMDAyZDNmMGFjZTk2ZTkyNzMxYTYyZjA4YjllYzk3MDE5ZWZhMSJ9",
+        "expire_date": "2023-10-16T08:55:20.098Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "0pv5ah6m27axed2k3z5s6xjxt7he5tfs",
+    "fields": {
+        "session_data": "YjFkYjEyNTdjODFkZTBlMWYzMzMyYjRhZWVmYjE1YTJhM2RhOTYzYTp7Il9hdXRoX3VzZXJfaWQiOiIyOCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNWZmNzNjYTU4ZjZlMDk4MGMwZDY1YmFlNTZmZGUwMTliZTVhYzgzYSJ9",
+        "expire_date": "2023-10-16T08:49:31.134Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "1bozpn0ad1axplor33zl1wl861zy9q3b",
+    "fields": {
+        "session_data": "YzU1MzVjYzhkYjY4OTg2ZjE4MDc2ODUxMDlhNDhkNWNmYzkxOTk1OTp7Il9hdXRoX3VzZXJfaWQiOiIyMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMjQ2ODVmMGMxNTc2Zjk3M2I2Nzg1OWJmMmRiNTBkMDMxYTRhZjFhNiJ9",
+        "expire_date": "2023-07-29T02:14:45.392Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "1uy52f1qm6dg4inwrn3sjvy6m3t7fo39",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-09-13T19:45:35.098Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "1v4y7771a3okcu2r6f7gg7god24i9p7m",
+    "fields": {
+        "session_data": "ZDQxN2EwY2YyZjQxMjRiNDU2YWIwMjMzNjQ2Yzg3OTViNmIwYjg3Nzp7Il9hdXRoX3VzZXJfaWQiOiIzMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMjRhYWMzYWZkOWQ4MmQ3ODBhYzVhNjY0OGRmZDA1NjNkMDQ1NWUyYSJ9",
+        "expire_date": "2023-10-26T06:51:12.572Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "3nqpprrr42dt2x1t554non05fgplu127",
+    "fields": {
+        "session_data": "NjM5ZmI2OGNhMzBhNDQ3NTM0MGJjZTc0YmI2NGU4ZTI2NTJjNjA3YTp7Il9hdXRoX3VzZXJfaWQiOiI3IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYzRmZmNmMzc1M2NlOGQ1YzQ2YTlkOGJiYTQ5ODUxNmZhNzY4MWMwIn0=",
+        "expire_date": "2023-05-25T07:44:11.185Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "3pu2bg3y9p6nfs42lc9e6zxg5m3n7ovb",
+    "fields": {
+        "session_data": "MmM0YjlkYzVmZjdlMjIxYjMzMDQ3MDg4ZTdhMDM4ZjA0YzY2YzU0Yzp7Il9hdXRoX3VzZXJfaWQiOiIyNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzM5MDYzODk2Mzc3YTI3ZDQ3MTNiYWIwNzM4OTU5NTllZGUxZGY3MSJ9",
+        "expire_date": "2023-10-30T07:25:25.309Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "4ylaow0yhj99phybnoxkyitrhat7epm1",
+    "fields": {
+        "session_data": "OGM2NzkyNDYxMmMzOTg4NTg2Y2RmODBlNjgwODhlZGExYjU1N2I5ODp7Il9hdXRoX3VzZXJfaWQiOiIxMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNjQ2NzkzOTViYmJiMWIyOTZjZTdmZjBiZDRjMzNmMzYyZWE4NDJkMiJ9",
+        "expire_date": "2023-06-01T10:31:27.344Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "512n2i1pg5e16rk2oiow5s2h1gkxx0h0",
+    "fields": {
+        "session_data": "ZWIzODlmMWY4YzBlN2E1MTkyZDU5NmM4YzliODVmNTI2NTk2ZWE0Nzp7Il9hdXRoX3VzZXJfaWQiOiIyMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjIxZDA3MzM4YmE4MTAyMjk4OGE0NDg1YjNjZGU4ZDU5YjJmMWYxZCJ9",
+        "expire_date": "2023-07-10T10:20:46.321Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "7hsav8hrh0tbwx4v5x9ek93e7b27cfah",
+    "fields": {
+        "session_data": "NjJhZTZjOGY0MjIwNDI0YTMwNmQyMzM0MzM2NzQ3OTZiMzJiZmE4YTp7Il9hdXRoX3VzZXJfaWQiOiIzMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZTI2ZWRiMDVlMTkxMDAzOGVkZTA1ZjAyMjJjNDUzMzY0ZmI0ZGNhNiJ9",
+        "expire_date": "2023-10-17T18:37:08.423Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "7j92nhnwyuirtqmhmdcdsynep64mrsh5",
+    "fields": {
+        "session_data": "NTI1MzBmYmI0M2U1ODg5MmE0NDJjNTU2ZGY1ZDRkMDRlYTJlYTdlODp7Il9hdXRoX3VzZXJfaWQiOiIzMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZGMzNjdhOTMyNDQwMjUwYjg5NTYzNmFiMDRkNTZjZjU1MjZjODZkZiJ9",
+        "expire_date": "2023-10-17T07:01:51.424Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "80pqcdo4er26u8ahvg5qnrkk0yli9mwb",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-09-08T13:09:38.239Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "8cvrk4m69fw06ro70i26499ixl5w7c4g",
+    "fields": {
+        "session_data": "OTU2YmMwYTZjMGZmNmIzMGNmMDU4ZWM4NTdlYTI0ZWY0ZWFiMWUwNzp7Il9hdXRoX3VzZXJfaWQiOiIxNyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMGU3ZDdkMGYyYzU4OTY2OTRiZmZhZjhmYzM1MDJjZDk1ODBhZjUxNyJ9",
+        "expire_date": "2023-06-23T08:12:24.583Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "a15gfl595lbwg9d2gdop11b2bab91743",
+    "fields": {
+        "session_data": "MmIxZjNkZDE2YjhkMjhiZTczYTEyNGJiMDkxYjFlY2NkNDE4ZGIzOTp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1M2ZkZTk3NDc5OGIyOWEzNTBmNmFmMzcxODcyNmVjODdiMzFiMGEwIn0=",
+        "expire_date": "2023-05-08T17:15:24.487Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "aebt562undumxgknm3jez5nhmh9hrb75",
+    "fields": {
+        "session_data": "NDMwNjJiNTI4NDUwOGQzMTM0NDBmYThjN2Q3ZmIzYzgwNjU4YTlmNjp7Il9hdXRoX3VzZXJfaWQiOiI5IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2ZWJiMGI3NzU1OWNiNDUxZDVmZmUxYWIxMWZjZjQyNjQ4Y2U3YTc3In0=",
+        "expire_date": "2023-05-29T12:46:12.198Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "b7idsnzi5aky6r64pn9qiifrnrwddd0t",
+    "fields": {
+        "session_data": "NjgxZjdhNDZkY2IyNGNmZmQ3ZDMzYjQxOTVmNWY2YjczMWNiYmE2MDp7Il9hdXRoX3VzZXJfaWQiOiIyNSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOGI0NGRlNzM2Y2U0OTQwM2QxNjYzYTU5MWM1YzUzMTdkNmM3ZjE0YyJ9",
+        "expire_date": "2023-09-26T11:35:50.080Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "d66sei2lx5qgip2yylm3dgoac4cy8gcs",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-08-24T15:17:39.963Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "edt59nn64eoxr73sv554prggfthgvshr",
+    "fields": {
+        "session_data": "ZTRhZTIzZWM4MzI0ZmM1ZTQxZmZmOTU2NTFmNjNjMmE3ZDVkMWFlMzp7Il9hdXRoX3VzZXJfaWQiOiI0IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4NmRhZjAxNzRiMTMwNDFjMjFlYzEyZTI4ODFkNTQxZWQ1NjZiZDU0In0=",
+        "expire_date": "2023-05-14T03:58:26.885Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "epdw0dulpy3fmxdqmt21pl32kwn4qv8g",
+    "fields": {
+        "session_data": "ZWIzODlmMWY4YzBlN2E1MTkyZDU5NmM4YzliODVmNTI2NTk2ZWE0Nzp7Il9hdXRoX3VzZXJfaWQiOiIyMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjIxZDA3MzM4YmE4MTAyMjk4OGE0NDg1YjNjZGU4ZDU5YjJmMWYxZCJ9",
+        "expire_date": "2023-07-10T10:23:41.401Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "fxmmgf534dna3adr08zhl5oj23awyxdy",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-06-23T11:00:18.743Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "h3fzpu0q75v8d2del9dj60k7xnfql186",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hCe_F267xkIPF6laiAp7cp4dyXpQrczk3mxEPethL3TGpbMLgzY6ZeliA-qQ-R7rLfGsdVtXRIfCT9s51PL9Lwe7d-gxF7GFr0HK0gqSVmIZDQkoTU4EC6CcvmMoFJyRlpCM39bh1bTDMYJi57Y-wO0izbl:1qxlPW:_RVjBvU4Hy_IAHkqfrteU2E2yUzTEoR4Ga0cOBrYY5A",
+        "expire_date": "2023-11-14T09:51:46.988Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "hclm67x8mqps05pgwgwdqo8e65emebzd",
+    "fields": {
+        "session_data": "M2EyMzNhZmI0ZDY3NGZkZjk4NGExMmM3YzAwNWQ2OWQ2MGE2ODRkNTp7Il9hdXRoX3VzZXJfaWQiOiIzMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZGNmMmI5MDU5OGVmYzA1YmFmMDU2YTkxYmJmODg4MmVhZWRkMDUzZSJ9",
+        "expire_date": "2023-10-19T17:39:12.490Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "hjqk2evh9jolbsxj8wz5908l0qftfxa6",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-10T08:07:28.474Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "hpd05e6tw3h7hsx44aprj9dll0mvmtij",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-31T06:02:58.163Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "i0aq2citms6ixuhps1k0raodm5yovwt4",
+    "fields": {
+        "session_data": "MmM0YjlkYzVmZjdlMjIxYjMzMDQ3MDg4ZTdhMDM4ZjA0YzY2YzU0Yzp7Il9hdXRoX3VzZXJfaWQiOiIyNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzM5MDYzODk2Mzc3YTI3ZDQ3MTNiYWIwNzM4OTU5NTllZGUxZGY3MSJ9",
+        "expire_date": "2023-08-31T10:58:42.487Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "ib0u1uca1t4vwwlamm21h5qnftovx2ah",
+    "fields": {
+        "session_data": "NjAzZjdmMDU1ZGE0MTM4OGM3NTBmNmZjMWVlMmIwMDFiZDc2MDUzNjp7Il9hdXRoX3VzZXJfaWQiOiIxNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNGZmZjA1NWEyODRjNmExOGM2OWJjNjE2Mjg5ZTg2YWJlZGJhNGE3ZCJ9",
+        "expire_date": "2023-06-09T22:36:58.727Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "kmq4mpg1kmpaxe6a13qdpahjq8reknbc",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-31T10:04:49.399Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "ks1carsw1kkwm8m00565cxwdcrs9bslo",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hCe_F267xkIPF6laiAp7cp4dyXpQrczk3mxEPethL3TGpbMLgzY6ZeliA-qQ-R7rLfGsdVtXRIfCT9s51PL9Lwe7d-gxF7GFr0HK0gqSVmIZDQkoTU4EC6CcvmMoFJyRlpCM39bh1bTDMYJi57Y-wO0izbl:1qxlN4:JgjclVYaZf2kUQJdji1jC2C4NhjKlUVpyk7Ua-wjNzA",
+        "expire_date": "2023-11-14T09:49:14.875Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "m7bx3tu2fle187vm1t8f7un9ncirxt0r",
+    "fields": {
+        "session_data": "ODliOGMxM2RmMmQ2ZGQ1YTVmNGZjOTRiYmY3NmZlZTlkYzk3ZDlhNDp7Il9hdXRoX3VzZXJfaWQiOiIyNyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOGM3MzQ1NTljZWMxZjc3ZTM1MGMxZTBkYWMxN2EwYWFjNTQ5MTMzZiJ9",
+        "expire_date": "2023-10-07T09:40:29.908Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "mgrqevoygjucnrzggck5z377y73h5qpj",
+    "fields": {
+        "session_data": "OGQ5NDUwNTQwMWJlNDM0ZWFjOTY0NWJhMDA5NThiYTJjZmFhYzllZDp7Il9hdXRoX3VzZXJfaWQiOiIyNiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMTgyOWI4MWRkOWM2MDM4OTk1MjQ5Yzk4ZjE3Nzk2M2NmZTAwZTlkYiJ9",
+        "expire_date": "2023-10-03T09:40:38.674Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "n5fv8k0tnnnutcs0fpx6x41duldwmgkl",
+    "fields": {
+        "session_data": "NDU4MzYzNWE2MTE5MDcwNDNiZWExZjE3ZTVjM2M4NjBhNmIyMTg1NTp7Il9hdXRoX3VzZXJfaWQiOiIyMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMDQ1MDE1NTdhY2NkZWYwNTVhNjM5ZmYzZGQ4YzZkZTJhOTA1NTlmOCJ9",
+        "expire_date": "2023-08-14T12:23:27.742Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "niqn9fse3qto46x9xh208rpz3ydqr250",
+    "fields": {
+        "session_data": "M2Q5MjU0MGU1MzY4YmYzZmE2MDQzNDdmZTU4Y2YyZWNiNjZkMGFkYzp7Il9hdXRoX3VzZXJfaWQiOiIxNiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNTc0ZjgyZmRiYmNlOGQ4ZjRiOGQzYjVmMzlmZGQ4MGZjOTMwYzdmYyJ9",
+        "expire_date": "2023-06-16T06:05:03.119Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "nlshqh8jufuzjuzn2677u9u43ivpbm1o",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-08T16:56:30.975Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "ohbwl5r9jlyaa871y1eu9kphbpuawlnc",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-06-30T08:36:52.834Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "opvzes7x615bvlz25dovvfx7xhphtc44",
+    "fields": {
+        "session_data": "NDY5MGI0YTIwNjc2N2ZiMmUyYzFkYzFlODE1ZTc3ODUyNmVjNmRjYTp7Il9hdXRoX3VzZXJfaWQiOiI4IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MjgzY2M2YTBjZGFlOWRkNmI5YzBlZTI4NDEzOTRmMjg3ZTdjMThlIn0=",
+        "expire_date": "2023-05-26T08:51:22.409Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "p1y234idmpuxhhfqqh5ta4a46qm2ukgk",
+    "fields": {
+        "session_data": "NTg5NDQyNTdjNzAxZmZlZDY4NDhjNmY3MDQ4NTdhMjUwYjZjOTI3Mjp7Il9hdXRoX3VzZXJfaWQiOiIxMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiM2M4MmJhODU5YTg4YzRmMTc4NmY0YTBiZTUwYTY2Y2QwMjU5MTUwNCJ9",
+        "expire_date": "2023-06-07T10:09:49.214Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "pd698a2cdd7a6atdenrqy319o6uuueqf",
+    "fields": {
+        "session_data": "MTIzNzE2ZGE5YWFmZjQ3ZjY5MGZiNTJiZmUyNWNlMjIzZjUwZmExMTp7Il9hdXRoX3VzZXJfaWQiOiIxNSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYTAwZjU3YThmMWI2YWU5ZjYwNDc5N2VmZTA2NDFmNmUxMjQ3N2RiZSJ9",
+        "expire_date": "2023-06-14T05:56:38.847Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "q64fh07s6hpjg890xjz85b059ls8s5z1",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-27T15:58:29.011Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "q6dmpasqs1xflqffjsoorigy9cp99kj5",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-07-26T05:42:22.573Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "s0ir1q091w75ptyxdka1n7mmc6g0x6s8",
+    "fields": {
+        "session_data": "Mjk3MDI2YTczMGZhM2NmMjY4MDE3ZmU5ODc4MzJmZWZlMmMyZDU2NTp7Il9hdXRoX3VzZXJfaWQiOiIxMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjEzMTk1MGMzODMxZjhiZTcyMGZjMmQ4YWM2YmMwODUzNjY5NzBiOSJ9",
+        "expire_date": "2023-06-01T08:56:18.111Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "um8zxe2feut04f9au1rwilcziudrrg0n",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-28T10:02:46.339Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "w6h80vdrvwui33ro5ao1wrjji3duum5c",
+    "fields": {
+        "session_data": "NDM0Y2MzNTlhNDgwMWM0MWI5NjRjOGVmMzBmYTVjYjNiNGI1NTAyYTp7Il9hdXRoX3VzZXJfaWQiOiI2IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1YjIzMmQ4MTllNmFjYzk0ZDdjNGU3MjU4OWJlOTE2MmIyYTNiYmEwIn0=",
+        "expire_date": "2023-05-24T13:17:39.615Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "xeqf20sy9tgjhelpwms19zy3apnli8h0",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-25T06:42:39.925Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "yblxzz0cop2tflaorssuzu7hxt8jecyn",
+    "fields": {
+        "session_data": "MjVjNmFiNzg3NDE3NGE3N2I2NWE3Zjk3ZTE4OWJmMDBiNzMzMWY0Yjp7Il9hdXRoX3VzZXJfaWQiOiIyMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiODVlMjg3N2JiMzZjZTVlMGRiNWYwYzU3MzdjOGRiNDdjMzI2YTJmZSJ9",
+        "expire_date": "2023-08-09T07:51:35.922Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "yjtu24waak3zx8damq016f646jep02kz",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-05-26T08:51:44.466Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "z5uyq0sob7g57f6naz44z576og2qc7a7",
+    "fields": {
+        "session_data": "NTRmYTIyZjZkNTJhYTM3MTc1ZWU4YjEwZGIwNzQ0ZDU4ZjZlZGY0ZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2OTUxZWM1YzkxMTNiNzA2ODJlYjcwMzliZmFmMmRlNTllOWFlNjhhIn0=",
+        "expire_date": "2023-10-05T05:41:21.013Z"
+    }
+}, {
+    "model": "sessions.session",
+    "pk": "zokbkio59ldqi6mey1wa642xorte0rqj",
+    "fields": {
+        "session_data": "ZTQwYzk2OGQ1MGEyMTA0NzIyNDlmYWJlY2U0MDlhOWYyNWQwOTNhYzp7Il9hdXRoX3VzZXJfaWQiOiIxMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiNjU0MTZjMWYwYTFhZWVmODA5ODliNzZjZmJlYjFlMzM2NTlkNWRkZiJ9",
+        "expire_date": "2023-06-06T10:53:39.275Z"
+    }
+}, {
+    "model": "personnels.seat",
+    "pk": 1,
+    "fields": {
+        "name": "врач-онколог",
+        "slug": "cancer-doc"
+    }
+}, {
+    "model": "personnels.seat",
+    "pk": 2,
+    "fields": {
+        "name": "Заведующий отделением",
+        "slug": "zavotdel"
+    }
+}, {
+    "model": "personnels.academicdegree",
+    "pk": 1,
+    "fields": {
+        "name": "Кандидат медицинских наук",
+        "slug": "KMN"
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 1,
+    "fields": {
+        "title": "Поликлиника",
+        "slug": "policlinik",
+        "description": "",
+        "adding_rate": true
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 2,
+    "fields": {
+        "title": "ЦАОП",
+        "slug": "CAOP",
+        "description": "",
+        "adding_rate": true
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 3,
+    "fields": {
+        "title": "Цитологическая лаборатория",
+        "slug": "citlab",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 4,
+    "fields": {
+        "title": "Клинико-диагностическая лаборатория",
+        "slug": "KDL",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 5,
+    "fields": {
+        "title": "Патологоанатомическое отделение",
+        "slug": "Patanatomy",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 6,
+    "fields": {
+        "title": "Химиотерапевтическое отделение № 1",
+        "slug": "HTO1",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 7,
+    "fields": {
+        "title": "Химиотерапевтическое отделение № 2",
+        "slug": "HTO2",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 8,
+    "fields": {
+        "title": "Отделение лучевой диагностики",
+        "slug": "luchevaia-diagnostica",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 9,
+    "fields": {
+        "title": "ОАРИТ",
+        "slug": "OARIT",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 10,
+    "fields": {
+        "title": "Дневной стационар",
+        "slug": "Dnevnoi-stacionar-him",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 11,
+    "fields": {
+        "title": "Эндоскопическое отделение",
+        "slug": "endoscopy",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 12,
+    "fields": {
+        "title": "Отделение радиотерапии",
+        "slug": "Radio",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 13,
+    "fields": {
+        "title": "Отделение паллиативной помощи",
+        "slug": "OPPOB",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 14,
+    "fields": {
+        "title": "Приемное отделение",
+        "slug": "Priem",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 15,
+    "fields": {
+        "title": "Отделение опухолей молочной железы",
+        "slug": "mamology",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 16,
+    "fields": {
+        "title": "Отделение онкогинекологии",
+        "slug": "ginecology",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 17,
+    "fields": {
+        "title": "Отделение абдоминальной онкологии",
+        "slug": "abdom",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 18,
+    "fields": {
+        "title": "Отделение онкоурологии",
+        "slug": "urology",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.department",
+    "pk": 19,
+    "fields": {
+        "title": "Отделение опухолей головы и шеи",
+        "slug": "golova-i-sheia",
+        "description": "",
+        "adding_rate": false
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 1,
+    "fields": {
+        "first_name": "Хеди",
+        "last_name": "Витаева",
+        "patronymic_name": "Яхъяевна",
+        "created_at": "2023-04-24T16:41:11.434Z",
+        "updated_at": "2023-10-15T15:58:22.934Z",
+        "education": "Чеченский государственный университет,  2012г. Лечебное дело.\r\nИнтернатура, Чеченский государственный университет, хирургия, с 01.09.2011г. по 23.07.2012г., удостоверение №70 выдано 25.08.2012г.",
+        "qualification": "Диплом о профессиональной переподготовке, Кубанский государственный медицинский университет, онкология, с 22.10.2013г. по 19.02.2013г. , 576 часов, ПП- I №396238, рег.№13290 выдано 19.02.2013г., г. Краснодар.\r\nПериодическая аккредитация, онкология, 31.01.2023г. ФГБОУ ДПО РМАНПО МЗ России",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "4.7999999999999998223643160599749535322189331054687500000000000000000000000000000000000000000000000000",
+        "persona_code": 9,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 2,
+    "fields": {
+        "first_name": "Израил",
+        "last_name": "Джабраилов",
+        "patronymic_name": "Ризванович",
+        "created_at": "2023-04-24T22:09:12.728Z",
+        "updated_at": "2023-10-12T20:25:25.954Z",
+        "education": "ГБОУ ВПО «Волгоградский государственный медицинский университет», 2015г. 103404 №0000381.\r\nИнтернатура, Чеченский государственный университет, хирургия, диплом №012018046058, рег. №0033, выдан 09.07.2016г., г. Грозный.\r\nОдинатура, ФГБУ «Государственный научный центр РФ – Федеральный медицинский биофизический центр им. А.И. Бурназяна,  онкология, диплом 107718№231858, рег. №84/18, выдан 31.08.2018г. г. Москва",
+        "qualification": "ФГБУ «Государственный научный центр РФ – Федеральный медицинский биофизический цент им. А.И. Бурназяна,  онкология, 20.07.2018г., №0377180815660, рег. №1084/18 выдан 31.08.2018г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "4.5599999999999996092014953319448977708816528320312500000000000000000000000000000000000000000000000000",
+        "persona_code": 2,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 3,
+    "fields": {
+        "first_name": "Кока",
+        "last_name": "Зайпулаева",
+        "patronymic_name": "Абуевна",
+        "created_at": "2023-04-24T22:09:57.591Z",
+        "updated_at": "2023-10-17T08:52:33.933Z",
+        "education": "Северо-Осетинский гос. мед. институт, 1991г. ЭВ №585231.\r\nИнтернатура, Больница скорой мед. помощи, хирургия, с 01.08.1991г. по 29.07.1992г., удостов. №5(дубликат), выдано 21.04.15г.\r\nПервичная специализация, Северо-Осетинская ГМА, онкология,  с 14.09.15г. по 13.11.15г., 288часов. №152402960561, выдано 16.11.2015г. рег. №1140 г. Владикавказ.",
+        "qualification": "ООО «Центр Профессионального Образования, онкология, 07.04.2020г. №1126242298833 рег.№2665 выдан 08.04.2020г. г. Ставрополь.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 7,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 4,
+    "fields": {
+        "first_name": "Заурбек",
+        "last_name": "Исмаилов",
+        "patronymic_name": "Абуранович",
+        "created_at": "2023-04-24T22:10:39.441Z",
+        "updated_at": "2023-10-17T08:32:49.867Z",
+        "education": "Чеченский государственный университет, 2010г. ВСГ №5405932.\r\nИнтернатура, ГУ «Республиканский онкологический диспансер,  онкология, с 02.08.10г. по 30.06.11г.,удостов. №205 от 30.06.11г.   \r\nДиплом по профессиональной переподготовке, АНО ДПО «Гуманитарно-технический институт», организация здравоохранения и общественное здоровье, с 12.09.2019г. по 17.12.2019г., 576 часов, №003839, рег. №М 1912/17 - 033, выдан 17.02.2019г. г. Москва",
+        "qualification": "Периодическая аккредитация, 30.08.2022г, ФГБОУ ДПО РМАНПО МЗ РФ, Онкология.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 1,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 5,
+    "fields": {
+        "first_name": "Ахмед",
+        "last_name": "Солтамурадов",
+        "patronymic_name": "Геланиевич",
+        "created_at": "2023-04-24T22:11:45.610Z",
+        "updated_at": "2023-10-13T06:37:18.306Z",
+        "education": "ЧГУ, КЗ №73366, 2011г.\r\nОрдинатура, Астраханский ГМУ, онкология, с 01.09.2013 по 31.07.2015г., 103024 №002657, выдан 31.08.2015г., рег. №058-15.",
+        "qualification": "ООО «Центр Профессионального Образования», онкология, 07.04.2020г., №1126242371975 рег.№2812 выдан 08.04.2020г. г. Ставрополь.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 3,
+        "published": false
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 6,
+    "fields": {
+        "first_name": "Хизир",
+        "last_name": "Солтамурадов",
+        "patronymic_name": "Магомедович",
+        "created_at": "2023-04-24T22:12:27.249Z",
+        "updated_at": "2023-10-17T07:16:17.689Z",
+        "education": "Чеченский государственный университет, 2013г. КФ №82696.\r\nИнтернатура, Астраханская ГМА, онкология, С0109.13г. по 31.08.14г., диплом №013024022732 рег. №121-14 г. Астрахань, выдан 31.08.2014г.",
+        "qualification": "ООО «Центр Профессионального Образования», онкология, 15.06.2019г. №1126241844839, рег.№1214 выдан 17.06.2019г. г. Ставрополь",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "3.6699999999999999289457264239899814128875732421875000000000000000000000000000000000000000000000000000",
+        "persona_code": 6,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 7,
+    "fields": {
+        "first_name": "Разита",
+        "last_name": "Тайсумова",
+        "patronymic_name": "Исаевна",
+        "created_at": "2023-04-24T22:13:04.146Z",
+        "updated_at": "2023-10-31T10:03:18.041Z",
+        "education": "ГОУ ВПО Ростовский гос. мед. университет, 2009г.  ВСГ №2614011ГОУ ВПО Ростовский гос. мед. университет, 2009г.  ВСГ №2614011.\r\nОрдинатура, Ростов. гос. мед. университет, онкология, С 01.09.09г. по 31.08.2011г., удостоверение   рег.№45 г. Ростов.",
+        "qualification": "ООО \"Центр-С\", онкология, 12.12.2020г. №262413072317,  рег. №5374, г. Ставрополь.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 5,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 8,
+    "fields": {
+        "first_name": "Мадина",
+        "last_name": "Усманова",
+        "patronymic_name": "Салаховна",
+        "created_at": "2023-04-24T22:13:41.126Z",
+        "updated_at": "2023-10-15T15:58:55.898Z",
+        "education": "Астраханская ГМА, 2012г. КА №49642.\r\nОрдинатура, Астраханская ГМА, онкология, с 01.09.12г. по 31.08.14г., диплом №103024 000796, рег. №054-14, 31.08.14г., г. Астрахань.",
+        "qualification": "АНО ДПО «Международный институт современного образования», онкология, 06.07.2019г., 1126242016628, рег. У 002221 - 19, выдан 01.07.2019г. г. Ессентуки.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 10,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 9,
+    "fields": {
+        "first_name": "Камета",
+        "last_name": "Хадисова",
+        "patronymic_name": "Сайдаминовна",
+        "created_at": "2023-04-24T22:14:27.866Z",
+        "updated_at": "2023-10-31T10:33:50.066Z",
+        "education": "Астраханский ГМИ, 1975г. ЭВ №437915.\r\nПервичная специализация, РНИОИ – онкология, С 01.07.07г. по 31.10.07г. г. Ростов, удостоверение б/н.",
+        "qualification": "АНО ДПО «Гуманитарно-технический институт», «Онкология», 23.11.2020г., №1177181102237, рег. №C2311-065, выдан 23.11.2020г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 11,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 10,
+    "fields": {
+        "first_name": "Макка",
+        "last_name": "Хадисова",
+        "patronymic_name": "Махмутовна",
+        "created_at": "2023-04-24T22:15:17.181Z",
+        "updated_at": "2023-10-17T05:35:17.543Z",
+        "education": "Ростовский гос. мед. университет, 2011г. КА №21301.\r\nИнтернатура, Ростов. Гос. мед. университет, хирургия, С 01.09.11г. по 31.07.12г.,Удостов. к диплому, КА №21301 от 31.07.12г.\r\nОрдинатура, Ростовский гос. мед. университет, онкология, с 01.09.12г. по 23.07.14г., диплом №016104  000204, рег.№155/14, выдан 01.09.14г., г. Ростов.",
+        "qualification": "АНО ДПО «Международный институт современного образования», онкология, 06.07.2019г., №1126242016667, рег. У 002293 - 19, выдан 08.07.2019г. г. Ессентуки.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": false
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 11,
+    "fields": {
+        "first_name": "Мадина",
+        "last_name": "Татаева",
+        "patronymic_name": "Шарамовна",
+        "created_at": "2023-05-11T07:23:37.444Z",
+        "updated_at": "2023-10-15T15:59:12.527Z",
+        "education": "Санкт-Петербургский ГМУ им. И.П. Павлова, 2011г. КБ №94043.\r\nИнтернатура, Санкт-Петерб. ГМУ им. И.П. Павлова, акушерство и гинекология,с 01.08.11г. по 31.07.2012г. Удостов. №1473 от 31.07.12г.,Рег.№473\r\nДиплом о проф. переподготовке, Российский нац. мед. университет им. Н.И. Пирогова, онкология, с 08.09.14г. по 26.12.14г., 576ч. №772402008372, выдан 26.12.14г. рег. №0489, г. Москва",
+        "qualification": "АНО ДПО «Международный институт современного образования», онкология, 28.09.2019г. №1126242054569, рег. №У-002743-19, выдан 30.09.2019г., г. Ессентуки",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": 0,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 12,
+    "fields": {
+        "first_name": "Ислам",
+        "last_name": "Докаев",
+        "patronymic_name": "Ломелиевич",
+        "created_at": "2023-05-11T08:29:53.218Z",
+        "updated_at": "2023-10-12T06:40:26.791Z",
+        "education": "Северо-Осетинская государственная медицинская академия Федерального агенства здравоохранения и социального развития г. Владикавказ, 20.06.2020г., 101505 №0591696, выдан 07.07.2020г.\r\nОрдинатура, ФГБОУ \"Северо-Осетинская государственная медицинская академия Федерального агентства здравоохранения и социального развития г. Владикавказ\", онкология, с 01.09.2020г. по 29.06.2022г., диплом 101524 №136626, рег. №78, выдан 04.07.2022г. Г. Владикавказ",
+        "qualification": "Первичная специализированная аккредитация, онкология,  27.07.2022г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [2],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 4,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 13,
+    "fields": {
+        "first_name": "Хеда",
+        "last_name": "Бацаева",
+        "patronymic_name": "Альвиевна",
+        "created_at": "2023-05-11T08:31:54.484Z",
+        "updated_at": "2023-10-16T03:24:28.035Z",
+        "education": "Кубанский гос. мед. университет, 25.06.2014г. , 102305 №0191840, выдан 26.06.2014г.\r\nОрдинатура, Ростовский гос. научно-исследовательский институт, онкология,  с 01.09.2014г. по 15.07.2016г., Диплом 106104 №000032, выдан 01.09.2016г. , рег.№32, г. Ростов-на-Дону.\r\nДиплом о проф. переподготовке, АНО «Научно-исследовательский институт здоровья», радиотерапия, с 01.09.2017г. по 23.12.2017г. , 576часов, №262402488715 рег. №2792, выдан 25.12.17г. , г. Кисловодск",
+        "qualification": "АНО «Сибирский институт непрерывного образования, онкология, 30.12.2020г., №1154242765940, рег. №СНМ02074?-73/20, выдан 30.12.2020г., г. Новосибирск",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [2],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 8,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 14,
+    "fields": {
+        "first_name": "Мадина",
+        "last_name": "Татаева",
+        "patronymic_name": "Шарамовна",
+        "created_at": "2023-05-11T08:33:25.394Z",
+        "updated_at": "2023-10-16T21:44:32.261Z",
+        "education": "Санкт-Петербургский ГМУ им. И.П. Павлова, 2011г. КБ №94043.\r\nИнтернатура, Санкт-Петерб. ГМУ им. И.П. Павлова, акушерство и гинекология,с 01.08.11г. по 31.07.2012г. Удостов. №1473 от 31.07.12г.,Рег.№473.\r\nДиплом о проф. переподготовке, Российский нац. мед. университет им. Н.И. Пирогова, онкология, с 08.09.14г. по 26.12.14г., 576ч. №772402008372, выдан 26.12.14г. рег. №0489, г. Москва.",
+        "qualification": "АНО ДПО «Международный институт современного образования», онкология, 28.09.2019г. 1126242054569, рег. №У-002743-19, выдан 30.09.2019г., г. Ессентуки.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [2],
+        "biography": null,
+        "image": "",
+        "avg_rating": "1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 12,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 15,
+    "fields": {
+        "first_name": "Залина",
+        "last_name": "Кунтаева",
+        "patronymic_name": "Абуевна",
+        "created_at": "2023-05-11T08:34:29.748Z",
+        "updated_at": "2023-10-17T01:29:08.484Z",
+        "education": "Чеченский государственный университет, 2014г. 102005 №0004826.\r\nОрдинатура, ФГБУ «Национальный медицинский исследовательский радиологический центр», МНИОИ им. П.А. Герцена)   онкология,  с 01.09.2014г. по 15.07.2016г. Диплом 104024 №015025, выдан 31.08.16г., рег.№10/2016 г. Обнинск.",
+        "qualification": "АНО ДПО «Гуманитарно-технический институт, онкология, 11.12.2020г., №1177181071118, рег.№1112-165, г. Москва",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [2],
+        "biography": null,
+        "image": "",
+        "avg_rating": "5.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "persona_code": 13,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 16,
+    "fields": {
+        "first_name": "Мовлет",
+        "last_name": "Темиргереев",
+        "patronymic_name": "Захирович",
+        "created_at": "2023-05-14T10:27:18.247Z",
+        "updated_at": "2023-09-26T10:24:09.823Z",
+        "education": "Казанский государственный медицинский университет, 2013г.,ОКА №22982.\r\nОрдинатура, ФГБУ «Национальный медицинский исследовательский центр радиологии» (МНИОИ им. Герцена)., онкология, с 01.09.2016г. по 25.07.2018г.,диплом 104024№063773, выдан 31.08.18г., рег.№24/2018, г. Москва.",
+        "qualification": "ФГБУ «Национальный медицинский исследовательский центр радиологии», онкология, №0277240267920, 25.07.2018г. Рег.№2018/28, выдан 25.07.2018г., г. Москва.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": false
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 17,
+    "fields": {
+        "first_name": "Умалат",
+        "last_name": "Тарамов",
+        "patronymic_name": "Увайсович",
+        "created_at": "2023-05-14T10:27:54.136Z",
+        "updated_at": "2023-10-16T23:57:29.760Z",
+        "education": "Чеченский государственный университет, 2011 г. КЗ №73371.\r\nОрдинатура, Ставрополь. ГМУ, онкология, с 01.09.2011г. по 31.08.2013г., Диплом №012618002515, рег. №104, г. Ставрополь.",
+        "qualification": "Периодическая аккредитация, онкология, 22.11.2022г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [1],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": false
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 18,
+    "fields": {
+        "first_name": "Адам",
+        "last_name": "Токаев",
+        "patronymic_name": "Вахаевич",
+        "created_at": "2023-05-23T11:13:13.137Z",
+        "updated_at": "2023-10-17T06:04:51.317Z",
+        "education": "Азербайджанский медицинский университет, 2004г. АС-I №000617.\r\nИнтернатура, ГБ №1, хирургия, С 01.08.04г. по 30.06.05г., удостов. №27, выдан 18.07.2005г.\r\nПроф. переподготовка Первичная специализация., РНИОИ, онкология, \r\nс 01.07.07г. по 31.10.07г., удостов. №43, выдано 31.10.2007г.",
+        "qualification": "АНО \"Научно-исследовательский институт здоровья\", онкология, 14.11.2017г.,№1126241442033, Рег. №2815 выдан 15.11.2017г.,   г. Кисловодск",
+        "experience": "",
+        "seat": 2,
+        "academic": null,
+        "speciality": null,
+        "department": [15],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 19,
+    "fields": {
+        "first_name": "Залина",
+        "last_name": "Темиркаева",
+        "patronymic_name": "Эмишевна",
+        "created_at": "2023-05-23T11:16:37.012Z",
+        "updated_at": "2023-10-15T15:57:43.449Z",
+        "education": "Астраханская государственная медицинская академия, 2011г. КА №49256.\r\nОрдинатура, Астраханская ГМА, онкология, с 01.09.11г. по 30.07.2013г., диплом №013024004575, выдан 31.08.13г.",
+        "qualification": "АНО ДПО \"Гуманитарно-технический институт\", онкология, 25.12.2020г., №1177181101413, рег. №С2512-380,  выдан 12.12.2020г., г. Москва",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [15],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 20,
+    "fields": {
+        "first_name": "Мялх-Азни",
+        "last_name": "Пешхоева",
+        "patronymic_name": "Асламбековна",
+        "created_at": "2023-05-23T11:18:12.469Z",
+        "updated_at": "2023-10-15T15:57:51.023Z",
+        "education": "ГБОУ ВПО «Астраханский государственный медицинский университет», 2016г. 113005 №0502256.\r\nОрдинатура, ФГБОУ ВО «Астраханский государственный медицинский университет» онкология, диплом  103024№071293, рег. №058/18 выдан 31.08.2018г. г. Астрахань",
+        "qualification": "ФГБОУ ВО «Астраханский государственный медицинский университет» онкология, 03.07.2018г., №0130241673747, рег. №058-18 выдан 31.08.2018г. г. Астрахань",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [15],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 21,
+    "fields": {
+        "first_name": "Раиса",
+        "last_name": "Идигова",
+        "patronymic_name": "Мохмадовна",
+        "created_at": "2023-05-23T11:21:43.019Z",
+        "updated_at": "2023-10-15T15:57:56.427Z",
+        "education": "Чеченский государственный университет, 2017г. 102005 №0058371.\r\nОрдинатура, ФГБУ «Национальный медицинский исследовательский центр радиологии» МНИОИ им. П.А. Герцена) , онкология, 24.07.2019г. 104024№077505, рег. №21/2019 выдан 30.08.2017г.г. Москва",
+        "qualification": "Первичная специализированная аккредитация. 28.08.2019",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [15],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 22,
+    "fields": {
+        "first_name": "Эмилия",
+        "last_name": "Кадиева",
+        "patronymic_name": "Абдулхамидовна",
+        "created_at": "2023-05-23T11:58:11.851Z",
+        "updated_at": "2023-10-15T19:29:08.754Z",
+        "education": "Чеченский государственный университет, 2004г. ВСА №0089761.\r\nИнтернатура, Рост. ГМУ, акушерство и гинекология, с 01.08.2004г. по 26.06.2005г , св-во б/н.\r\nОрдинатура, МНИОИ им. П.А. Герцена, онкология, с 01.09.08г. по 31.08.2010г., удостоверение, рег.№211, выдано 31.08.10г.,г. Москва.\r\nАспирантура, МНИОИ им. П.А. Герцена, онкология, удостов. рег. №2/2013 от 23.08.13г. г. г.Москва",
+        "qualification": "ООО «Центр Профессионального Образования», онкология, 07.04.2020г., №1126242371969, рег.№2800, выдан 08.04.2020г. г. Ставрополь",
+        "experience": "",
+        "seat": 2,
+        "academic": 1,
+        "speciality": null,
+        "department": [16],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 23,
+    "fields": {
+        "first_name": "Фатима",
+        "last_name": "Исакова",
+        "patronymic_name": "Сулимбековна",
+        "created_at": "2023-05-24T05:40:21.268Z",
+        "updated_at": "2023-10-15T15:56:10.499Z",
+        "education": "Ростовский государственный медицинский университет, 2011г. КА №21185.\r\nОрдинатура, Ростовский  гос. мед. университет, онкология,  с 01.09.2011г. по 30.08.2013г., диплом 016124 №006346, выдан 30.08.13г., рег.№147/13, г. Ростов-на-Дону.\r\nАспирантура, Ростовский научно-исследовательский онкологический институт, онкология,  с 01.09.2013г. по 31.08.2016г. Диплом КНД №027880, от 12.12.2016г. г. Москва.",
+        "qualification": "АНО ДПО \"Гуманитарно-технический институт\",  онкология, 28.12.2020г. №1177181106837, рег. №С2812-072,  г. Москва, выдан 28.12.2020г.",
+        "experience": "",
+        "seat": 1,
+        "academic": 1,
+        "speciality": null,
+        "department": [16],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 24,
+    "fields": {
+        "first_name": "Элина",
+        "last_name": "Нанаева",
+        "patronymic_name": "Хасановна",
+        "created_at": "2023-05-24T05:42:36.627Z",
+        "updated_at": "2023-10-16T18:07:16.954Z",
+        "education": "Санкт-Петербургская государственная педиатрическая медицинская академия, 2009г. ВСГ №1454810.\r\nОрдинатура, Санкт-Петербургская гос. педиатрическая мед. академия, акушерство и гинекология, С 03.09.09г. по 02.09.11г., удостов. рег.№37/11, выдан 02.09.11г.\r\nДиплом по проф. переподг-ке, Северо-Западный гос. мед. университет им. И.И. Мечникова, онкология, №0178040001301 С 06.10.14г. по 18.12.2014г., 504ч., рег.№ 21756, выдан 18.12.14г., г. Санкт-Петербург.",
+        "qualification": "АНО ДПО «Международный институт современного образования», онкология, 28.09.2019г. №1126242054568, рег. №У-002742-19, выдан 30.09.2019г., г. Ессентуки",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [16],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 25,
+    "fields": {
+        "first_name": "Мовлет",
+        "last_name": "Темиргереев",
+        "patronymic_name": "Захирович",
+        "created_at": "2023-05-24T05:53:47.655Z",
+        "updated_at": "2023-10-16T10:39:55.582Z",
+        "education": "Казанский государственный медицинский университет, 2013г.,ОКА №22982.\r\nОрдинатура, ФГБУ «Национальный медицинский исследовательский центр радиологии»(МНИОИ им. Герцена)., онкология, с 01.09.2016г. по 25.07.2018г.,диплом 104024№063773, выдан 31.08.18г., рег.№24/2018, г. Москва.",
+        "qualification": "ФГБУ «Национальный медицинский исследовательский центр радиологии», онкология, №0277240267920, 25.07.2018г. Рег.№2018/28, выдан 25.07.2018г., г. Москва.",
+        "experience": "",
+        "seat": 2,
+        "academic": null,
+        "speciality": null,
+        "department": [18],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 26,
+    "fields": {
+        "first_name": "Умалат",
+        "last_name": "Тарамов",
+        "patronymic_name": "Увайсович",
+        "created_at": "2023-05-24T05:58:17.612Z",
+        "updated_at": "2023-10-15T09:31:10.655Z",
+        "education": "Чеченский государственный университет, 2011г. КЗ №73371.\r\nОрдинатура, Ставрополь.  ГМУ, онкология, с 01.09.2011г. по 31.08.2013г.,Диплом №012618002515, рег. №104, г. Ставрополь.",
+        "qualification": "Периодическая аккредитация, онкология, 22.11.2022г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [18],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 27,
+    "fields": {
+        "first_name": "Израил",
+        "last_name": "Джабраилов",
+        "patronymic_name": "Ризванович",
+        "created_at": "2023-05-24T06:00:55.982Z",
+        "updated_at": "2023-10-15T09:31:34.497Z",
+        "education": "ГБОУ ВПО «Волгоградский государственный медицинский университет», 2015г. 103404 №0000381.\r\nИнтернатура, Чеченский государственный университет, хирургия, диплом №012018046058, рег. №0033, выдан 09.07.2016г., г. Грозный.\r\nОдинатура, ФГБУ «Государственный научный центр РФ – Федеральный медицинский биофизический центр им. А.И. Бурназяна,  онкология, диплом 107718№231858, рег. №84/18, выдан 31.08.2018г. г. Москва.",
+        "qualification": "ФГБУ «Государственный научный центр РФ – Федеральный медицинский биофизический цент им. А.И. Бурназяна,  онкология, 20.07.2018г., №0377180815660, рег. №1084/18 выдан 31.08.2018г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [18],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 28,
+    "fields": {
+        "first_name": "Эльдар",
+        "last_name": "Магомадов",
+        "patronymic_name": "Аптиевич",
+        "created_at": "2023-05-24T06:03:19.785Z",
+        "updated_at": "2023-10-15T01:13:30.098Z",
+        "education": "Петрозаводский государственный университет , 2011г. ВСГ №3835404.\r\nОрдинатура, Петрозаводский гос. университет,  хирургия, с 01.09.12г. по 26.05.14г. , диплом №011024  004446 , рег. №30 выдан 26.05.14г., г. Петрозаводск.",
+        "qualification": "ООО «Центр Профессионального Образования», онкология, 15.06.2019г. №1126241844838, рег.№1212 выдан 17.06.2019г. г. Ставрополь",
+        "experience": "",
+        "seat": 2,
+        "academic": 1,
+        "speciality": null,
+        "department": [17],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 29,
+    "fields": {
+        "first_name": "Адлан",
+        "last_name": "Базаев",
+        "patronymic_name": "Лечаевич",
+        "created_at": "2023-05-24T06:06:29.710Z",
+        "updated_at": "2023-10-17T09:19:15.419Z",
+        "education": "ГБОУ «Ростовский государственный медицинский университет», 2012г. КО №98178.\r\nОрдинатура, ГБОУ  «Ростовский научно-исследовательский онкологический институт», онкология, с 01.09.2012г. по 31.07.2014г., диплом 106104 №000002, рег. №92, выдан 08.08.2014г. г. Ростов-на-Дону.\r\nАспирантура, «Ростовский научно-исследовательский онкологический институт», специальность «Клиническая медицина» - квалификация «Исследователь. Преподаватель – исследователь» с 01.09.2014г. по 21.06.2017г., диплом 106104 №0000002, рег. №02/17 от 12.07.2017г. г. Ростов-на-Дону.\r\nОрдинатура, ФГБОУ ВО «Ростовский государственный медицинский университет», хирургия, с 01.09.2017г. по 13.06.2019г., диплом 106124 №081601, рег. №396/19, выдан 01.07.2019г. г. Ростов-на-Дону.",
+        "qualification": "ГБОУ  «Ростовский научно-исследовательский онкологический институт», онкология, 30.04.2019г. №0261040000670, рег. №2019001, выдан 30.04.2019г., г. Ростов-на-Дону.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [17],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 30,
+    "fields": {
+        "first_name": "Алихан",
+        "last_name": "Гехаев",
+        "patronymic_name": "Умарович",
+        "created_at": "2023-05-24T06:15:58.690Z",
+        "updated_at": "2023-10-11T17:25:52.195Z",
+        "education": "Белгородский государственный научно-исследовательский университет, 2013г. ,КБ №04334.\r\nОрдинатура, Ростовский НИОИ, онкология, с 30.08.2013 по 31.08.15г., диплом 106104 №000019, выдан 02.09.15г.,рег. №19 г. Ростов-на-Дону",
+        "qualification": "ООО «Центр Профессионального Образования», онкология, 07.04.2020г., №112624233272, рег.№2806, выдан 08.04.2020г. г. Ставрополь.",
+        "experience": "",
+        "seat": 2,
+        "academic": null,
+        "speciality": null,
+        "department": [19],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 31,
+    "fields": {
+        "first_name": "Леча",
+        "last_name": "Ибрагимов",
+        "patronymic_name": "Ахмадович",
+        "created_at": "2023-05-24T06:18:08.603Z",
+        "updated_at": "2023-10-17T05:34:25.873Z",
+        "education": "Чеченский государственный университет, 2010Г. ВСГ №5405927.\r\nОрдинатура, Ростовский ГМУ, онкология, С 01.09.2011г. по 29.08.13г.,Диплом №016124 006343 от 30.08.13г. ,Рег. №146/13.\r\nДиплом о профессиональной переподготовке, ООО 'АПГРЕЙД', пластическая хирургия, с 19.09.23019г. по 24.12.2019г., 576часов, № 0000392, рег. №М2412/19-18, вдан 24.12.2019г. г.Москва.",
+        "qualification": "АНО ДПО\"Гуманитарно-технический институт\",, онкология, 28.12.2020г., №1177181106836, рег. №С2812-071, выдан 28.12.2020г., г. Москва.                                                                                                      ООО 'АПГРЕЙД', пластическая хирургия, 24.12.2019г., №1177181040844, рег. №2412-18, выдан 24.12.2019г., г. Москва.\r\nАНО ДПО\"Гуманитарно-технический институт\",  хирургия, 03.12.2020г. №1177181106795, рег. №С0312-023,  г. Москва, выдан 03.12.2020г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [19],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 32,
+    "fields": {
+        "first_name": "Алхазур",
+        "last_name": "Сулейманов",
+        "patronymic_name": "Магомедович",
+        "created_at": "2023-05-24T06:20:09.235Z",
+        "updated_at": "2023-10-14T08:30:00.983Z",
+        "education": "Московский государственный медико-стоматологический университет, 2007г. ВСГ №1482485.\r\nИнтернатура, Московский гос. медико-стоматологический университетхирургия, с 01.09.2007г. по 31.08.2008г. Удостов. №129, Выдан 31.08.2008г.\r\nОрдинатура, Московский гос. медико-стоматологический университет, хирургия, с 24.10.08г. по 23.10.2010г., удостов. №1376, выдан 19.10.2010г. \r\nИнтернатура, ННОУ ЦПДО «Грозненский МедиФарм» онкология, с 02.08.2010г. по 30.06.2011г., удостов. №207, выдан 30.06.2011г.",
+        "qualification": "ООО «Центр – С»», онкология, 17.10.2020г., №1126242384377, рег. №5084, выдан 17.10.2020г.,г. Ставрополь.\r\nАНО ДПО \"Гуманитарно-технический институт\",  хирургия, 25.12.2020г. №1177181106820, рег. №С2512-232,  г. Москва, выдан 25.12.2020г.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [19],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.persona",
+    "pk": 33,
+    "fields": {
+        "first_name": "Идрис",
+        "last_name": "Чаниев",
+        "patronymic_name": "Хасанович",
+        "created_at": "2023-05-24T06:22:33.610Z",
+        "updated_at": "2023-10-12T07:07:43.465Z",
+        "education": "Петрозаводский государственный университет, 2013г. КА №25148.\r\nИнтернатура, Петрозаводский гос. университет, хирургия, с 01.09.13г. по 31.07.2014г., диплом №011024009694 выдан 30.06.14г. рег. №262, г. Петрозаводск.\r\nОрдинатура, Петрозаводский гос. университет, хирургия, с 01.09.14г. по 20.06.2016г., диплом 011024 №014946 выдан 20.06.16г. рег. №120, г. Петрозаводск.\r\nДиплом по профессиональной переподготовке, АНО ДПО «Научно-исследовательский институт здоровья», онкология, с 19.06.2017г. по 07.10.2017г., 576 часов. №262402488700 рег.№2684, выдан 09.10.2017г. , г. Кисловодск.\r\nДиплом о профессиональной переподготовке, АНО ДПО «Гуманитарно-технический институт», организация здравоохранения и общественное здоровье, с 19.09.2019г. по 23.12.2019г., 576часов, №003505, рег. №М1912/23 - 064,  выдан 23.12.2019г., г. Москва.",
+        "qualification": "ООО «Центр - С\", онкология, с 04.12.2020г. по 31.12.2020г., 144 часа, №262413648526, рег.№6146, выдано 31.12.2020г., г. Ставрополь.",
+        "experience": "",
+        "seat": 1,
+        "academic": null,
+        "speciality": null,
+        "department": [19],
+        "biography": null,
+        "image": "",
+        "avg_rating": "0E-100",
+        "persona_code": null,
+        "published": true
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 9,
+    "fields": {
+        "persona": 15,
+        "author": 9,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 11,
+    "fields": {
+        "persona": 5,
+        "author": 17,
+        "score": 1,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 13,
+    "fields": {
+        "persona": 9,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 14,
+    "fields": {
+        "persona": 4,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 15,
+    "fields": {
+        "persona": 13,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 16,
+    "fields": {
+        "persona": 6,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 17,
+    "fields": {
+        "persona": 8,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 18,
+    "fields": {
+        "persona": 1,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:41.777Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 19,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T06:58:50.504Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 20,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-18T07:04:19.380Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 21,
+    "fields": {
+        "persona": 9,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-19T05:53:52.118Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 22,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 1,
+        "created": "2023-07-21T10:49:16.608Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 23,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-21T10:50:44.618Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 24,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-21T10:52:50.842Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 25,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-21T10:55:41.172Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 26,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-21T10:57:08.760Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 27,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-07-27T12:34:08.380Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 28,
+    "fields": {
+        "persona": 8,
+        "author": null,
+        "score": 5,
+        "created": "2023-08-04T09:11:05.805Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 29,
+    "fields": {
+        "persona": 1,
+        "author": null,
+        "score": 4,
+        "created": "2023-08-10T15:05:37.484Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 30,
+    "fields": {
+        "persona": 13,
+        "author": null,
+        "score": 5,
+        "created": "2023-08-21T06:24:14.984Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 31,
+    "fields": {
+        "persona": 8,
+        "author": null,
+        "score": 5,
+        "created": "2023-08-22T07:18:40.725Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 32,
+    "fields": {
+        "persona": 7,
+        "author": null,
+        "score": 5,
+        "created": "2023-08-24T08:13:56.527Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 33,
+    "fields": {
+        "persona": 1,
+        "author": null,
+        "score": 5,
+        "created": "2023-08-31T07:49:45.225Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 34,
+    "fields": {
+        "persona": 2,
+        "author": null,
+        "score": 5,
+        "created": "2023-09-08T09:51:37.719Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 35,
+    "fields": {
+        "persona": 14,
+        "author": null,
+        "score": 1,
+        "created": "2023-09-19T09:37:13.725Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 36,
+    "fields": {
+        "persona": 6,
+        "author": null,
+        "score": 1,
+        "created": "2023-09-21T08:06:22.547Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 37,
+    "fields": {
+        "persona": 6,
+        "author": null,
+        "score": 5,
+        "created": "2023-09-21T09:31:25.364Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 38,
+    "fields": {
+        "persona": 1,
+        "author": null,
+        "score": 5,
+        "created": "2023-09-28T07:37:30.181Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 39,
+    "fields": {
+        "persona": 1,
+        "author": null,
+        "score": 5,
+        "created": "2023-10-04T08:03:11.061Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 40,
+    "fields": {
+        "persona": 8,
+        "author": null,
+        "score": 5,
+        "created": "2023-10-04T11:26:31.254Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 41,
+    "fields": {
+        "persona": 3,
+        "author": null,
+        "score": 5,
+        "created": "2023-10-12T06:25:15.893Z"
+    }
+}, {
+    "model": "personnels.rating",
+    "pk": 42,
+    "fields": {
+        "persona": 12,
+        "author": null,
+        "score": 5,
+        "created": "2023-10-12T06:40:26.701Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 2,
+    "fields": {
+        "persona": 1,
+        "author": 6,
+        "text": "Хороший врач",
+        "created": "2023-05-10T13:18:20.891Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 4,
+    "fields": {
+        "persona": 7,
+        "author": 12,
+        "text": "Очень грубая женщина!",
+        "created": "2023-05-23T10:54:36.758Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 5,
+    "fields": {
+        "persona": 5,
+        "author": 17,
+        "text": "При всем том , что я верю в хорошее , хочу сказать что это не тот случай!!!! Эмоционально неуравновешенный. Никакой этики . Никакого профессионального качества врача . Я очень сожалею что за неимением другого врача лор онколога , приходится стоять на учете у него (",
+        "created": "2023-06-09T08:15:36.553Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 6,
+    "fields": {
+        "persona": 5,
+        "author": 17,
+        "text": "При всем том , что я верю в хорошее , хочу сказать что это не тот случай!!!! Эмоционально неуравновешенный. Никакой этики . Никакого профессионального качества врача . Я очень сожалею что за неимением другого врача лор онколога , приходится стоять на учете у него (",
+        "created": "2023-06-09T13:54:29.258Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 8,
+    "fields": {
+        "persona": 5,
+        "author": 19,
+        "text": "Спасибо Вам огромное.",
+        "created": "2023-06-26T10:14:33.484Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 9,
+    "fields": {
+        "persona": 5,
+        "author": 20,
+        "text": "-\"-_-_-_+_+_+_++_+₽+₽+₽+₽+₽--₽-₽+₽+_-&₽;₽;_+_+_;_+_(_+_+_-_-₽-36636373;4'крешмрвдкоагкгтаивооя-₽-_-_-474738#+#+:₽:₽6363;4+4+4+3+4+3+4-3+737₽7365353:;_? _? \"?! 'Тмтсососоаоаоаоококркрнкнрврараоаоаоаоааововооаококооококллвоаганнурткоковококрововотооовлуг;\"-_7₽+375_-4+3(376_-3-3+_+'оаоьвлвгнаталвоуоугурчнр-\"-₽5#5263;4;4+_7₽7_7_+_+_7_747_65\" &-₽+₽+7_+_+_+_-₽-_6'наоаоаоаоаор;_-_-_-_dbdhxgdudhdyeyeuejehdhdbf fhfhfhdhdhfhfhfh+_-_653&3&3:3+_+_8'uyegevevrbrhdhdjjduxuctxhsnsjshdheyeyyetwcwbbxnxnchchfhhdhdhdhdhfhchfhydhdhdhdhfhfhdyctsjbwcdd-_+\"-_-$;7$+;3;3+3+3+3+_6432-2;:_! _! $(8_7_)?? _/_/_/_(+_-5#&#-bdhdtteheuftdvb;\";\"_5#(3;_;_-\"&8454521845754545458256291945458288164676855555464616528527",
+        "created": "2023-06-26T10:28:05.976Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 10,
+    "fields": {
+        "persona": 5,
+        "author": 20,
+        "text": "Хочу сказать Вам огромное спасибо! Благодарю за проделанную работу, за оказанную помощь, за возможность полноценной жизни. \r\nЖелаю Вам достатка, сил и безграничных возможностей.",
+        "created": "2023-06-26T10:28:50.764Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 11,
+    "fields": {
+        "persona": 4,
+        "author": 23,
+        "text": "Были записаны 31.07 числа к этому врачу на время 13:40, уже два часа сидим в очереди, врача до сих пор нет. Огромная очередь, в которой много пожилых людей. Никто даже не ставит в курс дела, где врач, почему задерживается, насколько задерживается. Ужасное отношение к пациентам",
+        "created": "2023-07-31T12:26:32.648Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 12,
+    "fields": {
+        "persona": 8,
+        "author": 29,
+        "text": "Самому Богобоязненному любимому Врачу Амине Салаховне Усмановой💜Дай Аллах тебе долгих лет жизни счастья, праведной семьи, всех земных благ, и благ в Ахирате пусть Аллах вознаградить тебя Раем Фирдавс🤲🏻",
+        "created": "2023-10-02T09:08:20.229Z"
+    }
+}, {
+    "model": "personnels.comment",
+    "pk": 13,
+    "fields": {
+        "persona": 8,
+        "author": 29,
+        "text": "Врач с чистой души, без высокомерии, Врач от Аллаха!!!",
+        "created": "2023-10-02T09:27:34.524Z"
+    }
+}, {
+    "model": "structure.license",
+    "pk": 2,
+    "fields": {
+        "title": "Лицензия на фармацевтическую деятельность",
+        "type": "фармацевтическая",
+        "licenses_num": "ЛО-95-02-000757",
+        "file": "licenses/farm_lic_olPDZpM.pdf"
+    }
+}, {
+    "model": "structure.license",
+    "pk": 3,
+    "fields": {
+        "title": "Лицензия деятельности по обороту наркотических средств",
+        "type": "наркотическая",
+        "licenses_num": "ЛО-95-03-000094",
+        "file": "licenses/narko_lic_kgUW5Fz.pdf"
+    }
+}, {
+    "model": "structure.license",
+    "pk": 4,
+    "fields": {
+        "title": "Лицензия на осуществление медицинской деятельности",
+        "type": "медицинская",
+        "licenses_num": "ЛО-95-01-001480",
+        "file": "licenses/lic_med_srg0Shi.pdf"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||image||25bfd224626d2e979bd8b07ed260b4e0",
+    "fields": {
+        "value": "{\"name\": \"persons/1.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [3368, 6000]}"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||image||a2ad0a37d069cb21793ee8259ce8d072",
+    "fields": {
+        "value": "{\"name\": \"cache/48/52/48529cbe383e0bc1e4bb0b27afce6131.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [960, 600]}"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||image||b9034d9a1a02aa146e8d51562d79ae4e",
+    "fields": {
+        "value": "{\"name\": \"persons/14.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [3368, 6000]}"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||image||f0dab7f6f7212c95834ceea5e5a6d115",
+    "fields": {
+        "value": "{\"name\": \"cache/e9/fa/e9faf4bd224caff87f527ba4721e6700.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [960, 600]}"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||thumbnails||25bfd224626d2e979bd8b07ed260b4e0",
+    "fields": {
+        "value": "[\"f0dab7f6f7212c95834ceea5e5a6d115\"]"
+    }
+}, {
+    "model": "thumbnail.kvstore",
+    "pk": "sorl-thumbnail||thumbnails||b9034d9a1a02aa146e8d51562d79ae4e",
+    "fields": {
+        "value": "[\"a2ad0a37d069cb21793ee8259ce8d072\"]"
+    }
+}]
