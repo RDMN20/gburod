@@ -262,7 +262,7 @@ class Rating(models.Model):
     def __str__(self):
         return (
             f'Сотруник: {self.persona.first_name} {self.persona.last_name}'
-            f'Оценка: {self.score}'
+            f'Оценка: {self.score} '
             f'Автор: {self.author}'
         )
 
