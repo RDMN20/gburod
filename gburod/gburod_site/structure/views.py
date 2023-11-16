@@ -59,37 +59,6 @@ def depart_detail(request, department_id):
     return render(request, template, context)
 
 
-# def depart_detail(request, department_id):
-#     """Подробно об отделении"""
-#     template = 'structure/department_detail.html'
-#     departs = Department.objects.all()
-#     current_page_id = department_id
-#     # Получаем отделение по ID или возвращаем 404, если отделение не найдено
-#     department = get_object_or_404(Department, id=department_id)
-#
-#     # Получаем все связи PersonaDepartment для данного отделения
-#     persona_departments = PersonaDepartment.objects.filter(
-#         department=department)
-#
-#     # Извлекаем список id сотрудников
-#     personas_ids = persona_departments.values_list('persona_id', flat=True)
-#
-#     # Получаем всех сотрудников, связанных с отделением, с подсчетом их
-#     # рейтингов
-#     personas = Persona.objects.filter(id__in=personas_ids,
-#                                       published=True).annotate(
-#         score_count=Count('rating'))
-#     page_obj = get_page_obj(personas, request.GET.get('page'))
-#
-#     context = {
-#         'current_page_id': current_page_id,
-#         'department': department,
-#         'departs': departs,
-#         'page_obj': page_obj,
-#     }
-#     return render(request, template, context)
-
-
 def persona_detail(request, persona_id=None, persona_code=None,
                    department_id=None):
     now = timezone.now()
@@ -167,16 +136,19 @@ def get_department(department_id):
 
 
 # @login_required
-def add_comment(request, persona_id):
+def add_comment(request, persona_id, department_id):
     """Добавление комментария."""
     persona = get_object_or_404(Persona, id=persona_id)
     form = CommentForm(request.POST or None)
     if form.is_valid():
         comment = form.save(commit=False)
-        comment.author = request.user
         comment.persona = persona
         comment.save()
-    return redirect('structure:persona_detail', persona_id=persona_id)
+    return redirect(
+        'structure:persona_detail',
+        persona_id=persona_id,
+        department_id=department_id,
+    )
 
 
 def licenses(request):

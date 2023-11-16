@@ -1,38 +1,30 @@
 {% load user_filters %}
-{#{% if user.is_authenticated %}#}
-  <div class="card m-0" style="border-radius: 0;">
-    {% if adding_rate %}
-      <h5 class="card-header">Добавить комментарий:</h5>
-      <div class="card-body">
-        <form method="post"
-              action="{% url 'structure:add_comment' persona.id %}">
-          {% csrf_token %}
-          <div class="form-group mb-2">
-            {{ comment_form.text|addclass:"form-control" }}
-          </div>
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Отправить</button>
-          </div>
-        </form>
-      </div>
-    {% endif %}
-  </div>
-{#{% else %}#}
-{#  <div class="card my-4" style="border-radius: 0;">#}
-{#    <div class="card-body">#}
-{#      <p>Чтобы оставить комментарий или рейтинг,#}
-{#        <a class="card-text"#}
-{#           href="{% url 'users:login' %}?next={{ request.path }}">#}
-{#          войдите#}
-{#        </a>#}
-{#        или#}
-{#        <a class="" href="{% url 'users:signup' %}?next={{ request.path }}">#}
-{#          зарегистрируйтесь#}
-{#        </a>#}
-{#      </p>#}
-{#    </div>#}
-{#  </div>#}
-{#{% endif %}#}
+<div class="card m-0" style="border-radius: 0;">
+  {% if adding_rate %}
+    <h5 class="card-header">Добавить комментарий:</h5>
+    <div class="card-body">
+      <form method="post"
+            action="{% url 'structure:add_comment' persona_id=persona.id department_id=department_id %}">
+        {% csrf_token %}
+        <div class="form-group mb-2">
+        <label for="{{ comment_form.text.id_for_label }}">Текст комментария:</label>
+        {{ comment_form.text|addclass:"form-control" }}
+    </div>
+    <div class="form-group mb-2">
+        <label for="{{ comment_form.comment_email.id_for_label }}">Email:</label>
+        {{ comment_form.comment_email|addclass:"form-control" }}
+    </div>
+    <div class="form-group mb-2">
+        <label for="{{ comment_form.author.id_for_label }}">Автор:</label>
+        {{ comment_form.author|addclass:"form-control" }}
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </div>
+      </form>
+    </div>
+  {% endif %}
+</div>
 {% for comment in comments %}
   <div class="row  pl-5 m-0 pt-4">
     <div class="col m-0">
@@ -42,8 +34,9 @@
             {{ comment.author }}
           </h5>
           <p class=""><small class="text-muted">
-             Комментарий добавлен: {{ comment.created|timesince:now }} назад. {{ comment.created }}
-            </small></p>
+            Комментарий добавлен: {{ comment.created|timesince:now }}
+            назад. {{ comment.created }}
+          </small></p>
           <p>
             <strong>Комментарий:</strong> {{ comment.text|linebreaksbr }}
           <hr>

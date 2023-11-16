@@ -13,7 +13,8 @@ urlpatterns = [
          check_recaptcha(views.persona_detail), name='persona_detail'),
     path('persona_detail/qr/<int:persona_code>/<int:department_id>/',
          check_recaptcha(views.persona_detail), name='persona_qr_detail'),
-    path('persona_detail/<int:persona_id>/comment/', views.add_comment,
+    path('persona_detail/<int:persona_id>/comment/<int:department_id>/',
+         views.add_comment,
          name='add_comment'),
     path('licenses/', views.licenses, name='licenses'),
 ]
