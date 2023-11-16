@@ -10,7 +10,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from decimal import Decimal
 
 from personnels.forms import RatingForm, CommentForm
-from personnels.models import Persona, Department, Rating, PersonaDepartment, Comment
+from personnels.models import Persona, Department, Rating, PersonaDepartment, \
+    Comment
 from structure.models import License
 
 
@@ -82,10 +83,12 @@ def persona_detail(request, persona_id=None, persona_code=None,
     adding_rate = department.adding_rate if department else None
 
     if request.method == 'POST':
-        form = RatingForm(request.POST)
-        if form.is_valid() and request.recaptcha_is_valid:
+        raiting_form = RatingForm(request.POST)
+        comment_form = CommentForm(request.POST)
+        if raiting_form.is_valid() \
+                and comment_form.is_valid() and request.recaptcha_is_valid:
             try:
-                score = Decimal(form.cleaned_data['score']).quantize(
+                score = Decimal(raiting_form.cleaned_data['score']).quantize(
                     Decimal('0.01'))
                 if Rating.objects.filter(persona=persona,
                                          created__gte=last_minute).exists():
@@ -94,22 +97,45 @@ def persona_detail(request, persona_id=None, persona_code=None,
                         'Вы уже оценили сотрудника в течение последней минуты',
                     )
                 else:
-                    Rating.objects.create(persona=persona, score=score)
+                    Rating.objects.create(
+                        persona=persona,
+                        score=score,
+                        author=comment_form.cleaned_data['author'],
+                    )
                     messages.success(request, 'Рейтинг успешно сохранен')
-                return redirect('structure:persona_detail',
-                                persona_id=persona.id)
+
+                    # Обновляем средний рейтинг
+                    persona.avg_rating = Rating.objects.filter(
+                        persona=persona
+                    ).aggregate(
+                            Avg('score'))['score__avg']
+                    persona.save()
+
+                    # Вызываем функцию для добавления комментария
+                    add_comment(
+                        request,
+                        persona.id,
+                        department_id,
+                        author=comment_form.cleaned_data['author'],
+                    )
+                return redirect(
+                    'structure:persona_detail',
+                    persona_id=persona.id,
+                    department_id=department_id,
+                )
             except ValidationError as e:
                 messages.error(request, e.args[0])
     else:
-        form = RatingForm()
+        raiting_form = RatingForm()
+        comment_form = CommentForm()
 
     context = {
         'persona': persona,
         'persona_departments': persona_departments,
         'ratings': ratings,
         'comments': comments,
-        'comment_form': CommentForm(),
-        'form': form,
+        'comment_form': comment_form,
+        'form': raiting_form,
         'department_id': department_id,
         'adding_rate': adding_rate,
         'now': now,
@@ -136,13 +162,14 @@ def get_department(department_id):
 
 
 # @login_required
-def add_comment(request, persona_id, department_id):
+def add_comment(request, persona_id, department_id, author=None):
     """Добавление комментария."""
     persona = get_object_or_404(Persona, id=persona_id)
-    form = CommentForm(request.POST or None)
-    if form.is_valid():
-        comment = form.save(commit=False)
+    comment_form = CommentForm(request.POST or None)
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
         comment.persona = persona
+        comment.author = author
         comment.save()
     return redirect(
         'structure:persona_detail',

@@ -15,6 +15,15 @@ class RatingForm(forms.ModelForm):
         })
     )
 
+    # Добавляем clean_score для валидации рейтинга
+    def clean_score(self):
+        score = self.cleaned_data.get('score')
+
+        if score is None:
+            raise forms.ValidationError('Пожалуйста, поставьте рейтинг.')
+
+        return score
+
     class Meta:
         model = Rating
         fields = ('score',)
@@ -25,5 +34,12 @@ class CommentForm(ModelForm):
         model = Comment
         fields = ('text', 'comment_email', 'author')
         widgets = {
-            'text': Textarea(attrs={'rows': 5})
+            'text': Textarea(attrs={'rows': 5, 'class': 'form-control'}),
+            'comment_email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'author': forms.TextInput(attrs={'class': 'form-control'}),
         }
+        # widgets = {
+        #     'text': Textarea(attrs={
+        #         'rows': 5,
+        #     })
+        # }
