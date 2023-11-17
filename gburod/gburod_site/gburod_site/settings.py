@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'ratings',
     'sorl.thumbnail',
     'news_posts',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

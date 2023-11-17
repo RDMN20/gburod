@@ -137,6 +137,17 @@ h3 {
     color: #4C6A85;
 }
 
+.news-item {
+    margin: 0 auto;
+    text-align: justify;
+}
+.news-item h2 {
+    text-align: center;
+}
+
+.news-item p {
+    display: inline;
+}
 
 /*footer*/
 
