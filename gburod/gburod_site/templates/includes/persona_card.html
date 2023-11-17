@@ -6,7 +6,7 @@
         <div class="card mb-3 h-100">
           {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
             <img class="card-img-top" src="{{ im.url }}"
-                 alt="Doctor image">
+                 alt="Persona image">
           {% endthumbnail %}
           <div class="card-body">
             <h5 class="card-title">
@@ -15,13 +15,20 @@
               {{ persona.patronymic_name }}
             </h5>
             <p class="card-text">
-              Должность: {{ persona.seat }}
+              <strong>Должность:</strong> {{ persona.seat }}
               <br>
               {% if persona.academic is not None and persona.academic is not False %}
                 Ученная степень: {{ persona.academic }}
                 <br>
               {% endif %}
-              Отделение: {{ persona.department }}
+              <strong>Отделение:</strong>
+              {% for persona_department in persona.persona_departments.all %}
+                <a
+                  href="{% url 'structure:depart_detail' persona_department.department.id %}">
+                  {{ persona_department.department.title }}
+                </a>
+                {% if not forloop.last %}, {% endif %}
+              {% endfor %}
               <br>
               {% if persona.speciality is not None %}
                 {{ persona.speciality }}
@@ -38,7 +45,7 @@
           <div class="card-footer">
             <small class="text-muted">
               <a
-                href="{% url 'structure:persona_detail' persona.pk %}"
+                href="{% url 'structure:persona_detail' persona.pk department.id %}"
                 class="">
                 Подробно
               </a>

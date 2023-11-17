@@ -73,8 +73,14 @@ class Department(models.Model):
     )
     adding_rate = models.BooleanField(
         default=False,
-        verbose_name='Добавить рейтинг',
+        verbose_name='Добавить в рейтинг',
     )
+
+    def get_personas(self):
+        return self.personadepartment_set.all().values_list(
+            'persona',
+            flat=True,
+        )
 
     class Meta:
         verbose_name = 'Отделение'
@@ -82,6 +88,20 @@ class Department(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Office(models.Model):
+    number = models.CharField(
+        max_length=10,
+        verbose_name='Номер кабинета',
+    )
+
+    class Meta:
+        verbose_name = 'Номер кабинет'
+        verbose_name_plural = 'Нумерация кабинетов'
+
+    def __str__(self):
+        return self.number
 
 
 class Persona(models.Model):
@@ -141,13 +161,13 @@ class Persona(models.Model):
         on_delete=models.SET_NULL,
         verbose_name='Специальность',
     )
-    department = models.ForeignKey(
-        Department,
+    office = models.ForeignKey(
+        Office,
         related_name='persona',
-        blank=False,
+        blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name='Отделение',
+        verbose_name='Кабинет',
     )
 
     biography = models.OneToOneField(
@@ -200,6 +220,19 @@ class Persona(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
+class PersonaDepartment(models.Model):
+    persona = models.ForeignKey(
+        Persona,
+        on_delete=models.CASCADE,
+        related_name='persona_departments',
+    )
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'отделение сотрудника'
+        verbose_name_plural = 'отделение сотрудников'
+
+
 class Rating(models.Model):
     persona = models.ForeignKey(
         Persona,
@@ -208,13 +241,7 @@ class Rating(models.Model):
         verbose_name='Сотрудник',
         help_text='Поставьте рейтинг от 1 до 5',
     )
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='rating',
-        null=True,
-        blank=True,
-    )
+    author = models.CharField(max_length=255, null=True, )
     score = models.IntegerField(
         default=0.00,
         validators=[
@@ -235,7 +262,7 @@ class Rating(models.Model):
     def __str__(self):
         return (
             f'Сотруник: {self.persona.first_name} {self.persona.last_name}'
-            f'Оценка: {self.score}'
+            f'Оценка: {self.score} '
             f'Автор: {self.author}'
         )
 
@@ -248,13 +275,11 @@ class Comment(models.Model):
         verbose_name='Сотрудник',
         help_text='Комментарий на сотрудника'
     )
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='comments',
-        verbose_name='Автор',
-        help_text='Автор комментария',
+    author = models.CharField(
+        max_length=80,
+        null=True,
     )
+    comment_email = models.EmailField()
     text = models.TextField(
         verbose_name='Текст',
         help_text='Текст комментария',
@@ -270,5 +295,4 @@ class Comment(models.Model):
         verbose_name_plural = 'Комментарии'
 
     def __str__(self):
-        return (f'Комментарий: {self.text[:30]} на {self.persona},',
-                f' автор: {self.author}, {self.created}')
+        return f'Комментарий: {self.text[:30]} на {self.persona}, автор: {self.author}, {self.created}'

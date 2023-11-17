@@ -5,115 +5,298 @@
 {% endblock title %}
 {% block content %}
   <div class="row justify-content-center">
-    <aside class="col col-md-6">
-      <p class="card-deck">
-      <div class="card p-0">
-        {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
-          <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
-        {% endthumbnail %}
-        <div class="card-body m-4">
-          <h5 class="card-title">
-            {{ persona.last_name }}
-            {{ persona.first_name }}
-            {{ persona.patronymic_name }}
-          </h5>
-          <p class="card-text">
-            <strong>Должность:</strong> {{ persona.seat }}
-            <br>
-            {% if persona.academic is not None and persona.academic is not False %}
-              <strong>Ученая степень:</strong> {{ persona.academic }}
+    <aside class="col col-lg-6">
+      <div class="card-deck">
+        <div class="card p-0" style="border-radius: 0;">
+          {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}
+            <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
+          {% endthumbnail %}
+          <div class="card-body p-5 m-0">
+            <h5 class="card-title">
+              {{ persona.last_name }}
+              {{ persona.first_name }}
+              {{ persona.patronymic_name }}
+            </h5>
+            <p class="card-text">
+              <strong>Должность:</strong> {{ persona.seat }}
               <br>
+              {% if persona.academic is not None and persona.academic is not False %}
+                <strong>Ученая степень:</strong> {{ persona.academic }}
+                <br>
+              {% endif %}
+              <strong>Отделение:</strong>
+              {% for depart in persona_departments %}
+                <a
+                  href="{% url 'structure:depart_detail' depart.department.id %}">
+                  {{ depart.department.title }}
+                </a>
+                {% if not forloop.last %}, {% endif %}
+              {% endfor %}
+              {% if persona.speciality is not None %}
+                {{ persona.speciality }}
+                <br>
+              {% endif %}
+            </p>
+            {% if persona.biography %}
+              <p class="card-text">{{ persona.biography }}</p>
             {% endif %}
-            <strong>Отделение:</strong> {{ persona.department }}
-            {% if persona.speciality is not None %}
-              {{ persona.speciality }}
-              <br>
+            {% if persona.education %}
+              <p class="card-text">
+                <strong>Образование:</strong>
+                {{ persona.education }}
+              </p>
             {% endif %}
-          </p>
-          {% if persona.biography %}
-            <p class="card-text">{{ persona.biography }}</p>
-          {% endif %}
-          {% if persona.education %}
-            <p class="card-text">
-              <strong>Образование:</strong>
-              {{ persona.education }}
-            </p>
-          {% endif %}
-          {% if persona.qualification %}
-            <p class="card-text">
-              <strong>Квалификация:</strong>
-              {{ persona.qualification }}
-            </p>
-          {% endif %}
-          {% if persona.experience %}
-            <p class="card-text">
-              <strong>Опыт работы:</strong>
-              {{ persona.experience }}</p>
-          {% endif %}
-          {% if persona.department.adding_rate == True %}
-            <p><strong>Рейтинг:</strong> {{ persona.avg_rating|floatformat:2 }}
-            </p>
-            <form method="POST">
-              {% csrf_token %}
-              <div class="rating">
-                <input type="hidden" name="score" id="score">
-                <i
-                  class="fa fa-star {% if average_rating >= 1 %}checked{% else %}{% endif %}"
-                  data-value="1"
-                  id="first"></i>
-                <i
-                  class="fa fa-star {% if average_rating >= 2 %}checked{% else %}{% endif %}"
-                  data-value="2"
-                  id="second"></i>
-                <i
-                  class="fa fa-star {% if average_rating >= 3 %}checked{% else %}{% endif %}"
-                  data-value="3"
-                  id="third"></i>
-                <i
-                  class="fa fa-star {% if average_rating >= 4 %}checked{% else %}{% endif %}"
-                  data-value="4"
-                  id="fourth"></i>
-                <i
-                  class="fa fa-star {% if average_rating >= 5 %}checked{% else %}{% endif %}"
-                  data-value="5"
-                  id="fifth"></i>
-              </div>
-              <hr>
-              {% if messages %}
-                <div class="d-flex justify-content-center">
-                  <ul class="messages list-unstyled">
-                    {% for message in messages %}
-                      <li{% if message.tags %}
-                        class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                  </ul>
+            {% if persona.qualification %}
+              <p class="card-text">
+                <strong>Квалификация:</strong>
+                {{ persona.qualification }}
+              </p>
+            {% endif %}
+            {% if persona.experience %}
+              <p class="card-text">
+                <strong>Опыт работы:</strong>
+                {{ persona.experience }}</p>
+            {% endif %}
+            {% if adding_rate == True %}
+              <p><strong>Рейтинг:</strong>
+                {{ persona.avg_rating|floatformat:2 }}
+              </p>
+              {# Добавляем проверку на наличие ошибок в форме рейтинга #}
+              {% if raiting_form.errors %}
+                <div class="alert alert-danger">
+                  {% for error in raiting_form.errors %}
+                    {{ error }}
+                  {% endfor %}
                 </div>
               {% endif %}
-              {#              {% if user.is_authenticated %}#}
-              <div class="d-flex justify-content-center">
-                <script src='https://www.google.com/recaptcha/api.js'></script>
-                <div class="form-group g-recaptcha"
-                     data-sitekey="6Lfh-30mAAAAAAcP00PLaQ8K0NTGy9B7MCW1_Hwq"></div>
+              <form method="POST" id="rating-comment-form">
+                {% csrf_token %}
+                <div class="rating">
+                  <input type="hidden" name="score" id="score">
+                  <i
+                    class="fa fa-star {% if average_rating >= 1 %}checked{% else %}{% endif %}"
+                    data-value="1"
+                    id="first"></i>
+                  <i
+                    class="fa fa-star {% if average_rating >= 2 %}checked{% else %}{% endif %}"
+                    data-value="2"
+                    id="second"></i>
+                  <i
+                    class="fa fa-star {% if average_rating >= 3 %}checked{% else %}{% endif %}"
+                    data-value="3"
+                    id="third"></i>
+                  <i
+                    class="fa fa-star {% if average_rating >= 4 %}checked{% else %}{% endif %}"
+                    data-value="4"
+                    id="fourth"></i>
+                  <i
+                    class="fa fa-star {% if average_rating >= 5 %}checked{% else %}{% endif %}"
+                    data-value="5"
+                    id="fifth"></i>
+                </div>
+                <hr>
+                <div class="form-group mb-2">
+                  <label for="{{ comment_form.text.id_for_label }}">Текст
+                    комментария:</label>
+                  {{ comment_form.text }}
+                </div>
+                <div class="form-group mb-2">
+                  <label for="{{ comment_form.comment_email.id_for_label }}">Email:</label>
+                  {{ comment_form.comment_email }}
+                </div>
+                <div class="form-group mb-2">
+                  <label
+                    for="{{ comment_form.author.id_for_label }}">Автор:</label>
+                  {{ comment_form.author }}
+                </div>
+                {% if messages %}
+                  <div class="d-flex justify-content-center">
+                    <ul class="messages list-unstyled">
+                      {% for message in messages %}
+                        <li{% if message.tags %}
+                          class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+                 <div class="d-flex justify-content-center">
+                   <script
+                     src='https://www.google.com/recaptcha/api.js'></script>
+                   <div class="form-group g-recaptcha"
+                        data-sitekey="6Lfh-30mAAAAAAcP00PLaQ8K0NTGy9B7MCW1_Hwq"></div>
+                 </div>
+                <div class="d-flex justify-content-center pt-3">
+                  <button type="submit" class="btn btn-primary">Отправить
+                    отзыв
+                  </button>
+                </div>
+              </form>
               </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary">Добавить
-                  рейтинг
-                </button>
+            {% else %}
               </div>
-              {#              {% endif %}#}
-            </form>
-            </div>
-          {% else %}
-            </div>
-          {% endif %}
-      {% include 'includes/comments.html' %}
-      <div class="d-flex pb-4 justify-content-center">
-        <button type="button" class="btn btn-primary btn-light">
-          <a href="{% url 'structure:depart_detail' persona.department.id %}">
-            Назад
-          </a>
-        </button>
+            {% endif %}
+        <div class="">
+          {% include 'includes/comments.html' %}
+        </div>
+        <div class="d-flex pb-3 justify-content-center">
+          <button type="button" class="btn btn-primary btn-light">
+            <a href="{% url 'structure:depart_detail' department_id %}">
+              Назад
+            </a>
+          </button>
+        </div>
       </div>
     </aside>
   </div>
 {% endblock %}
+
+{#{% extends 'base.html' %}#}
+{#{% load thumbnail %}#}
+{#{% block title %}#}
+{#  Сотрудник#}
+{#{% endblock title %}#}
+{#{% block content %}#}
+{#  <div class="row justify-content-center">#}
+{#    <aside class="col col-lg-6">#}
+{#      <div class="card-deck">#}
+{#        <div class="card p-0" style="border-radius: 0;">#}
+{#          {% thumbnail persona.image "960x600" crop="center" upscale=True as im %}#}
+{#            <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">#}
+{#          {% endthumbnail %}#}
+{#          <div class="card-body p-5 m-0">#}
+{#            <h5 class="card-title">#}
+{#              {{ persona.last_name }}#}
+{#              {{ persona.first_name }}#}
+{#              {{ persona.patronymic_name }}#}
+{#            </h5>#}
+{#            <p class="card-text">#}
+{#              <strong>Должность:</strong> {{ persona.seat }}#}
+{#              <br>#}
+{#              {% if persona.academic is not None and persona.academic is not False %}#}
+{#                <strong>Ученая степень:</strong> {{ persona.academic }}#}
+{#                <br>#}
+{#              {% endif %}#}
+{#              <strong>Отделение:</strong>#}
+{#              {% for depart in persona_departments %}#}
+{#                <a#}
+{#                  href="{% url 'structure:depart_detail' depart.department.id %}">#}
+{#                  {{ depart.department.title }}#}
+{#                </a>#}
+{#                {% if not forloop.last %}, {% endif %}#}
+{#              {% endfor %}#}
+{#              {% if persona.speciality is not None %}#}
+{#                {{ persona.speciality }}#}
+{#                <br>#}
+{#              {% endif %}#}
+{#            </p>#}
+{#            {% if persona.biography %}#}
+{#              <p class="card-text">{{ persona.biography }}</p>#}
+{#            {% endif %}#}
+{#            {% if persona.education %}#}
+{#              <p class="card-text">#}
+{#                <strong>Образование:</strong>#}
+{#                {{ persona.education }}#}
+{#              </p>#}
+{#            {% endif %}#}
+{#            {% if persona.qualification %}#}
+{#              <p class="card-text">#}
+{#                <strong>Квалификация:</strong>#}
+{#                {{ persona.qualification }}#}
+{#              </p>#}
+{#            {% endif %}#}
+{#            {% if persona.experience %}#}
+{#              <p class="card-text">#}
+{#                <strong>Опыт работы:</strong>#}
+{#                {{ persona.experience }}</p>#}
+{#            {% endif %}#}
+{#            {% if adding_rate == True %}#}
+{#              <p><strong>Рейтинг:</strong>#}
+{#                {{ persona.avg_rating|floatformat:2 }}#}
+{#              </p>#}
+{#              {% if raiting_form.errors %}#}
+{#                <div class="alert alert-danger">#}
+{#                  {% for error in raiting_form.errors %}#}
+{#                    {{ error }}#}
+{#                  {% endfor %}#}
+{#                </div>#}
+{#              {% endif %}#}
+{#              <form method="POST" id="rating-comment-form">#}
+{#                {% csrf_token %}#}
+{#                <div class="rating">#}
+{#                  <input type="hidden" name="score" id="score">#}
+{#                  <i#}
+{#                    class="fa fa-star {% if average_rating >= 1 %}checked{% else %}{% endif %}"#}
+{#                    data-value="1"#}
+{#                    id="first"></i>#}
+{#                  <i#}
+{#                    class="fa fa-star {% if average_rating >= 2 %}checked{% else %}{% endif %}"#}
+{#                    data-value="2"#}
+{#                    id="second"></i>#}
+{#                  <i#}
+{#                    class="fa fa-star {% if average_rating >= 3 %}checked{% else %}{% endif %}"#}
+{#                    data-value="3"#}
+{#                    id="third"></i>#}
+{#                  <i#}
+{#                    class="fa fa-star {% if average_rating >= 4 %}checked{% else %}{% endif %}"#}
+{#                    data-value="4"#}
+{#                    id="fourth"></i>#}
+{#                  <i#}
+{#                    class="fa fa-star {% if average_rating >= 5 %}checked{% else %}{% endif %}"#}
+{#                    data-value="5"#}
+{#                    id="fifth"></i>#}
+{#                </div>#}
+{#                <hr>#}
+{#                <div class="form-group mb-2">#}
+{#                  <label for="{{ comment_form.text.id_for_label }}">Текст#}
+{#                    комментария:</label>#}
+{#                  {{ comment_form.text }}#}
+{#                </div>#}
+{#                <div class="form-group mb-2">#}
+{#                  <label for="{{ comment_form.comment_email.id_for_label }}">Email:</label>#}
+{#                  {{ comment_form.comment_email }}#}
+{#                </div>#}
+{#                <div class="form-group mb-2">#}
+{#                  <label#}
+{#                    for="{{ comment_form.author.id_for_label }}">Автор:</label>#}
+{#                  {{ comment_form.author }}#}
+{#                </div>#}
+{#                {% if messages %}#}
+{#                  <div class="d-flex justify-content-center">#}
+{#                    <ul class="messages list-unstyled">#}
+{#                      {% for message in messages %}#}
+{#                        <li{% if message.tags %}#}
+{#                          class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+{#                      {% endfor %}#}
+{#                    </ul>#}
+{#                  </div>#}
+{#                {% endif %}#}
+                {#                <div class="d-flex justify-content-center">#}
+                {#                  <script#}
+                {#                    src='https://www.google.com/recaptcha/api.js'></script>#}
+                {#                  <div class="form-group g-recaptcha"#}
+                {#                       data-sitekey="6Lf1KhEpAAAAANaGtk2W7_8z8xuXY4_j9h1Q41Pj"></div>#}
+                {#                </div>#}
+{#                <div class="d-flex justify-content-center pt-3">#}
+{#                  <button type="submit" class="btn btn-primary">Отправить#}
+{#                    отзыв#}
+{#                  </button>#}
+{#                </div>#}
+{#              </form>#}
+{#              </div>#}
+{#            {% else %}#}
+{#              </div>#}
+{#            {% endif %}#}
+{#        <div class="">#}
+{#          {% include 'includes/comments.html' %}#}
+{#        </div>#}
+{#        <div class="d-flex pb-3 justify-content-center">#}
+{#          <button type="button" class="btn btn-primary btn-light">#}
+{#            <a href="{% url 'structure:depart_detail' department_id %}">#}
+{#              Назад#}
+{#            </a>#}
+{#          </button>#}
+{#        </div>#}
+{#      </div>#}
+{#    </aside>#}
+{#  </div>#}
+{#{% endblock %}#}
