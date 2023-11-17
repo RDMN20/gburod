@@ -7,14 +7,14 @@
     </div>
   </div>
   <div class="row justify-content-center pt-2">
-    <div class="col-12 col-sm-8">
+    <div class="col-10 col-sm-8">
       <hr>
       {% if page_obj %}
         {% for item in page_obj %}
           <div class="news-item">
             <h2>{{ item.title }}</h2>
             <p>{{ item.content|safe }}</p>
-            <div class="pt-2">
+            <div class="pt-2 m-1">
               <p><strong>Дата публикаций:</strong> <small class="text-muted">{{ item.pub_date|date:"d-m-Y" }}</small></p>
             </div>
           </div>
