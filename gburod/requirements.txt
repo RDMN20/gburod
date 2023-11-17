@@ -59,7 +59,7 @@ python-slugify==8.0.1
 pytz==2023.3.post1
 PyYAML==6.0.1
 ratings==0.3.6
-rcssmin==1.1.2
+rcssmin==1.1.1
 requests==2.31.0
 rich==13.7.0
 rjsmin==1.2.2
