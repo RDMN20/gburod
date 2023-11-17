@@ -6,14 +6,14 @@ services:
     image: postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    ports:
-      - '5432:5432'
+#    ports:
+#      - '5432:5432'
     env_file: gburod/.env
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      DB_NAME: ${DB_NAME}
       TZ: UTC
       PGTZ: UTC
 
@@ -25,7 +25,6 @@ services:
       - static_value:/app/static/
       - media_value:/app/media/
       - ./gburod:/app/gburod
-      - python-deps:/app/python-deps
     ports:
       - '8000:8000'
     depends_on:
@@ -47,4 +46,3 @@ volumes:
   static_value:
   media_value:
   postgres_data:
-  python-deps:
