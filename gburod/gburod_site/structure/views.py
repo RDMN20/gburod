@@ -3,15 +3,18 @@ from django.utils import timezone
 from django.conf import settings
 from django.contrib import messages
 from django.core.exceptions import ValidationError
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.db.models import Avg, Count
-from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.db.models import Avg
 from django.shortcuts import render, get_object_or_404, redirect
 from decimal import Decimal
 
 from personnels.forms import RatingForm, CommentForm
-from personnels.models import Persona, Department, Rating, PersonaDepartment, \
-    Comment
+from personnels.models import (
+    Persona,
+    Department,
+    Rating,
+    PersonaDepartment,
+)
 from structure.models import License
 
 
@@ -71,7 +74,6 @@ def persona_detail(request, persona_id=None, persona_code=None,
 
     # Получаем отделения сотрудника
     persona_departments = PersonaDepartment.objects.filter(persona=persona)
-    departments = [pd.department for pd in persona_departments]
     # Получаем связанные рейтинги
     ratings = Rating.objects.filter(persona=persona)
 
@@ -85,8 +87,9 @@ def persona_detail(request, persona_id=None, persona_code=None,
     if request.method == 'POST':
         raiting_form = RatingForm(request.POST)
         comment_form = CommentForm(request.POST)
-        if raiting_form.is_valid() \
-                and comment_form.is_valid() and request.recaptcha_is_valid:
+        if (raiting_form.is_valid()
+                and comment_form.is_valid()
+                and request.recaptcha_is_valid):
             try:
                 score = Decimal(raiting_form.cleaned_data['score']).quantize(
                     Decimal('0.01'))
@@ -107,8 +110,7 @@ def persona_detail(request, persona_id=None, persona_code=None,
                     # Обновляем средний рейтинг
                     persona.avg_rating = Rating.objects.filter(
                         persona=persona
-                    ).aggregate(
-                            Avg('score'))['score__avg']
+                    ).aggregate(Avg('score'))['score__avg']
                     persona.save()
 
                     # Вызываем функцию для добавления комментария
