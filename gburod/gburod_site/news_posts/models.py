@@ -4,8 +4,13 @@ from django.contrib.auth.models import User
 
 class News(models.Model):
     """Модель новостных постов."""
-    title = models.CharField(max_length=200)
-    content = models.TextField()
+    title = models.CharField(
+        max_length=200,
+        verbose_name='Заголовок'
+    )
+    content = models.TextField(
+        verbose_name='Контент'
+    )
     pub_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         User,
@@ -15,7 +20,6 @@ class News(models.Model):
     )
     is_published = models.BooleanField(default=True)
     image = models.ImageField(upload_to='news_images/', blank=True, null=True)
-
 
     class Meta:
         verbose_name = 'Новость'
