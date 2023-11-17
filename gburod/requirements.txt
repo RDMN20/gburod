@@ -62,7 +62,7 @@ ratings==0.3.6
 rcssmin==1.1.1
 requests==2.31.0
 rich==13.7.0
-rjsmin==1.2.2
+rjsmin==1.2.1
 scipy==1.11.3
 six==1.16.0
 sorl-thumbnail==12.10.0
