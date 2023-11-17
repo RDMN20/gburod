@@ -136,3 +136,4 @@ dmypy.json
 .pyre/
 
 gburod_dump_3.json
+gburod_dump_*.json
