@@ -16,12 +16,27 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 
+from structure.sitemaps import (
+    DepartmentSitemap,
+    PersonaSitemap, StaticSitemap,
+)
+from news_posts.sitemaps import NewsSitemap
+
+
+sitemaps = {
+    'static': StaticSitemap,
+    'departments': DepartmentSitemap,
+    'personas': PersonaSitemap,
+    'news': NewsSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('structure/', include('structure.urls')),
     path('paid_services/', include('paid_services.urls')),
     path('news/', include('news_posts.urls')),
@@ -29,7 +44,6 @@ urlpatterns = [
     path('auth/', include('django.contrib.auth.urls')),
 
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(

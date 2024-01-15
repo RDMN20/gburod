@@ -6,14 +6,14 @@ services:
     image: postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-#    ports:
-#      - '5432:5432'
+    ports:
+      - '5432:5432'
     env_file: gburod/.env
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      DB_NAME: ${DB_NAME}
+      POSTGRES_DB: ${DB_NAME}
       TZ: UTC
       PGTZ: UTC
 

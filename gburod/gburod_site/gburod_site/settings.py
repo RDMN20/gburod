@@ -96,8 +96,6 @@ WSGI_APPLICATION = 'gburod_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# База проды
-
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE'),
