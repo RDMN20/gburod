@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.db.models import Avg
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -88,6 +89,10 @@ class Department(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('structure:depart_detail',
+                       kwargs={'department_id': self.id})
 
 
 class Office(models.Model):
@@ -218,6 +223,18 @@ class Persona(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
+    def get_absolute_url(self):
+        persona_department = self.persona_departments.first()
+        if persona_department:
+            # Если отделение найдено, используем его id в URL
+            return reverse('structure:persona_detail', kwargs={
+                'persona_id': self.id,
+                'department_id': persona_department.department_id
+            })
+        # Если у персоны нет отделения, возвращаем пустую строку или URL по
+        # умолчанию
+        return ""
 
 
 class PersonaDepartment(models.Model):

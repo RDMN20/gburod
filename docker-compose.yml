@@ -13,7 +13,7 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      DB_NAME: ${DB_NAME}
+      POSTGRES_DB: ${DB_NAME}
       TZ: UTC
       PGTZ: UTC
 
