@@ -11,7 +11,7 @@ urlpatterns = [
          name='depart_detail'),
     path('persona_detail/<int:persona_id>/<int:department_id>/',
          check_recaptcha(views.persona_detail), name='persona_detail'),
-    path('persona_detail/qr/<int:persona_code>/<int:department_id>/',
+    path('persona_detail/qr/<int:persona_code>/',
          check_recaptcha(views.persona_detail), name='persona_qr_detail'),
     path('persona_detail/<int:persona_id>/comment/<int:department_id>/',
          views.add_comment,
