@@ -1,0 +1,30 @@
+<div class="col" style="border-radius: 0;">
+  <div
+    class="row g-0 mb-3 rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+    {% if news.image %}
+      <div class="col-auto">
+        <img src="{{ news.image.url }}" width="100%">
+      </div>
+    {% endif %}
+    <div class="col p-4 d-flex flex-column position-static mx-4">
+      <h3 class="mb-0">{{ news.title }}</h3>
+      <div class="mb-1 text-muted">
+        <small class="text-muted">
+          <strong>
+            Дата публикаций:
+          </strong>
+          {{ news.pub_date|date:"d-m-Y" }}
+        </small>
+      </div>
+      <p class="card-text mb-auto">
+        {{ news.content|truncatechars:200|safe }}
+        <a
+          href="{% url 'news-posts:news_detail' news.id %}"
+          class="stretched-link">
+          далее
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+<hr>

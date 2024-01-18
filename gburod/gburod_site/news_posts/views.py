@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import News
 
@@ -26,3 +26,14 @@ def news_list(request):
     }
 
     return render(request, template, context)
+
+
+def news_detail(request, news_id):
+    """Представление для детального отображения новостей"""
+    news = get_object_or_404(News, id=news_id)
+
+    context = {
+        'news': news,
+    }
+
+    return render(request, 'news/news_detail.html', context)
