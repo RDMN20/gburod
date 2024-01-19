@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
+from django.views.generic import TemplateView
 
 from structure.sitemaps import (
     DepartmentSitemap,
@@ -36,6 +37,8 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')),
+    path('robots.txt', TemplateView.as_view(
+        template_name='robots.txt', content_type='text/plain')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('structure/', include('structure.urls')),
     path('paid_services/', include('paid_services.urls')),
