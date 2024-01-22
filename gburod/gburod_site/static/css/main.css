@@ -95,6 +95,10 @@ li a.active {
     color: black;
 }
 
+.dep-cards {
+    min-height: 10rem;
+}
+
 .dep-card-a {
     color: black;
     background-color: #87CEEB;
