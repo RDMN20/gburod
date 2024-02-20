@@ -43,8 +43,8 @@ urlpatterns = [
     path('structure/', include('structure.urls')),
     path('paid_services/', include('paid_services.urls')),
     path('news/', include('news_posts.urls')),
-    path('auth/', include('users.urls')),
-    path('auth/', include('django.contrib.auth.urls')),
+    # path('auth/', include('users.urls')),
+    # path('auth/', include('django.contrib.auth.urls')),
 
 ]
 
