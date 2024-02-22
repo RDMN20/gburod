@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
           {% if page_obj %}
             {% for news in page_obj %}
-            {% include 'includes/news_card_short.html' %}
+              {% include 'includes/news_card_short.html' %}
             {% endfor %}
             </div>
             {% include 'includes/paginator.html' %}
@@ -21,5 +21,6 @@
             <p>Нет опубликованных новостей.</p>
           {% endif %}
       </div>
+    </div>
   </div>
 {% endblock %}
