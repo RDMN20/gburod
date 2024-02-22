@@ -15,8 +15,8 @@
             <div class="card-body">
               <h5 class="card-title">{{ depart.title }}</h5>
             </div>
-            <div class="card-footer">
-              <a class="dep-card-a btn btn-primary"
+            <div class="card-footer p-0 m-0 dep-card-a text-center">
+              <a class="dep-card-a btn"
                  href="{% url 'structure:depart_detail' depart.id %}">
                 Подробнее
               </a>
@@ -25,22 +25,5 @@
         </div>
       {% endfor %}
     </div>
-    {#    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">#}
-    {#      {% for depart in departs|dictsort:"title" %}#}
-    {#        <div class="col text-center">#}
-    {#          <div class="card mb-3" style="border-radius: 0">#}
-    {#                <img src="{% thumbnail depart.image 300x200 %}"#}
-    {#                     class="card-img-top" alt="{{ depart.title }}">#}
-    {#            <div class="card-body">#}
-    {#              <h5 class="card-title">{{ depart.title }}</h5>#}
-    {#              <!-- Здесь можно добавить другую информацию о каждом отделении -->#}
-    {#            </div>#}
-    {#            <a#}
-    {#              class="dep-card-a btn btn-primary"#}
-    {#              href="{% url 'structure:depart_detail' depart.id %}">Подробнее</a>#}
-    {#          </div>#}
-    {#        </div>#}
-    {#      {% endfor %}#}
-    {#    </div>#}
   </div>
 {% endblock %}
