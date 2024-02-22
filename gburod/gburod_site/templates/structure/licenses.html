@@ -8,9 +8,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"
              fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
           <path
-            d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+            d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5
+            6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0
+            1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"></path>
           <path
-            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0
+            1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1
+            1 0 0 0-1-1"></path>
         </svg>
       </div>
       <div class="gburod-docs col-auto pt-2 pt-sm-5">
@@ -23,55 +27,48 @@
       </div>
     </div>
     <hr>
-    <div class="row justify-content-center">
-      <div class="col-auto mb-3">
-        <h3>Лицензии</h3>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col col-md-4">
-        <div class="card-deck">
-          {% for license in licenses %}
-            <div class="card mb-4 text-center">
-              <div class="card-header">
-                <h6 class="card-title">{{ license.title }}</h6>
-              </div>
-              <div class="card-body">
-                <a class="preview-link" href="{{ license.file.url }}"
-                   data-toggle="modal" data-target="#pdfModal{{ license.pk }}">
-                  <i class="fa fa-file-pdf-o"></i>
-                  <p>открыть</p>
-                </a>
-              </div>
+    <div class="row text-center">
+      {% for license in licenses %}
+        <div class="col-12 col-sm-12 col-md-4">
+          <div class="card m-2">
+            <div class="card-header">
+              <h6 class="card-title">{{ license.title }}</h6>
             </div>
-            <div class="modal fade" id="pdfModal{{ license.pk }}" tabindex="-1"
-                 role="dialog"
-                 aria-labelledby="pdfModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-lg"
-                   role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title"
-                        id="pdfModalLabel">{{ license.title }}</h5>
-                    <button type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <embed src="{{ license.file.url }}" type="application/pdf"
-                           width="100%" height="600px">
-                  </div>
+            <div class="card-body">
+              <a class="preview-link" href="{{ license.file.url }}"
+                 data-toggle="modal" data-target="#pdfModal{{ license.pk }}">
+                <i class="fa fa-file-pdf-o"></i>
+                <p>открыть</p>
+              </a>
+            </div>
+          </div>
+          <div class="modal fade" id="pdfModal{{ license.pk }}" tabindex="-1"
+               role="dialog"
+               aria-labelledby="pdfModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg"
+                 role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"
+                      id="pdfModalLabel">{{ license.title }}</h5>
+                  <button type="button" class="close" data-dismiss="modal"
+                          aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <embed src="{{ license.file.url }}" type="application/pdf"
+                         width="100%" height="600px">
                 </div>
               </div>
             </div>
-            {% empty %}
-            <div class="alert alert-warning" role="alert">
-              Нет лицензий.
-            </div>
-          {% endfor %}
+          </div>
         </div>
-      </div>
+        {% empty %}
+        <div class="alert alert-warning" role="alert">
+          Нет лицензий.
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}
