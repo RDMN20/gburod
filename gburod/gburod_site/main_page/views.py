@@ -19,3 +19,8 @@ def index(request):
 def about_us(request):
     template = 'main_page/about.html'
     return render(request, template)
+
+
+def privacy(request):
+    template = 'main_page/privacy.html'
+    return render(request, template)

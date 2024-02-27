@@ -1,27 +1,37 @@
 {% load static %}
-<footer class="footer mt-auto">
-  <div class="row justify-content-center">
-    <div class="col-auto">
-      <div class="d-flex " style="height: 200px;">
-        <div class="col col-md-8 text-center align-self-center">
-          <div class="copyright-info">
-            © 2023 - {% now 'Y' %} Copyright ГБУ "Республиканский онкологический
-            диспансер"
-          </div>
+<footer class="footer m-o pt-2 pb-2">
+  <div class="row m-0 p-0 justify-content-center">
+    <div class="d-flex">
+      <div class="col col-sm-6  align-self-center">
+        <div class="copyright-info text-center">
+          © 2023 - {% now 'Y' %} Copyright ГБУ "Республиканский
+          онкологический
+          диспансер"
         </div>
-        <div class="col col-md-2 text-center align-self-center">
-          <div class="mz-nok-mu">
-            <img class="mz-log-img"
-                 src="{% static 'img/minzdrav_logo_small.png' %}"
-                 alt="mz-logo-sm">
-            <p class="">
-              НЕЗАВИСИМАЯ ОЦЕНКА КАЧЕСТВА
-              УСЛОВИЙ ОКАЗАНИЯ УСЛУГ
-              МЕДИЦИНСКИМИ ОРГАНИЗАЦИЯМИ
-            </p>
-            <a target="_blank"
-               href="https://anketa.minzdrav.gov.ru/ambulator/0f7f19c5-dfb1-4534-a304-93756b3d5729">Оценить</a>
-          </div>
+        <div class="text-center">
+          <p>
+            <a href="{% url 'main-page:privacy' %}"
+               class="a-footer-text text-dark">
+              Политика обработки персональных данных
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="col col-sm-2"></div>
+      <div class="col col-sm-3 text-center align-self-center">
+        <div class="mz-nok-mu">
+          <img class="mz-log-img mb-1"
+               src="{% static 'img/minzdrav_logo_small.png' %}"
+               alt="mz-logo-sm">
+          <p class="">
+            НЕЗАВИСИМАЯ ОЦЕНКА КАЧЕСТВА
+            УСЛОВИЙ ОКАЗАНИЯ УСЛУГ
+            МЕДИЦИНСКИМИ ОРГАНИЗАЦИЯМИ
+          </p>
+          <a target="_blank"
+             href="https://anketa.minzdrav.gov.ru/ambulator/0f7f19c5-dfb1-4534-a304-93756b3d5729">
+            Оценить
+          </a>
         </div>
       </div>
     </div>
