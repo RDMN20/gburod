@@ -1,4 +1,5 @@
 html body {
+    height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -7,10 +8,19 @@ html body {
     overflow-y: scroll;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 320px) {
     body {
         min-width: 320px !important;
     }
+}
+
+.content {
+  flex: 1; /* Элемент с классом .content будет растягиваться на всю доступную высоту */
 }
 
 .fakeimg {
@@ -106,8 +116,13 @@ li a.active {
     border-radius: 0
 }
 
-ul {
+.dep-ul-list {
     list-style-type: none !important;
+}
+
+.pk-ul {
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 div.first-head {
@@ -154,14 +169,15 @@ h3 {
     display: inline;
 }
 
-/*footer*/
+.footer {
+  background-color: #4682B4; /* Цвет фона футера */
+  height: auto; /* Высота вашего футера */
+  margin-top: auto; /* Автоматический отступ сверху */
+  color: #eeeeee;
+}
 
-footer.footer {
-    background-color: #4682B4 !important;
-    height: 200px;
-    color: #eeeeee;
-    text-align: center;
-    padding: 10px 10px 0;
+.footer a {
+    font-weight: bold;
 }
 
 .copyright-info {
