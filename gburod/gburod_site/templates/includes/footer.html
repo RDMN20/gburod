@@ -1,14 +1,14 @@
 {% load static %}
-<footer class="footer m-o pt-2 pb-2">
+<footer class="footer m-o p-2">
   <div class="row m-0 p-0 justify-content-center">
     <div class="d-flex">
-      <div class="col col-sm-6  align-self-center">
-        <div class="copyright-info text-center">
+      <div class="col col-sm-8  align-self-center ps-5">
+        <div class="copyright-info text-left">
           © 2023 - {% now 'Y' %} Copyright ГБУ "Республиканский
           онкологический
           диспансер"
         </div>
-        <div class="text-center">
+        <div class="text-left">
           <p>
             <a href="{% url 'main-page:privacy' %}"
                class="a-footer-text text-dark">
@@ -17,8 +17,7 @@
           </p>
         </div>
       </div>
-      <div class="col col-sm-2"></div>
-      <div class="col col-sm-3 text-center align-self-center">
+      <div class="col col-sm-4 text-center align-self-center">
         <div class="mz-nok-mu">
           <img class="mz-log-img mb-1"
                src="{% static 'img/minzdrav_logo_small.png' %}"
