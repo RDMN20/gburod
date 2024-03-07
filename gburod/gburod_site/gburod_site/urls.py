@@ -41,7 +41,7 @@ urlpatterns = [
         template_name='robots.txt', content_type='text/plain')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('structure/', include('structure.urls')),
-    path('paid_services/', include('paid_services.urls')),
+    path('paid-services/', include('paid_services.urls')),
     path('news/', include('news_posts.urls')),
     # path('auth/', include('users.urls')),
     # path('auth/', include('django.contrib.auth.urls')),

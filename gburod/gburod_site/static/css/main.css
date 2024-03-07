@@ -135,11 +135,11 @@ div.first-head {
     font-size: 32px !important;
 }
 
-.gburod-docs h3 {
+.gburod-docs-head h3 {
     font-size: 1.6em;
 }
 
-.gburod-docs {
+.gburod-docs-head {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     letter-spacing: 0px;
@@ -171,7 +171,7 @@ h3 {
 
 .footer {
   background-color: #4682B4; /* Цвет фона футера */
-  height: auto; /* Высота вашего футера */
+  height: auto; /* Высота футера */
   margin-top: auto; /* Автоматический отступ сверху */
   color: #eeeeee;
 }
@@ -184,6 +184,7 @@ h3 {
     font-size: 1em;
 }
 
+/* -------------------- */
 /*баннеры мз по оценке качества мед услуг*/
 .mz-nok-mu img.mz-log-img {
     width: auto;
@@ -199,3 +200,5 @@ h3 {
     color: #eeeeee !important;
     font-size: 1em;
 }
+
+/* -------------------- */
