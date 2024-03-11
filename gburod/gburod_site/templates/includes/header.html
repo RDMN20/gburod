@@ -71,7 +71,8 @@
                   href="{% url 'main-page:index' %}">
                   Диспансер
                 </a>
-              </li><li class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a
                   class="nav-link {% if request.path == '/news/' %} active {% endif %}"
                   href="{% url 'news-posts:news' %}">
@@ -96,6 +97,11 @@
               </li>
               <li class="nav-item">
                 <a
+                  class="nav-link {% if request.resolver_match.url_name == 'patients' %} active{% endif %}"
+                  href="{% url 'main-page:patients' %}">Пациентам</a>
+              </li>
+              <li class="nav-item">
+                <a
                   class="nav-link {% if request.resolver_match.url_name == 'about' %} active{% endif %}"
                   href="{% url 'main-page:about' %}">Контакты</a>
               </li>
@@ -104,7 +110,7 @@
                    aria-disabled="true"></a>
               </li>
               {% if user.is_authenticated %}
-{#                {% include 'includes/user_into.html' %}#}
+                {#                {% include 'includes/user_into.html' %}#}
               {% endif %}
             </ul>
           </div>

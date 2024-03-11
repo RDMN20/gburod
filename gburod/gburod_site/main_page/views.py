@@ -24,3 +24,8 @@ def about_us(request):
 def privacy(request):
     template = 'main_page/privacy.html'
     return render(request, template)
+
+
+def for_patients(request):
+    template = 'main_page/for_patients.html'
+    return render(request, template)
