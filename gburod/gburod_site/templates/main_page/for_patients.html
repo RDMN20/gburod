@@ -6,15 +6,10 @@
       <div class="col-auto py-5">
         <h2>Порядок обращения в диспансер</h2>
       </div>
-
     </div>
     <div class="row py-2">
       <div class="col-lg-3 ">
-        <ul>
-          <li></li>
-          <li><a href="{% url 'paid-services:services' %}">Платные услуги</a>
-          </li>
-        </ul>
+        {% include 'includes/patients_nav_list.html'%}
       </div>
       <div class="col-lg-9 p-1">
         <div

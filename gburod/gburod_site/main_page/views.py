@@ -29,3 +29,8 @@ def privacy(request):
 def for_patients(request):
     template = 'main_page/for_patients.html'
     return render(request, template)
+
+
+def diag_research(request):
+    template = 'main_page/prep_diag_research.html'
+    return render(request, template)
