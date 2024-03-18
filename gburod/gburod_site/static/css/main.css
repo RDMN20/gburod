@@ -147,7 +147,7 @@ h3 {
     text-align: left;
     outline: none;
     font-size: 1.1em;
-    transition: 0.4s;
+    transition: 0.5s;
     border-bottom: 1px solid #7d7d7d; /* Граница в нижней части кнопки */
 }
 .accordion:hover,
@@ -166,6 +166,9 @@ h3 {
     border-right: 2px solid #0056b3;
     border-bottom: 2px solid #0056b3;
 }
+.details h5 {
+    padding-top: 10px;
+}
 .details ul {
     list-style: none; /* Убрать маркеры */
     padding: 0;
@@ -173,7 +176,7 @@ h3 {
 }
 .details li {
     border-bottom: 1px solid #dddddd;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 .details li:last-child {
     border-bottom: none;
