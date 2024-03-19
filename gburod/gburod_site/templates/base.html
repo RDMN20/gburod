@@ -111,6 +111,12 @@
     Контент не подвезли!
   {% endblock %}
 </div>
+<div>
+  <!-- Button "Наверх" -->
+  <button onclick="scrollToTop()" id="scrollBtn" title="Наверх">
+    Вверх
+    <span>&#8593;</span></button>
+</div>
 {% include 'includes/footer.html' %}
 
 <!-- Import jQuery (just once) -->
@@ -125,6 +131,7 @@
 <script src="{% static 'js/main.js' %}" defer></script>
 <script src="{% static 'js/preview_pdf.js' %}" defer></script>
 <script src="{% static 'js/according_list.js' %}" defer></script>
+<script src="{% static 'js/scrollUp.js' %}" defer></script>
 
 </body>
 </html>

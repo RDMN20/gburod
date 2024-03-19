@@ -7,108 +7,135 @@ html body {
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
 body {
     display: flex;
     flex-direction: column;
 }
+
 @media (max-width: 320px) {
     body {
         min-width: 320px !important;
     }
 }
+
 .content {
     flex: 1;
 }
+
 .fakeimg {
     height: 350px;
     width: 300px;
     background: #aaa;
 }
+
 .logos {
     width: 100%;
     height: 100px;
     object-fit: contain;
 }
+
 .nav {
     font-size: larger;
 }
+
 .navbar {
     background-color: #87CEEB;
     text-transform: uppercase;
 }
+
 .navbar-elements {
     display: flex;
     justify-content: center;
 }
+
 hr {
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .checked {
     color: orange;
 }
+
 .raiting-btn {
     background-color: inherit !important;
     border: 0 !important;
 }
+
 .rating .fa-star:hover ~ .fa-star {
     color: black;
 }
+
 .header-info-item-2 {
     margin-left: 0px;
     background-color: #87CEEB;
     font-size: 1.5em;
 }
+
 .navbar-nav a.active {
     font-weight: bold;
     background-color: #87CEEB;
     color: #6a7175;
 }
+
 .header-info-desc-span {
     font-size: 14px;
     color: #7d7d7d;
 }
+
 .header-info-desc-b {
     font-weight: bold;
     margin-bottom: 3px;
 }
+
 .header-info-link-span-2 {
     font-size: 14px;
 }
+
 .header-info-item-text {
     font-size: 15px;
 }
+
 .btn.btn-secondary {
     background-color: #87CEEB;
     color: black;
 }
+
 .dep-cards {
     min-height: 10rem;
 }
+
 .dep-card-a {
     color: black;
     background-color: #87CEEB;
     border: 1px solid #87CEEB;
     border-radius: 0
 }
+
 .dep-ul-list {
     list-style-type: none !important;
 }
+
 .pk-ul {
     list-style-type: disc;
     list-style-position: inside;
 }
+
 div.first-head {
     justify-content: center !important;
 }
+
 /*Стили страницы документы*/
 
 .fa.fa-file-pdf-o {
     font-size: 32px !important;
 }
+
 .gburod-docs-head h3 {
     font-size: 1.6em;
 }
+
 .gburod-docs-head {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
@@ -121,17 +148,21 @@ div.first-head {
     font-variant: normal;
     text-transform: none;
 }
+
 h3 {
     font-family: 'Roboto', sans-serif;
     color: #4C6A85;
 }
+
 .news-item {
     margin: 0 auto;
     text-align: justify;
 }
+
 .news-item h2 {
     text-align: center;
 }
+
 .news-item p {
     display: inline;
 }
@@ -150,13 +181,16 @@ h3 {
     transition: 0.5s;
     border-bottom: 1px solid #7d7d7d; /* Граница в нижней части кнопки */
 }
+
 .accordion:hover,
 .accordion:focus {
     background-color: #007ACC;
 }
+
 .active, .accordion:hover {
     background-color: #007ACC;
 }
+
 .details {
     padding: 0 18px;
     background-color: white;
@@ -166,30 +200,73 @@ h3 {
     border-right: 2px solid #0056b3;
     border-bottom: 2px solid #0056b3;
 }
+
 .details h5 {
     padding-top: 10px;
 }
+
 .details ul {
     list-style: none; /* Убрать маркеры */
     padding: 0;
     margin: 0;
 }
+
 .details li {
     border-bottom: 1px solid #dddddd;
     padding: 5px 0;
 }
+
 .details li:last-child {
     border-bottom: none;
 }
+/* Up Button */
+#scrollBtn {
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: #007ACC;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 11px;
+}
+
+#scrollBtn span {
+    display: block;
+    font-size: 12px!important; /* Размер текста */
+    margin-top: -5px; /* Выравнивание текста */
+}
+
+#scrollBtn:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  #scrollBtn {
+    display: none;
+  }
+}
+
+/* Footer style */
 .footer {
     background-color: #4682B4; /* Цвет фона футера */
     height: auto; /* Высота футера */
     margin-top: auto; /* Автоматический отступ сверху */
     color: #eeeeee;
 }
+
 .footer a {
     font-weight: bold;
 }
+
 .copyright-info {
     font-size: 1em;
 }
@@ -200,12 +277,15 @@ h3 {
     width: auto;
     height: 60px;
 }
+
 .mz-nok-mu p {
     font-size: 0.7em;
     margin-bottom: 0px;
 }
+
 .mz-nok-mu a {
     color: #eeeeee !important;
     font-size: 1em;
 }
+
 /* -------------------- */
