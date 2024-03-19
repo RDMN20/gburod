@@ -81,9 +81,9 @@ jobs:
             sudo echo GOOGLE_RECAPTCHA_SECRET_KEY=${{ secrets.GOOGLE_RECAPTCHA_SECRET_KEY }} >> .env
             
             sudo docker-compose stop
-            sudo docker-compose rm web
-            sudo docker-compose rm nginxg
-            sudo docker volume rm oncochr_static_value
+            sudo docker-compose rm -f web
+            sudo docker-compose rm -f nginxg
+            sudo docker volume rm -f oncochr_static_value
             sudo docker-compose pull web
             sudo docker-compose up -d --build
             sudo docker exec -it backend python manage.py collectstatic --noinput
