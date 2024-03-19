@@ -2,13 +2,15 @@
 {% block title %}Платные услуги{% endblock title %}
 {% block content %}
   <div class="container">
-    <div class="row py-4 justify-content-center">
-      <div class="col-auto gburod-docs-head">
-        <h2>Платные услуги</h2>
+
+    <div class="row p-2 justify-content-start">
+      <div class="col-lg-3 p-2">
+        {% include 'includes/patients_nav_list.html' %}
       </div>
-    </div>
-    <div class="row px-5 justify-content-start">
       <div class="col-auto">
+        <div>
+          <h3>Платные услуги</h3>
+        </div>
         {% if pdf_docs %}
           {% for pdf_doc in pdf_docs %}
             <div>
