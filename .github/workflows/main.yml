@@ -82,7 +82,7 @@ jobs:
             
             sudo docker-compose stop
             sudo docker-compose rm -f web
-            sudo docker-compose rm -f oncochr_nginx
+            sudo docker rm -f oncochr_nginx
             sudo docker volume rm -f oncochr_static_value
             sudo docker-compose pull web
             sudo docker-compose up -d --build
