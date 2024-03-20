@@ -9,6 +9,7 @@ html body {
 }
 
 body {
+    background-color: ghostwhite;
     display: flex;
     flex-direction: column;
 }
@@ -17,6 +18,11 @@ body {
     body {
         min-width: 320px !important;
     }
+}
+
+.container {
+    background-color: white;
+    /*flex: 1;*/
 }
 
 .content {
