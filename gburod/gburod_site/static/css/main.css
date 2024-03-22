@@ -139,7 +139,7 @@ div.first-head {
 }
 
 .gburod-docs-head h3 {
-    font-size: 1.6em;
+    font-size: 1em;
 }
 
 .gburod-docs-head {
@@ -154,6 +154,13 @@ div.first-head {
     font-variant: normal;
     text-transform: none;
 }
+
+@media (max-width: 827px) {
+    .gburod-docs-head {
+        font-size: 1em;
+    }
+}
+
 
 h3 {
     font-family: 'Roboto', sans-serif;
@@ -225,6 +232,7 @@ h3 {
 .details li:last-child {
     border-bottom: none;
 }
+
 /* Up Button */
 #scrollBtn {
     position: fixed;
@@ -256,9 +264,9 @@ h3 {
 }
 
 @media (max-width: 767px) {
-  #scrollBtn {
-    display: none;
-  }
+    #scrollBtn {
+        display: none;
+    }
 }
 
 .partners-org img {

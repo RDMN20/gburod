@@ -42,9 +42,13 @@ class StaticSitemap(Sitemap):
         # Return list of url names for views to include in sitemap
         return [
             'main-page:index',
-            'structure:structures',
+            'main-page:diag-research',
             'main-page:about',
+            'main-page:patients',
+            'main-page:privacy'
             'structure:licenses',
+            'structure:structures',
+            'paid-services:services',
         ]
 
     def location(self, item):
