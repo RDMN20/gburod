@@ -139,7 +139,7 @@ div.first-head {
 }
 
 .gburod-docs-head h3 {
-    font-size: 1.6em;
+    font-size: 1em;
 }
 
 .gburod-docs-head {
@@ -154,6 +154,13 @@ div.first-head {
     font-variant: normal;
     text-transform: none;
 }
+
+@media (max-width: 827px) {
+    .gburod-docs-head {
+        font-size: 1em;
+    }
+}
+
 
 h3 {
     font-family: 'Roboto', sans-serif;
@@ -225,6 +232,59 @@ h3 {
 .details li:last-child {
     border-bottom: none;
 }
+
+/*Стиле карусели новости*/
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 0.5rem;
+    bottom: 2.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+}
+
+.carousel-caption h2 {
+    color: #41464b;
+}
+
+.carousel-image {
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1199px) {
+    .carousel-image {
+        height: 650px;
+        /*height: auto;*/
+    }
+
+    .carousel-caption h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .carousel-image {
+        height: 450px;
+        width: auto;
+    }
+
+    .carousel-caption h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #newsCarousel {
+        display: none;
+    }
+}
+
+
 /* Up Button */
 #scrollBtn {
     position: fixed;
@@ -244,21 +304,15 @@ h3 {
     font-size: 1.8em;
 }
 
-/*#scrollBtn span {*/
-/*    display: block;*/
-/*    font-size: 2.5em; !* Размер текста *!*/
-/*    !*margin-top: -5px; !* Выравнивание текста *!*!*/
-/*}*/
-
 #scrollBtn:hover {
     opacity: 0.8;
     transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
-  #scrollBtn {
-    display: none;
-  }
+    #scrollBtn {
+        display: none;
+    }
 }
 
 .partners-org img {
