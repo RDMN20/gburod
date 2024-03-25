@@ -21,6 +21,10 @@ class News(models.Model):
     )
     is_published = models.BooleanField(default=True)
     image = models.ImageField(upload_to='news_images/', blank=True, null=True)
+    # default_image_path = models.CharField(
+    #     max_length=100,
+    #     default='news_images/default_image.jpg',
+    # )
 
     class Meta:
         verbose_name = 'Новость'
@@ -30,5 +34,6 @@ class News(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
+    @staticmethod
+    def get_absolute_url():
         return reverse('news-posts:news', kwargs={})
