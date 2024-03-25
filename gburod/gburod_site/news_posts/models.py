@@ -21,10 +21,6 @@ class News(models.Model):
     )
     is_published = models.BooleanField(default=True)
     image = models.ImageField(upload_to='news_images/', blank=True, null=True)
-    # default_image_path = models.CharField(
-    #     max_length=100,
-    #     default='news_images/default_image.jpg',
-    # )
 
     class Meta:
         verbose_name = 'Новость'
