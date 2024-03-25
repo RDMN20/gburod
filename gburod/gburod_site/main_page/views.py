@@ -8,9 +8,10 @@ def index(request):
     latest_news = News.objects.filter(
         is_published=True
     ).order_by('-pub_date')[:3]
-
+    default_image_path = 'img/default_image.jpg'
     context = {
         'latest_news': latest_news,
+        'default_image_path': default_image_path,
     }
 
     return render(request, template, context)

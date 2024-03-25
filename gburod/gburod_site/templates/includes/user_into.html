@@ -1,18 +1,20 @@
-<li class="nav-item">
-  <a class="nav-link link-light"
-     href="{% url 'users:logout' %}">Выйти</a>
-</li>
-<li class="nav-item link-light nav-link">
-  <div>
-    Пользователь: {{ user.username }}
-  </div>
-</li>
+{% if user.is_authenticated %}
+  <li class="nav-item">
+    <a class="nav-link link-light"
+       href="{% url 'users:logout' %}">Выйти</a>
+  </li>
+  <li class="nav-item link-light nav-link">
+    <div>
+      Пользователь: {{ user.username }}
+    </div>
+  </li>
 {% else %}
-<li>
-  <a class="nav-link link-light"
-     href="{% url 'users:login' %}">Войти</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link link-light"
-     href="{% url 'users:signup' %}">Регистрация</a>
-</li>
+  <li>
+    <a class="nav-link link-light"
+       href="{% url 'users:login' %}">Войти</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-light"
+       href="{% url 'users:signup' %}">Регистрация</a>
+  </li>
+{% endif %}
