@@ -1,0 +1,35 @@
+<div id="newsCarousel" class="carousel carousel-dark slide"
+     data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for news in latest_news %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}"
+           data-bs-interval="5000">
+        <a href="{% url 'news-posts:news_detail' news.id %}">
+          {% if news.image %}
+            <img src="{{ news.image.url }}"
+                 class="d-block w-100 carousel-image" alt="{{ news.title }}">
+          {% else %}
+            <p>Изображение отсутствует</p>
+          {% endif %}
+          <div class="carousel-caption d-none d-md-block">
+            <h2>{{ news.title }}</h2>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    {% if latest_news.count == 1 %}
+      <!-- Если есть только одна новость, добавляем пустой слайд -->
+      <div class="carousel-item"></div>
+    {% endif %}
+  </div>
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#newsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#newsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
